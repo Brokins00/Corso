@@ -17,6 +17,7 @@ header {
     color: white;
     text-transform: uppercase;
     text-align: center;
+    font-weight: bold;
 }
 
 header img, header p {
@@ -32,6 +33,10 @@ header a:link, header a:visited {
     color: white;
 }
 
+header a:hover {
+    color: red;
+}
+
 header nav ul {
     padding: 0;
 }
@@ -41,8 +46,8 @@ header nav ul li {
     margin: 0;
 }
 
-header nav ul li:before {
-    content: '\2605';
+header nav ul li a:before {
+    content: '\22c6\0020';
     font-size: 70%;
     padding-right: 7px;
 }
