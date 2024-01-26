@@ -48,7 +48,7 @@ header img {
 
 .titolo {
     width: 50%;
-    margin: 0 auto;
+    margin: 50px auto;
 }
 
 .pulsante {
@@ -111,7 +111,7 @@ header img {
 /* ASIDE */
 
 #schede {
-    margin: 7vh 0;
+    margin: 10vh 0;
     text-align: center;
 }
 
@@ -144,16 +144,17 @@ footer {
     background-color: #25a2c3;
     margin: 0;
     height: max-content;
-    padding: 7vw;
+    padding: 2vw;
 }
 
 footer .headFooter {
     color: white;
+    font-size: 2.85rem;
 }
 
 footer address {
     font-style: normal;
-    font-size: 1.3rem;
+    font-size: 1.0rem;
 }
 
 footer a:visited, footer a:link {
@@ -164,6 +165,12 @@ footer #copyright {
     margin: 3vh auto 0 auto;
     padding: 3vh 0;
     border-top: 1px solid white;
-    font-size: 1.1rem;
-    width: max-content;
+    font-size: 0.8rem;
+    width: 250px;
+    text-align: center;
+}
+
+#footer {
+    width: 250px;
+    margin: 0 auto;
 }
