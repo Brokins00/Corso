@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -6,7 +10,6 @@ body {
     color: #393d41;
     font-size: 1.3rem;
     line-height: 1.65;
-    /* text-align: center; */
 }
 
 h1, h2, h3, h4, h5, h6, .pulsante {
@@ -61,6 +64,16 @@ header img {
     border-radius: 5px;
 }
 
+.pulsante a:link, .pulsante a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.pulsante:hover {
+    border: 1px solid black;
+    cursor: pointer;
+}
+
 #contenuto {
     padding: 0 10vw;
     margin: 0 auto 7vh auto;
@@ -80,6 +93,7 @@ header img {
 #contenuto img {
     border-radius: 50%;
     width: 40%;
+    box-shadow: 1px 1px 8px black;
 }
 
 #testimonianze {
@@ -127,6 +141,11 @@ header img {
     overflow: hidden;
 }
 
+.scheda:hover {
+    box-shadow: 1px 1px 8px black;
+    cursor: pointer;
+}
+
 .scheda img {
     width: 100%;
     height: 60%;
@@ -155,6 +174,10 @@ footer .headFooter {
 footer address {
     font-style: normal;
     font-size: 1.0rem;
+}
+
+footer address div:last-of-type a {
+    text-decoration: none;
 }
 
 footer a:visited, footer a:link {
