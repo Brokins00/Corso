@@ -167,3 +167,8 @@ document.getElementById("risultato_john2").innerHTML =
     "Sono identici ora? Risposta: " + risultato_due;
 console.log("Sono identici ora? Risposta: " + risultato_due);
 console.log("--------------------");
+
+const logo = document.getElementById('logo_epicode');
+logo.addEventListener('click', function() {
+    window.open('http://www.epicode.com/it/');
+});
