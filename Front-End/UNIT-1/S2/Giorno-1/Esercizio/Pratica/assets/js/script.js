@@ -127,10 +127,10 @@ console.log(
 console.log("");
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let somma_x = 4 + x;
-document.getElementById("somma_x").innerHTML = "let somma_x = 4 + x;";
-document.getElementById("somma_x_risultato").innerHTML = somma_x;
-console.log("Risultato somma 4 + x: " + somma_x);
+let sottrazione_x = 4 - x;
+document.getElementById("sottrazione_x").innerHTML = "let sottrazione_x = 4 - x;";
+document.getElementById("sottrazione_x_risultato").innerHTML = sottrazione_x;
+console.log("Risultato sottrazione 4 - x: " + sottrazione_x);
 console.log("--------------------");
 
 /* ESERCIZIO 7
