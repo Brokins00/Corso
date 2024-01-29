@@ -52,6 +52,7 @@ console.log("ESERCIZIO 2");
 console.log(
     'Crea una variable chiamata "myName" e assegna ad essa il tuo nome, sotto forma di stringa.'
 );
+console.log("");
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 const myName = "Fabio";
@@ -67,6 +68,7 @@ console.log("ESERCIZIO 3");
 console.log(
     "Scrivi il codice necessario ad effettuare un'addizione (una somma) dei numeri 12 e 20."
 );
+console.log("");
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 let numero1 = 12;
@@ -87,6 +89,7 @@ console.log("--------------------");
 */
 console.log("ESERCIZIO 4");
 console.log('Crea una variabile di nome "x" e assegna ad essa il numero 12');
+console.log("");
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 let x = 12;
@@ -106,6 +109,7 @@ console.log(
 console.log(
     "Dimostra l'impossibilità di riassegnare un valore ad una variabile dichiarata con il costrutto const."
 );
+console.log("");
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 document.getElementById("myNameCognome").innerHTML = 'myName = "Brogi"';
@@ -116,9 +120,11 @@ console.log("--------------------");
 /* ESERCIZIO 6
  Esegui una sottrazione tra i numeri 4 e la variable "x" appena dichiarata (che contiene il numero 12).
 */
+console.log("ESERCIZIO 6");
 console.log(
     'Esegui una sottrazione tra i numeri 4 e la variable "x" appena dichiarata (che contiene il numero 12).'
 );
+console.log("");
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 let somma_x = 4 + x;
@@ -139,6 +145,7 @@ console.log(
 console.log(
     "Verifica che name1 sia diversa da name2 (suggerimento: è la stessa cosa di verificare che la loro uguaglianza sia falsa)."
 );
+console.log("");
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 let name1 = "john";
@@ -154,6 +161,7 @@ console.log("--------------------");
 console.log(
     "EXTRA: verifica che la loro uguaglianza diventi true se entrambe vengono trasformate in lowercase (senza cambiare il valore di name2!)."
 );
+console.log("");
 let risultato_due = name1.toLowerCase() === name2.toLowerCase() ? "Si" : "No";
 document.getElementById("risultato_john2").innerHTML =
     "Sono identici ora? Risposta: " + risultato_due;

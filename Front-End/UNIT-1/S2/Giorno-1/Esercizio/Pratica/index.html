@@ -1,61 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Esercizi JS</title>
-  </head>
-  <body>
-    <header>
-      <h1>Esercizio JS</h1>
-    </header>
-    <main>
-      <ol>
-        <li>
-          Elenca e descrivi i principali datatype in JavaScript. Prova a spiegarli come se volessi farli comprendere a un bambino.<br>
-          <ul>
-            <li><b>string</b>: <span id="string"></span></li>
-            <li><b>number</b>: <span id="number"></span></li>
-            <li><b>boolean</b>: <span id="boolean"></span></li>
-            <li><b>null</b>: <span id="null"></span></li>
-            <li><b>undefined</b>: <span id="undefined"></span></li>
-          </ul>
-        </li>
-        <li>
-          Crea una variable chiamata "myName" e assegna ad essa il tuo nome, sotto forma di stringa.<br>
-          <code id="myName"></code>
-        </li>
-        <li>
-          Scrivi il codice necessario ad effettuare un addizione (una somma) dei numeri 12 e 20.<br>
-          <code id="somma"></code><br>
-          Il risultato in console è: <code id="somma_risultato"></code>
-        </li>
-        <li>
-          Crea una variable di nome "x" e assegna ad essa il numero 12<br>
-          <code id="variabile_x"></code>
-        </li>
-        <li>
-          Riassegna un nuovo valore alla variabile "myName" già esistente: il tuo cognome.<br>
-          Dimostra l'impossibilità di riassegnare un valore ad una variabile dichiarata con il costrutto const.<br>
-          <code id="myNameCognome"></code><br>
-          <code id="risultatoConst">Risultato: Uncaught TypeError: Assignment to constant variable at script.js:riga:carattere</code><br>
-          Ciò significa che la variabile, non essendo messa in un blocco, ha bloccato tutto lo script.
-        </li>
-        <li>
-          Esegui una sottrazione tra i numeri 4 e la variable "x" appena dichiarata (che contiene il numero 12).<br>
-          <code id="somma_x"></code><br>
-          Il risultato in console è: <code id="somma_x_risultato"></code>
-        </li>
-        <li>
-          Crea due variabili: "name1" e "name2". Assegna a name1 la stringa "john", e assegna a name2 la stringa "John" (con la J maiuscola!).<br>
-          Verifica che name1 sia diversa da name2 (suggerimento: è la stessa cosa di verificare che la loro uguaglianza sia falsa).<br>
-          <code id="john"></code><br>
-          Il risultato in console è: <code id="risultato_john"></code><br>
-          EXTRA: verifica che la loro uguaglianza diventi true se entrambe vengono trasformate in lowercase (senza cambiare il valore di name2!).<br>
-          Il risultato in console è: <code id="risultato_john2"></code><br>
-        </li>
-      </ol>
-    </main>
-    <script src="assets/js/script.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Esercizi JS</title>
+        <link rel="stylesheet" href="assets/css/normalize.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+    <body>
+        <header>
+            <img
+                src="http://epicode.com/wp-content/uploads/2022/05/footer-logo.svg"
+                alt="Immagine Epicode"
+            />
+            <h1>Esercizio JS</h1>
+        </header>
+        <main>
+            <ol>
+                <li>
+                    Elenca e descrivi i principali datatype in JavaScript. Prova
+                    a spiegarli come se volessi farli comprendere a un
+                    bambino.<br />
+                    <ul>
+                        <li><b>string</b>: <span id="string"></span></li>
+                        <li><b>number</b>: <span id="number"></span></li>
+                        <li><b>boolean</b>: <span id="boolean"></span></li>
+                        <li><b>null</b>: <span id="null"></span></li>
+                        <li><b>undefined</b>: <span id="undefined"></span></li>
+                    </ul>
+                </li>
+                <li>
+                    Crea una variable chiamata "myName" e assegna ad essa il tuo
+                    nome, sotto forma di stringa.<br />
+                    <code id="myName"></code>
+                </li>
+                <li>
+                    Scrivi il codice necessario ad effettuare un addizione (una
+                    somma) dei numeri 12 e 20.<br />
+                    <code id="somma"></code><br />
+                    Il risultato in console è:
+                    <code id="somma_risultato"></code>
+                </li>
+                <li>
+                    Crea una variable di nome "x" e assegna ad essa il numero
+                    12<br />
+                    <code id="variabile_x"></code>
+                </li>
+                <li>
+                    Riassegna un nuovo valore alla variabile "myName" già
+                    esistente: il tuo cognome.<br />
+                    Dimostra l'impossibilità di riassegnare un valore ad una
+                    variabile dichiarata con il costrutto const.<br />
+                    <code id="myNameCognome"></code><br />
+                    <code id="risultatoConst"
+                        >Risultato: Uncaught TypeError: Assignment to constant
+                        variable at script.js:riga:carattere</code
+                    ><br />
+                    Ciò significa che la variabile, non essendo messa in un
+                    blocco, ha bloccato tutto lo script.
+                </li>
+                <li>
+                    Esegui una sottrazione tra i numeri 4 e la variable "x"
+                    appena dichiarata (che contiene il numero 12).<br />
+                    <code id="somma_x"></code><br />
+                    Il risultato in console è:
+                    <code id="somma_x_risultato"></code>
+                </li>
+                <li>
+                    Crea due variabili: "name1" e "name2". Assegna a name1 la
+                    stringa "john", e assegna a name2 la stringa "John" (con la
+                    J maiuscola!).<br />
+                    Verifica che name1 sia diversa da name2 (suggerimento: è la
+                    stessa cosa di verificare che la loro uguaglianza sia
+                    falsa).<br />
+                    <code id="john"></code><br />
+                    Il risultato in console è: <code id="risultato_john"></code
+                    ><br />
+                    EXTRA: verifica che la loro uguaglianza diventi true se
+                    entrambe vengono trasformate in lowercase (senza cambiare il
+                    valore di name2!).<br />
+                    Il risultato in console è: <code id="risultato_john2"></code
+                    ><br />
+                </li>
+            </ol>
+        </main>
+        <footer>&copy; 2024 - Fabio Brogi - Epicode</footer>
+        <script src="assets/js/script.js"></script>
+    </body>
 </html>
