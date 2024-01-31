@@ -14,8 +14,10 @@ let numero2 = 10;
 
 if (numero1 > numero2) {
     console.log(numero1 + " è il più grande tra " + numero1 + " e " + numero2);
-} else {
+} else if (numero1 < numero2) {
     console.log(numero2 + " è il più grande tra " + numero1 + " e " + numero2);
+} else {
+    console.log(numero2 + " e " + numero1 + " sono uguali");
 }
 
 /* ESERCIZIO 2
@@ -69,7 +71,7 @@ console.log("");
 /* SCRIVI QUI LA TUA RISPOSTA */
 let num1 = 9;
 let num2 = 8;
-if (num1 == 8 || num2 == 8 || num1 + num2 == 8 || num1 - num2 == 8) {
+if (num1 == 8 || num2 == 8 || num1 + num2 == 8 || num1 - num2 == 8 || num2 - num1 == 8) {
     console.log(
         "Dati i numeri " +
             num1 +
