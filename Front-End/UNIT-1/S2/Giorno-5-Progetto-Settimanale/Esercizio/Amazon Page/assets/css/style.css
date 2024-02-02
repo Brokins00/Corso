@@ -1,0 +1,63 @@
+/* Your styles here */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #E9EDEE;
+}
+
+header {
+    background: #222F3F;
+}
+
+header img {
+    width: 7%;
+    margin: 5px 30px;
+}
+
+header nav {
+    background: #364757;
+}
+
+header nav ul {
+    display: inline-block;
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 2px 0 2px 30px;
+}
+
+header nav ul li {
+    display: inline;
+    padding: 0 10px 0 0;
+    font-size: 0.70em;
+}
+
+main {
+    width: 86%;
+    margin: 0 auto;
+}
+
+#giftcard {
+    margin: 2.3vh 0;
+    background-color: #F76500;
+    text-align: center;
+}
+
+#giftcard p {
+    padding: 4px;
+    font-size: 0.7em;
+}
+
+#guida {
+    text-align: center;
+    background-image: url('../images/bg-image.png');
+}
+
+#guida h1 {
+    padding-top: 10vh;
+}
+#guida h2 {
+    padding-bottom: 5vh;
+}
