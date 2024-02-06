@@ -94,6 +94,37 @@ let lunghezzaArray = animali.unshift("uccello") // inserisce al primo indice del
 console.log(`L'array ha ${lunghezzaArray} valori all'interno dopo la nuova aggiunta`)
 console.log(`Nuovo array: ${animali}`)
 
-let nuovoAnimali = animali.splice(2, 2); // elimina dall'indice indicato nel primo argomento per un totale di n posizioni (compreso l'iniziale), va a modificare l'array iniziale, se inserito in una variabile, la variabile sarà una nuova array contenente i valori eliminati. Tutto ciò che c'è dopo i primi 2 argomenti, sono valori da aggiungere
+let nuovoAnimali = animali.splice(2, 2); // elimina dall'indice indicato nel primo argomento (compreso) fino all'indice indicato nel secondo argomento (indica quanti indici deve prendere), va a modificare l'array iniziale, se inserito in una variabile, la variabile sarà una nuova array contenente i valori eliminati. Tutto ciò che c'è dopo i primi 2 argomenti, sono valori da aggiungere. Se contiene numeri negativi indica che parte dal fondo a contare
 console.log(`Il nuovo array contiene gli elementi eliminati: ${nuovoAnimali}`)
 console.log(`L'array iniziale diventerà: ${animali}`)
+
+const nuoviAnimali2 = animali.concat("zebra"); // aggiunge alla fine dell'array i vari elementi messi come argomenti e restituisce l'array nuova, non modifica l'array iniziale
+console.log(`Il nuovo array contiene: ${nuoviAnimali2}`)
+console.log(`L'array iniziale diventerà: ${animali}`)
+
+let nuoviAnimali3 = animali.slice(2, 4); // si usa nelle variabili e la variabile prende il valore di un'array contenente ciò che sta nell'array iniziale tra il primo indice e il secondo indice indicati (primo argomento => inizio indice (incluso), secondo argomento => fine indice (escluso)). NON MODIFICA L'ARRAY INIZIALE
+console.log(`Il nuovo array contiene: ${nuoviAnimali3}`)
+console.log(`L'array iniziale diventerà: ${animali}`)
+
+// forEach e map sono simili, non vanno a modificare l'array originario
+
+const array = [32, 7, 84, 12];
+array.forEach(function(element) { // uguale a ciclo for ma più lento del for, ma semplificato, element si scrive così per convenzione. Se devi leggere un array, conviene usare il ciclo for, il forEach si utilizza solo in casi dove dobbiamo scrivere un codice complesso
+    console.log(`L'array contiene: ${element}`)
+})
+
+/* 
+    Si può scrivere anche:
+    array.forEach(element => console.log(`L'array contiene: ${element}`));
+
+    Si può fare anche con (in questo caso più veloce):
+    for (let i=0; i < array.length; i++) {
+        console.log(`L'array contiene: ${array[i]}`)
+    }
+*/
+
+const array2 = [32, 7, 84, 12];
+const risultati = array2.map(function(element) { // uguale a forEach, solamente che, se messo in una variabile, restituisce un array con i vari risultati
+    return `L'array contiene: ${element}` // Questo return popola l'array creata dal metodo nella variabile risultati
+})
+console.log(risultati)
