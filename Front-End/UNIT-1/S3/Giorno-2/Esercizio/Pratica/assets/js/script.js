@@ -334,12 +334,37 @@ console.log(`La somma degli anni dei film è: ${sommaAnni()}`);
 console.log("--------------------");
 console.log("***ESERCIZIO 14***");
 
-const cercaFilm = (imdbID) => {
-    const find = movies.find((element) => element.imdbID === imdbID);
-    console.log(find);
-};
+// const cercaFilm = (imdbID) => {
+//     const find = movies.find((element) => element.imdbID === imdbID);
+//     console.log(find);
+// };
 
-cercaFilm("tt4154796");
+// cercaFilm("tt4154796");
+
+const select = document.getElementById("seleziona_film");
+
+movies.forEach((element) => {
+    const option = document.createElement("option");
+    option.setAttribute("value", element.imdbID);
+    option.innerText = element.Title;
+    select.appendChild(option);
+});
+
+const bottone = document.getElementById("scegli");
+bottone.addEventListener("click", (e) => {
+    e.preventDefault();
+    document.getElementById("locandina").innerHTML = "";
+    const filmScelto = movies.find(
+        (element) => element.imdbID === select.value
+    );
+    document.getElementById("titolo").innerText = filmScelto.Title;
+    document.getElementById("anno").innerText = filmScelto.Year;
+    const img = document.createElement("img");
+    img.style.width = "300px";
+    img.alt = filmScelto.Title;
+    img.src = filmScelto.Poster;
+    document.getElementById("locandina").appendChild(img);
+});
 
 /* ESERCIZIO 15 (findIndex)
     Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
