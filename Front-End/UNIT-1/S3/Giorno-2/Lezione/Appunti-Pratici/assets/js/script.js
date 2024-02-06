@@ -123,8 +123,23 @@ array.forEach(function(element) { // uguale a ciclo for ma più lento del for, m
     }
 */
 
-const array2 = [32, 7, 84, 12];
-const risultati = array2.map(function(element) { // uguale a forEach, solamente che, se messo in una variabile, restituisce un array con i vari risultati
+const risultati = array.map(function(element) { // uguale a forEach, solamente che, se messo in una variabile, restituisce un array con i vari risultati
     return `L'array contiene: ${element}` // Questo return popola l'array creata dal metodo nella variabile risultati
 })
 console.log(risultati)
+
+/* 
+    Si può scrivere anche:
+    const risultati = array.map(element => return `L'array contiene: ${element}`));
+*/
+
+const arrayFiltrato = array.filter(function(element) { // simile a map solamente ritorna l'elemento se soddisfa la condizione mezza nel return
+    return element > 30
+})
+
+console.log(`L'array filtrata contiene: ${arrayFiltrato}`)
+
+/* 
+    Si può scrivere anche:
+    const arrayFiltrato = array.filter(element => return element > 30));
+*/
