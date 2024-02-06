@@ -143,3 +143,24 @@ console.log(`L'array filtrata contiene: ${arrayFiltrato}`)
     Si può scrivere anche:
     const arrayFiltrato = array.filter(element => return element > 30));
 */
+
+const totaleLista = array.reduce((totale, valoreCorrente) => totale + valoreCorrente, 0) // restituisce un unico valore che è il risultato dell'operazione effettuata dopo la freccia, il primo parametro parte dal valore messo dopo la virgola
+console.log(`La somma dei numeri dell'array è: ${totaleLista}`)
+
+const totaleMoltiplicazione = array.reduce((totale, valoreCorrente) => totale * valoreCorrente, 1) // si mette 1 perché se no non funzionerebbe se iniziasse con 0
+console.log(`La moltiplicazione dei numeri dell'array è: ${totaleMoltiplicazione}`)
+
+const test1 = array.some((elemento) => elemento < 5) // controlla se almeno un elemento dell'array soddisfa la condizione, ritorna true o false
+console.log(`Almeno un elemento è minore di 5?: ${test1}`)
+
+const test2 = array.every((elemento) => elemento > 5) // controlla se tutti gli elementi dell'array soddisfa la condizione, ritora true o false
+console.log(`Tutti gli elementi sono maggiori di 5?: ${test2}`)
+
+const test3 = array.indexOf(84); // controlla a che indice dell'array si trova l'argomento inserito (in questo caso 84) e lo restituisce, se non lo trova ritorna -1
+console.log(`Il numero 84 si trova all'indice numero ${test3}`)
+
+const numero = array.find((elemento) => elemento > 10) // ritorna il valore del primo elemento che soddisfa la condizione, ritorna undefined se non trova nulla che soddisfi la condizione
+console.log(`Il primo valore che soddisfa la condizione è: ${numero}`);
+
+const numerotwo = array.findIndex((elemento) => elemento > 10) // ritorna l'indice del primo elemento che soddisfa la condizione, ritorna undefined se non trova nulla che soddisfi la condizione
+console.log(`Il primo indice che soddisfa la condizione è: ${numerotwo}`)
