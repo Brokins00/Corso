@@ -1,0 +1,122 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: "Roboto", sans-serif;
+    background-color: rgb(56, 56, 56);
+    color: white;
+    height: 100%;
+}
+
+body > footer {
+    position: sticky;
+    top: 100vh;
+}
+
+header,
+footer {
+    text-align: center;
+    background-color: black;
+    padding: 30px 0;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 7vw;
+    width: 60%;
+    color: white;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form {
+    background-color: lightblue;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+}
+
+.form input, .form button {
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 1.2em;    
+}
+
+.form input {
+    width: 76%;
+}
+
+.form button {
+    background-color: greenyellow;
+    position: absolute;
+    right: 10px;
+}
+
+.risultati {
+    width: 100%;
+}
+
+.risultato {
+    padding: 10px;
+    width: 100%;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    margin-bottom: 2px;
+    position: relative;
+}
+
+.risultato * {
+    vertical-align: middle;
+}
+
+.risultato i, .form button, .risultato button {
+    cursor: pointer;
+}
+
+.risultato p {
+    display: inline;
+}
+
+.risultato button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: red;
+    color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.popup, .overlay {
+    display: none;
+    position: fixed;
+}
+
+.popup {
+    color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
