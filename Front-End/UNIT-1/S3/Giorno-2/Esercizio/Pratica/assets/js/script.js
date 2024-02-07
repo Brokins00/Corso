@@ -8,8 +8,8 @@ console.log("***ESERCIZIO 1***");
 const concatenazione = (stringa1 = "", stringa2 = "") => {
     let parte1 = stringa1.split("");
     let parte2 = stringa2.split("");
-    parte1 = parte1.slice(0, 2).join("");
-    parte2 = parte2.slice(parte2.length - 3).join("");
+    parte1 = parte1.slice(0, 2).join("").toUpperCase();
+    parte2 = parte2.slice(parte2.length - 3).join("").toUpperCase();
     console.log(`${parte1}${parte2}`);
 };
 
