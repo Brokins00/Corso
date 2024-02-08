@@ -1,0 +1,59 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: "Outfit", sans-serif;
+    background-color: rgb(56, 56, 56);
+    color: white;
+    height: 100%;
+}
+
+body > footer {
+    position: sticky;
+    top: 100vh;
+}
+
+header,
+footer {
+    text-align: center;
+    background-color: black;
+    padding: 30px 0;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 7vw;
+    width: 65%;
+    color: white;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.cella {
+    width: 110px;
+    height: 110px;
+    position: relative;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 0px 5px 5px 0px;
+}
+
+.cella span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.uscito {
+    background-color: green;
+}
+
+.bottone {
+    text-align: center;
+}
