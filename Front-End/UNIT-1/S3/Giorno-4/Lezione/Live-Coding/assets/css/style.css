@@ -93,6 +93,10 @@ main {
 }
 
 .oggi {
-    color: 'red';
-    text-align: 'center';
+    color: red;
+    text-align: center;
+}
+
+.selected {
+    border: 1px solid red;
 }

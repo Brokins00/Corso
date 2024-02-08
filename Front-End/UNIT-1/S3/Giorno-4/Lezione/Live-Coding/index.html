@@ -6,11 +6,18 @@
         <title>LIVE-CODING: Tombola</title>
         <link rel="stylesheet" href="assets/css/normalize.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;700;900&display=swap"
-			rel="stylesheet" />
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
         <link rel="stylesheet" href="assets/css/style.css" />
     </head>
     <body>
@@ -23,53 +30,61 @@
             <h1>LIVE CODING - SETT 3 - GIORNO 3</h1>
         </header>
         <main>
-                <div class="container">
-                    <!-- nome del mese -->
-                    <h2 id="meseCorrente"></h2>
-                    <!-- calendario -->
-                    <div id="calendario"></div>
-                    <!-- Inserimento appuntamenti -->
-                    <h3>Aggiungi Evento</h3>
-                    <div id="aggiungiEvento">
-                        <form id="formEvento" method="post">
-                            <div class="giornoEvento">
-                                <h5>Giorno Evento</h5>
-                                <span id="nuovoGiornoEvento">Clicca su un giorno</span>
-                            </div>
-                            <div>
-                                <h5>Orario Evento</h5>
-                                <input
-                                    type="time"
-                                    id="nuovoOrarioEvento"
-                                    required
-                                />
-                            </div>
-                            <div>
-                                <h5>Nome Evento</h5>
-                                <input
-                                    type="text"
-                                    id="nuovoNomeEvento"
-                                    placeholder="Inserisci l'impegno"
-                                    required
-                                />
-                            </div>
-                            <div>
-                                <h5>Aggiungi</h5>
-                                <button type="submit">Salva Evento</button>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- eventi inseriti -->
-                    <section>
-                        <div id="eventi">
-                            <h2>Eventi del giorno:</h2>
-                            <!-- lista impegni -->
-                            <span id="nessun-risultato">Nessun Evento</span>
-                            <ul id="listaEventi"></ul>
+            <div class="popup" id="popup">
+                Per favore compila tutti i campi obbligatori.
+            </div>
+            <div class="overlay" id="overlay"></div>
+            <div class="container">
+                <!-- nome del mese -->
+                <h2 id="meseCorrente"></h2>
+                <!-- calendario -->
+                <div id="calendario"></div>
+                <!-- Inserimento appuntamenti -->
+                <h3>Aggiungi Evento</h3>
+                <div id="aggiungiEvento">
+                    <form id="formEvento" method="post">
+                        <div class="giornoEvento">
+                            <h5>Giorno Evento</h5>
+                            <span id="nuovoGiornoEvento"
+                                >Clicca su un giorno</span
+                            >
                         </div>
-                    </section>
+                        <div>
+                            <h5>Orario Evento</h5>
+                            <input
+                                type="time"
+                                id="nuovoOrarioEvento"
+                                required
+                            />
+                        </div>
+                        <div>
+                            <h5>Nome Evento</h5>
+                            <input
+                                type="text"
+                                id="nuovoNomeEvento"
+                                placeholder="Inserisci l'impegno"
+                                required
+                            />
+                        </div>
+                        <div>
+                            <h5>Aggiungi</h5>
+                            <button type="submit" id="salva">
+                                Salva Evento
+                            </button>
+                        </div>
+                    </form>
                 </div>
-            </main>
+                <!-- eventi inseriti -->
+                <section>
+                    <div id="eventi">
+                        <h2>Eventi del giorno:</h2>
+                        <!-- lista impegni -->
+                        <span id="nessun-risultato">Nessun Evento</span>
+                        <ul id="listaEventi"></ul>
+                    </div>
+                </section>
+            </div>
+        </main>
         <footer>&copy; 2024 - Fabio Brogi - Epicode</footer>
         <script src="assets/js/script.js"></script>
     </body>
