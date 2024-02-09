@@ -391,6 +391,13 @@ const movies = [
 console.log("--------------------");
 console.log("***ESERCIZIO 11***");
 
+const oggetto = {
+    test1: "test",
+    test2: 10,
+    test3: true,
+    test4: []
+}
+
 const deleteProp = (oggetto, stringa) => {
     if (oggetto[stringa]) {
         delete oggetto[stringa];
@@ -398,7 +405,7 @@ const deleteProp = (oggetto, stringa) => {
     return oggetto;
 };
 
-console.log(deleteProp(me, ""));
+console.log(deleteProp(oggetto, "test3"));
 
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
@@ -468,13 +475,13 @@ console.log("--------------------");
 console.log("***ESERCIZIO 15***");
 
 const onlyInLastMillennium = () => {
-    const questoMillennio = [];
+    const scorsoMillennio = [];
     for (let i = 0; i < movies.length; i++) {
-        if (parseInt(movies[i].Year) > 2000) {
-            questoMillennio.push(movies[i]);
+        if (parseInt(movies[i].Year) <= 2000) {
+            scorsoMillennio.push(movies[i]);
         }
     }
-    return questoMillennio;
+    return scorsoMillennio;
 };
 
 console.log(onlyInLastMillennium());
@@ -705,14 +712,9 @@ console.log("--------------------");
 console.log("***ESERCIZIO 28***");
 
 const tree = (num) => {
-    for (let i = 0; i < num; i++) {
-        const spazi = " ".repeat(num - (i + 1));
-        let asterischi = "";
-        if (i == 0) {
-            asterischi = "*".repeat(1 * (i + 1));
-        } else {
-            asterischi = "*".repeat(2 * i + 1);
-        }
+    for (let i = 1; i <= num; i++) {
+        const spazi = " ".repeat(num - i);
+        let asterischi = "*".repeat(2 * (i - 1) + 1);
         console.log(spazi + asterischi);
     }
 };
