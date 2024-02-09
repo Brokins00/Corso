@@ -1,0 +1,46 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: "Roboto", sans-serif;
+    background-color: rgb(56, 56, 56);
+    color: white;
+    height: 100%;
+    text-align: center;
+}
+
+body > footer {
+    position: sticky;
+    top: 100vh;
+}
+
+header,
+footer {
+    background-color: black;
+    padding: 30px 0;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 7vw;
+    width: 60%;
+    color: white;
+    margin: 0 auto;
+}
+
+.test {
+    background-color: blue;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+table, table td {
+    border: 1px solid black;
+}
