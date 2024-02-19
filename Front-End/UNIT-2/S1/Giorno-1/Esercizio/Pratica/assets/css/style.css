@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
@@ -11,7 +12,7 @@ body {
 }
 
 header {
-    background: linear-gradient(to bottom, #009DC2, #046D86);
+    background: linear-gradient(to bottom, #009dc2, #046d86);
     margin: 10px;
     box-shadow: 1px 1px 4px gray, -1px 1px 4px gray;
     color: white;
@@ -24,15 +25,20 @@ header {
     font-size: 3.3em;
     font-weight: 500;
 }
-#main p, #main li, main .novita p {
+#main p,
+#main li,
+main .novita p {
     font-size: 1.2em;
 }
 
 #main img {
     margin-top: 20px;
+    border: 4px solid blue;
+    outline: 4px solid red;
 }
 
-header img, header p {
+header img,
+header p {
     margin: 20px;
 }
 
@@ -40,7 +46,8 @@ header nav {
     padding-bottom: 10px;
 }
 
-header a:link, header a:visited {
+header a:link,
+header a:visited {
     text-decoration: none;
     color: white;
 }
@@ -74,18 +81,18 @@ main {
 }
 
 .artista {
-    color: #AEAEAE;
+    color: #aeaeae;
     margin: 0;
 }
 
 main strong {
-    color: #A32C76;
+    color: #a32c76;
 }
 
 main code {
-    background-color: #E3E3E3;
+    background-color: #e3e3e3;
     border-radius: 5px;
-    border: 1px solid #B0AFAF;
+    border: 1px solid #b0afaf;
 }
 
 main table {
@@ -101,24 +108,26 @@ main table caption {
 }
 
 main table thead tr {
-    background-color: #3F6BCA;
+    background-color: #3f6bca;
     color: white;
 }
 
-main table td, main table th {
+main table td,
+main table th {
     padding: 15px;
 }
 
 main table tbody tr:nth-child(even) {
-    background-color: #F3F3F3;
+    background-color: #f3f3f3;
 }
 
 main table tbody tr:last-child {
-    border-bottom: 2px solid #3F6BCA;
+    border-bottom: 2px solid #3f6bca;
 }
 
-main p a:link, main p a:visited {
-    color: #01A1C5;
+main p a:link,
+main p a:visited {
+    color: #01a1c5;
 }
 
 main .video {
@@ -127,7 +136,7 @@ main .video {
 }
 
 main .novita {
-    background-color: #E3E3E3;
+    background-color: #e3e3e3;
     padding: 20px;
     margin-top: 20px;
 }
@@ -142,7 +151,7 @@ main .novita h2 {
 main .novita button {
     border: 0;
     color: white;
-    background-color: #3F6BCA;
+    background-color: #3f6bca;
     padding: 4px 18px;
 }
 
@@ -162,14 +171,15 @@ main aside h2 {
 }
 
 main .articolo {
-    background-color: #E3E3E3;
-    border: 1px solid #CBCBCB;
+    background-color: #e3e3e3;
+    border: 1px solid #cbcbcb;
     padding: 10px;
     margin-bottom: 10px;
 }
 
-main .articolo .titolo a:link, main .articolo .titolo a:visited {
-    color: #00A0C6;
+main .articolo .titolo a:link,
+main .articolo .titolo a:visited {
+    color: #00a0c6;
     font-weight: 700;
 }
 
@@ -194,8 +204,9 @@ footer address {
     font-size: 1.4em;
 }
 
-footer a:link, footer a:visited {
-    color: #C90FD1;
+footer a:link,
+footer a:visited {
+    color: #c90fd1;
 }
 
 footer p {
@@ -206,7 +217,7 @@ footer p {
 
 @media screen and (min-width: 768px) {
     #main > h2 {
-        font-size: 4.0em;
+        font-size: 4em;
         font-weight: 800;
     }
     #main .bold {
@@ -215,7 +226,8 @@ footer p {
     main table {
         margin: 0 auto;
     }
-    main table td, main table th {
+    main table td,
+    main table th {
         padding: 15px 30px;
     }
     main {
@@ -225,12 +237,14 @@ footer p {
         padding: 4px 20px;
         height: 44px;
     }
-    
+
     main .novita input {
         width: 70%;
         height: 40px;
     }
-    .categoria, footer p, footer address {
+    .categoria,
+    footer p,
+    footer address {
         font-size: 1.2em;
     }
 }
@@ -243,17 +257,22 @@ footer p {
     header * {
         vertical-align: middle;
     }
-    main, header, footer {
+    main,
+    header,
+    footer {
         margin: 20px 120px;
     }
     #main > h2 {
         font-size: 2.7em;
     }
-    #main p, #main li, main .novita p {
+    #main p,
+    #main li,
+    main .novita p {
         line-height: 2;
         font-size: 0.95em;
     }
-    main table td, main table th {
+    main table td,
+    main table th {
         padding: 15px 60px;
     }
     main table {
@@ -262,7 +281,8 @@ footer p {
     main .video {
         height: 212px;
     }
-    main .video, main .novita {
+    main .video,
+    main .novita {
         vertical-align: middle;
         width: 47%;
     }
@@ -270,7 +290,8 @@ footer p {
         display: inline-block;
         margin-top: 0;
     }
-    header p, header nav {
+    header p,
+    header nav {
         display: inline-block;
         margin: 0;
         padding: 0;
@@ -299,11 +320,12 @@ footer p {
         font-size: 0.8em;
     }
     main .articolo .categoria {
-        font-size: 1.0em;
+        font-size: 1em;
         margin: 10px 0;
     }
-    footer p, footer address {
-        font-size: 1.0em;
+    footer p,
+    footer address {
+        font-size: 1em;
     }
     footer address {
         padding: 20px 150px;
