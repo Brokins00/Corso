@@ -332,3 +332,13 @@ footer p {
         line-height: 2.2;
     }
 }
+
+@media print {
+    header, footer, aside, .video, .novita {
+        display: none;
+    }
+    main {
+        box-shadow: none;
+        border: 0;
+    }
+}
