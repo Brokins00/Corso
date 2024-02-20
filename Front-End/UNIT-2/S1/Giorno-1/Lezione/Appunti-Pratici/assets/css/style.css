@@ -1,0 +1,150 @@
+/* PRIMA PARTE */
+
+/* Se parti da Mobile */
+/* h1 {
+    font-size: 2.5rem;
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    h1 {
+        font-size: 4rem;
+    }
+} */
+
+/* SECONDA PARTE */
+
+/* Se parto da Desktop */
+/* main, div {
+    height: 150px;
+    border: 2px solid black;
+}
+
+.sposta {
+    display: inline-block;
+    width: 45vw;
+}
+
+@media screen and (max-width: 768px) {
+    .sposta {
+        display: block;
+        width: 100%;
+    }
+} */
+
+/* TERZA PARTE */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, footer {
+    height: 150px;
+    border: 2px solid black;
+    background-color: rgb(50, 50, 50);
+    color: bisque;
+}
+
+header nav ul {
+    display: inline;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 auto;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a:link, header nav ul li a:visited  {
+    text-decoration: none;
+    color: bisque;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+    color: magenta;
+}
+
+.sposta {
+    border: 2px solid black;
+    margin: 20px;
+    text-align: center;
+}
+
+.sposta img {
+    max-width: 50%;
+}
+
+main {
+    margin: 0 auto;
+    width: 90%;
+}
+
+main p {
+    column-count: 2;
+    column-rule: solid 1px;
+    column-fill:balance;
+}
+
+.sposta img {
+    max-width: 50%;
+}
+
+main div {
+    display: inline-block;
+    width: 45%;
+    margin: 0 auto;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    main div {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    main div {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    footer {
+        position: relative;
+    }
+}
+
+@media print {
+    header, footer, main div:last-child {
+        display: none;
+    }
+
+    #principale {
+        border: 0;
+        width: 100%;
+    }
+
+    .sposta {
+        text-align: left;
+    }
+
+    main p {
+        column-count: 1;
+        column-width: 100%;
+        column-rule: none;
+    }
+}
