@@ -1,0 +1,137 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    line-height: 1.2;
+}
+
+#lavagna {
+    background-color: gray;
+    border: 3px solid black;
+    padding: 50px;
+    height: 100vh;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-evenly;
+    font-family: "Indie Flower", cursive;
+}
+
+.sticky {
+    width: 200px;
+    height: 170px;
+    box-shadow: 3px 3px 5px black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 1s;
+}
+
+.sticky h2 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.sticky p {
+    margin: 0;
+    font-size: 1.4em;
+}
+
+#lavagna > .sticky:hover {
+    transform: rotate(0deg) scale(1.2);
+    box-shadow: 5px 5px 10px black;
+    z-index: 1;
+}
+
+#uno {
+    transform: rotate(-4deg);
+}
+
+#due {
+    transform: rotate(2deg);
+}
+
+#tre {
+    transform: rotate(-8deg);
+}
+
+#quattro {
+    transform: rotate(8deg);
+}
+
+#cinque {
+    transform: rotate(-4deg);
+}
+
+#sei {
+    transform: rotate(-8deg);
+}
+
+#sette {
+    transform: rotate(-4deg);
+}
+
+#otto {
+    transform: rotate(4deg);
+}
+
+.uno {
+    background: linear-gradient(180deg, rgba(249,250,200,1) 0%, rgba(219,219,160,1) 85%, rgba(189,189,160,1) 100%);
+}
+
+.due {
+    background: linear-gradient(180deg, #CCFDCC 0%, #A6BFA6 85%, #9DB5A1 100%);
+}
+
+.tre {
+    background: linear-gradient(180deg, #C8C8F6 0%, #A1A1B7 85%, #8B8C9B 100%);
+}
+
+/* SECONDO ESERCIZIO */
+
+#testoAlternato {
+    font-family: "Bree Serif", serif;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#testoAlternato > div {
+    border: 2px solid black;
+    padding: 20px;
+    width: 50%;
+}
+
+.testoAlternato > span {
+    color: transparent;
+    position: absolute;
+    top: 0;
+    left: 195px;
+    animation: testi 6s infinite 0s;
+}
+
+.testoAlternato > span:nth-child(2) {
+    animation-delay: 2s;
+}
+.testoAlternato > span:nth-child(3) {
+    animation-delay: 4s;
+}
+
+@keyframes testi {
+    from {color: transparent; top: -20px;}
+    20% {color: darkcyan; top: 5px;}
+    50% {color: transparent; top: 20px;}
+}
+
+.testoAlternato {
+    display: flex;
+    flex-direction:  column;
+    justify-content: center;
+    height: 30px;
+    position: relative;
+}
