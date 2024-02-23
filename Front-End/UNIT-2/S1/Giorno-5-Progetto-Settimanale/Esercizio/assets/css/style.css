@@ -272,6 +272,9 @@ a:link, a:visited {
     #header_container, #hero_container, #trending_container, #content_page {
         width: 90%;
     }
+    #hero {
+        overflow: hidden;
+    }
     #hero_container p {
         width: 50%;
     }
@@ -337,5 +340,8 @@ a:link, a:visited {
     #hero_container p {
         width: 90%;
         font-size: 1.6rem;
+    }
+    #trending_container .card {
+        width: 100%;
     }
 }

@@ -33,5 +33,5 @@ window.addEventListener('load', function(e) {
         } else {
             elements[random].setAttribute('opacity', "1")
         }
-    }, 40)
+    }, 100)
 })
