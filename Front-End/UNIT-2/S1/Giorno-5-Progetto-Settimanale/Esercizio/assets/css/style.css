@@ -11,6 +11,9 @@ html, body {
 header {
     background-color: #ffc017;
     border-bottom: 1px solid black;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 #header_container {
@@ -127,26 +130,30 @@ header {
     padding: 5px;
 }
 
-#trending_container .author_card {
+#trending_container .author_card, #content_page .author_article {
     display: flex;
     align-items: center;
 }
 
-#trending_container .author_card img {
+#trending_container .author_card img, #content_page .author_article img {
     border-radius: 50%;
-    width: 20px;
+    width: 15px;
     margin-right: 10px;
 }
-#trending_container .borderRadius_inferiore img {
+#trending_container .borderRadius_inferiore img , #content_page .borderRadius_inferiore img {
     border-radius: 5px;
 }
 
-#trending_container .author_card span {
+#trending_container .author_card span, #content_page .author_article span {
     font-size: 0.6rem;
 }
 
-#trending_container .author_card > span {
+#trending_container .author_card > span, #content_page .author_article > span {
     font-weight: 800;
+}
+
+#trending_container .author_card span > span, #content_page .author_article span > span {
+    font-weight: normal;
 }
 
 #trending_container h4 {
@@ -154,7 +161,7 @@ header {
     font-size: 0.7rem;
 }
 
-#trending_container .date_card {
+#trending_container .date_card, #content_page .date_article {
     font-size: 0.8em;
     color: gray;
     display: flex;
@@ -166,4 +173,88 @@ header {
     width: 70%;
     margin: 0 auto;
     padding-top: 30px;
+    display: flex;
+}
+
+#end {
+    width: 40%;
+    position: sticky;
+    top:75px;
+    padding-left: 110px;
+    height: 100%;
+}
+
+#container_aside {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+aside h5 {
+    font-size: 0.5em;
+}
+
+#container_aside .bottone_aside {
+    padding: 10px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(128, 128, 128, 0.26);
+    margin: 0 0 10px 10px;
+}
+
+#fakefooter {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#fakefooter a {
+    font-size: 0.8rem;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+#content_page > section {
+    width: 60%;
+}
+
+#content_page h4 {
+    margin: 10px 0;
+}
+
+#content_page article {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#content_page .content_article {
+    width: 70%;
+}
+
+#content_page article > img {
+    width: 30%;
+    object-fit: contain;
+}
+
+#content_page p {
+    font-size: 0.7rem;
+    margin: 10px 20px 10px 0;
+    color: gray;
+}
+
+.date_article {
+    position: relative;
+}
+
+.date_article img:last-child {
+    position: absolute;
+    right: 20px;
+}
+
+.date_article span span {
+    background-color:rgb(221, 221, 221);
+    padding: 2px 5px;
+    border-radius: 10px;
 }
