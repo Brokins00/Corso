@@ -276,7 +276,7 @@ a:link, a:visited {
         width: 50%;
     }
     #trending_container .card {
-        width: 39%;
+        width: 47%;
     }
     #contenuto_trending {
         justify-content: space-between;
@@ -295,5 +295,47 @@ a:link, a:visited {
     }
     aside h5 {
         font-size: 0.8em;
+    }
+    #hero_destra {
+        margin-right: -200px;
+    }
+    #trending_container h4 {
+        font-size: 1.0em;
+    }
+    #trending_container .author_card img, #content_page .author_article img {
+        width: 23px;
+    }
+    #trending_container .author_card span, #content_page .author_article span {
+        font-size: 0.8rem;
+    }
+    #trending_container .borderRadius_inferiore img, #content_page .borderRadius_inferiore img{
+        border-radius: 50%;
+    }
+    .date_card img {
+        display: none;
+    }
+    .date_card > span {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    #content_page p {
+        font-size: 1.0rem;
+    }
+    #content_page h4 {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    #hero_destra {
+        display: none;
+    }
+    #header_container nav ul li:nth-child(1), #header_container nav ul li:nth-child(2), #header_container nav ul li:nth-child(3) {
+        display: none;
+    }
+    #hero_container p {
+        width: 90%;
+        font-size: 1.6rem;
     }
 }
