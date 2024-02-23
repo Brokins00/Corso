@@ -25,29 +25,6 @@ const arrayNumerica = (elemento, qtty, array) => {
 }
 
 window.addEventListener('load', function(e) {
-    // const svgElement = document.getElementById('svgM');
-    // const gElementsWithOpacityZero = svgElement.querySelectorAll('g > g[opacity="1"]');
-
-    // let array = arrayNumerica(gElementsWithOpacityZero, 50)
-    // let arrayInvisibile = []
-    // let arrayRiempita = true;
-
-    // setInterval(() => {
-    //     if (array.length > 0 && arrayRiempita) {
-    //         array[0].style.opacity = 0;
-    //         arrayInvisibile.push(array.shift());
-    //         if (array.length == 0) {
-    //             arrayRiempita = false;
-    //         }
-    //     } else {
-    //         arrayInvisibile[0].style.opacity = 1;
-    //         array.push(arrayInvisibile.shift());
-    //         if (array.length == 50) {
-    //             array = arrayNumerica(gElementsWithOpacityZero, 50)
-    //             arrayRiempita = true;
-    //         }
-    //     }
-    // }, 100)
     const elements = document.querySelectorAll('g[stroke-linecap=butt]')
     setInterval(() => {
         let random = Math.floor(Math.random() * elements.length)
