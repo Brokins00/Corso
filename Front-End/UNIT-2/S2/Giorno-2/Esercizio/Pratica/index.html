@@ -1,0 +1,634 @@
+<!-- Abbiamo bisogno di un sito web per un'agenzia di viaggi!
+
+In questa pagina aggiungerai destinazioni di posti che sogni di visitare in futuro.
+
+Il progetto non richiede alcuna customizzazione di CSS, dovrai crearlo interamente usando le classi di bootstrap, sia per quello che riguarda il layout che lo stile.
+
+
+Testa frequentemente il tuo lavoro nelle 3 principali risoluzioni (mobile, tablet, desktop) usando i developer tools del browser nella sezione emulazione device, per una maggiore precisione.
+
+Inizia utilizzando i componenti esistenti di Bootstrap 5 per creare la tua pagina (modificali all'occorrenza utilizzando le utility classes di bootstrap: colori, spazi, margini, dimensioni etc...)
+Usa container > row > col-* in questo ordine per ottenere un layout responsive perfetto.
+
+Esercizi:
+
+1) Implementa una navbar con questi elementi di menu:
+Home
+Saldi
+Welcome Summer
+Last Minute
+Recensioni
+
+Collegherai ogni sezione della pagina agli elementi del menu corrispondenti. 
+
+2) Aggiungi un logo alla navbar, un qualsiasi logo di agenzia di viaggi, anche inventata.
+
+3) Aggiungi una sezione introduttiva con il nome, il payoff dell'agenzia, 
+una breve descrizione in corsivo e una call-to-action (bottone) "Prenota ora" di colore azzurro chiaro e testo bianco e grassetto
+
+Il background della sezione sarà grigio chiaro e con bordi arrotondati e del padding generoso all'interno
+
+4) Implementa la sezione "Saldi". Qui mostrerai 4 destinazioni.
+
+In questa sezione dovranno esserci:
+
+4 card per destinazioni per linea a schermo grande - desktop (quattro sulla stessa linea)
+3 card per destinazioni per linea a schermo medio  - tablet  (una dovrà scomparire)
+2 card per destinazioni per linea a schermo piccolo - mobile (due per linea)
+
+le card avranno un bordo di 2px azzurro chiaro, il bottone azzurro chiaro e testo default
+
+5) Implementa la sezione "Welcome Summer". Qui mostrerai 6 destinazioni al tuo utente. (nessun bordo, ma stesso stile dei bottoni precedenti)
+
+In questa sezione dovranno esserci:
+
+6 card per destinazioni per linea a schermo extra large
+3 card per destinazioni per linea a schermo grande (desktop)
+2 card per destinazioni per linea a schermo medio (tablet)
+2 card per destinazioni per linea a schermo piccolo (mobile)
+
+6) Implementa la sezione "Offerta del giorno". Qui avrai:
+
+66% dello spazio dedicato all'immagine del luogo di destinazione
+33% dedicato al nome, date, prezzo e un badge con "best offer" come testo
+
+l'immagine avrà i bordi arrotondati e un'ombra leggera
+per il contenuto: il nome dovrà essere più grande del resto,
+le date dovranno essere formattate con font "monospace",
+il prezzo dovrà essere definito come "lead"
+e il badge sarà scuro
+
+
+7) Rendi invisibile la sezione "Offerta del giorno" su schermi piccoli.
+
+8) Aggiungi nella sezione "Welcome Summer" un'ombra grande ad ogni card.
+
+9) Crea una sezione "Last Minute", in cui mostrerai 6 immagini delle destinazioni last minute come rettangoli ombreggiati dai bordi arrotondati, senza testo. Rendile responsive come preferisci!
+
+10) Crea una sezione "Recensioni", dove l'utente potrà trovare alcuni feedback da utenti fittizi. 
+Piccola immagine tonda a sinistra con bordo 2px azzurro, nome utente e recensione a destra
+
+11) Crea un footer con le informazioni dell'agenzia e un bottone "Contattaci".
+
+
+
+EXTRAS
+
+12) Crea un bottone vicino ad ogni sezione per collassarla e riaprirla se premuto.
+
+13) Crea la possibilità di contare il numero di "viaggi" presenti sulla pagina e visualizzare il risultato in un alert.
+
+14) Crea un modale con un campo email e un messaggio.
+
+15) Quando l'utente cliccherà su "Contattaci", il modale dovrà essere visualizzato.
+
+16) Crea una funzione che aggiunga un badge con la scritta "HOT" su ognuna delle offerte "Welcome Summer" posizionato in alto a destra.
+
+17) Crea una funzione che rimuova tutte le "card" dalla pagina
+
+-->
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Eveline-R</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous" />
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-lg bg-body-tertiary">
+				<div class="container">
+					<a
+						class="navbar-brand"
+						href="#"
+						><img
+							src="https://seeklogo.com/images/E/Evelin_R_travel_agency-logo-F9A7A2958C-seeklogo.com.png"
+							width="90"
+					/></a>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent"
+						aria-expanded="false"
+						aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div
+						class="collapse navbar-collapse"
+						id="navbarSupportedContent">
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+							<li class="nav-item">
+								<a
+									class="nav-link active"
+									aria-current="page"
+									href="#"
+									>Home</a
+								>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link"
+									href="#"
+									>Saldi</a
+								>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link"
+									href="#"
+									>Welcome Summer</a
+								>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link"
+									href="#"
+									>Last Minute</a
+								>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link"
+									href="#"
+									>Recensioni</a
+								>
+							</li>
+						</ul>
+						<form
+							class="d-flex"
+							role="search">
+							<input
+								class="form-control me-2"
+								type="search"
+								placeholder="Cerca posti da sogno"
+								aria-label="Search" />
+							<button
+								class="btn btn-outline-success"
+								type="submit">
+								Cerca
+							</button>
+						</form>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<div
+			class="container p-5 text-secondary bg-light mt-5 rounded-3 shadow-sm text-center">
+			<div
+				class="container-fluid d-flex align-items-center justify-content-center">
+				<div class="display-1">Eveline-R-</div>
+				<p class="fs-6 p-0 m-0">Feel the Freedome</p>
+			</div>
+			<hr />
+			<p class="h4 fst-italic">
+				Scopri le destinazioni più calde del momento!
+			</p>
+			<div class="btn btn-info text-white px-4 mt-4">Prenota Ora</div>
+		</div>
+		<div class="container mt-4 p-0">
+			<div
+				class="container-fluid d-flex align-items-center justify-content-between">
+				<div class="h4">Saldi</div>
+				<div class="link-info fs-6">Nascondi sezione</div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-sm-6 col-md-4 col-lg-3 p-3">
+					<div class="card border-info border-2">
+						<img
+							src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+							class="card-img-top"
+							alt="Località" />
+						<div class="card-body">
+							<h5 class="card-title">Titolo</h5>
+							<p class="card-text">
+								Lorem ipsum dolor sit amet, consectetur
+								adipisicing elit. Natus fugit reiciendis
+								excepturi consequuntur culpa hic esse dolorum
+								at, porro laudantium eligendi accusantium
+								suscipit quod vitae assumenda dolore quidem fuga
+								eaque.
+							</p>
+							<a
+								href="#"
+								class="btn btn-primary"
+								>Prenota</a
+							>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-md-4 col-lg-3 p-3">
+					<div class="card border-info border-2">
+						<img
+							src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+							class="card-img-top"
+							alt="Località" />
+						<div class="card-body">
+							<h5 class="card-title">Titolo</h5>
+							<p class="card-text">
+								Lorem ipsum dolor sit amet, consectetur
+								adipisicing elit. Natus fugit reiciendis
+								excepturi consequuntur culpa hic esse dolorum
+								at, porro laudantium eligendi accusantium
+								suscipit quod vitae assumenda dolore quidem fuga
+								eaque.
+							</p>
+							<a
+								href="#"
+								class="btn btn-primary"
+								>Prenota</a
+							>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-md-4 col-lg-3 p-3">
+					<div class="card border-info border-2">
+						<img
+							src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+							class="card-img-top"
+							alt="Località" />
+						<div class="card-body">
+							<h5 class="card-title">Titolo</h5>
+							<p class="card-text">
+								Lorem ipsum dolor sit amet, consectetur
+								adipisicing elit. Natus fugit reiciendis
+								excepturi consequuntur culpa hic esse dolorum
+								at, porro laudantium eligendi accusantium
+								suscipit quod vitae assumenda dolore quidem fuga
+								eaque.
+							</p>
+							<a
+								href="#"
+								class="btn btn-primary"
+								>Prenota</a
+							>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 d-md-none d-lg-flex col-lg-3 p-3">
+					<div class="card border-info border-2">
+						<img
+							src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+							class="card-img-top"
+							alt="Località" />
+						<div class="card-body">
+							<h5 class="card-title">Titolo</h5>
+							<p class="card-text">
+								Lorem ipsum dolor sit amet, consectetur
+								adipisicing elit. Natus fugit reiciendis
+								excepturi consequuntur culpa hic esse dolorum
+								at, porro laudantium eligendi accusantium
+								suscipit quod vitae assumenda dolore quidem fuga
+								eaque.
+							</p>
+							<a
+								href="#"
+								class="btn btn-primary"
+								>Prenota</a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container mt-4 p-0">
+			<div
+				class="container-fluid d-flex align-items-center justify-content-between">
+				<div class="h4">Welcome Summer</div>
+				<div class="link-info fs-6">Nascondi sezione</div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-sm-6 col-xl-4 mb-4">
+					<div class="card position-relative shadow-lg">
+						<img
+							src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+							class="card-img-top"
+							alt="Località" />
+						<span
+							class="position-absolute top-0 end-0 m-2 badge rounded bg-danger text-white"
+							>HOT</span
+						>
+						<div class="card-body">
+							<h5 class="card-title">Titolo</h5>
+							<p class="card-text">
+								Lorem ipsum dolor sit, amet consectetur
+								adipisicing elit. Error, reiciendis placeat?
+								Illum corrupti dolorum officiis beatae
+								praesentium dolore nemo, debitis accusantium
+								animi saepe nulla dolorem? Accusamus praesentium
+								iure minima laudantium.
+							</p>
+							<a
+								href="#"
+								class="btn btn-primary"
+								>Prenota</a
+							>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-xl-4 mb-4">
+					<div class="card position-relative shadow-lg">
+						<img
+							src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+							class="card-img-top"
+							alt="Località" />
+						<span
+							class="position-absolute top-0 end-0 m-2 badge rounded bg-danger text-white"
+							>HOT</span
+						>
+						<div class="card-body">
+							<h5 class="card-title">Titolo</h5>
+							<p class="card-text">
+								Lorem ipsum dolor sit, amet consectetur
+								adipisicing elit. Error, reiciendis placeat?
+								Illum corrupti dolorum officiis beatae
+								praesentium dolore nemo, debitis accusantium
+								animi saepe nulla dolorem? Accusamus praesentium
+								iure minima laudantium.
+							</p>
+							<a
+								href="#"
+								class="btn btn-primary"
+								>Prenota</a
+							>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-xl-4 mb-4">
+					<div class="card position-relative shadow-lg">
+						<img
+							src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+							class="card-img-top"
+							alt="Località" />
+						<span
+							class="position-absolute top-0 end-0 m-2 badge rounded bg-danger text-white"
+							>HOT</span
+						>
+						<div class="card-body">
+							<h5 class="card-title">Titolo</h5>
+							<p class="card-text">
+								Lorem ipsum dolor sit, amet consectetur
+								adipisicing elit. Error, reiciendis placeat?
+								Illum corrupti dolorum officiis beatae
+								praesentium dolore nemo, debitis accusantium
+								animi saepe nulla dolorem? Accusamus praesentium
+								iure minima laudantium.
+							</p>
+							<a
+								href="#"
+								class="btn btn-primary"
+								>Prenota</a
+							>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-xl-4 mb-4">
+					<div class="card position-relative shadow-lg">
+						<img
+							src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+							class="card-img-top"
+							alt="Località" />
+						<span
+							class="position-absolute top-0 end-0 m-2 badge rounded bg-danger text-white"
+							>HOT</span
+						>
+						<div class="card-body">
+							<h5 class="card-title">Titolo</h5>
+							<p class="card-text">
+								Lorem ipsum dolor sit, amet consectetur
+								adipisicing elit. Error, reiciendis placeat?
+								Illum corrupti dolorum officiis beatae
+								praesentium dolore nemo, debitis accusantium
+								animi saepe nulla dolorem? Accusamus praesentium
+								iure minima laudantium.
+							</p>
+							<a
+								href="#"
+								class="btn btn-primary"
+								>Prenota</a
+							>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-xl-4 mb-4">
+					<div class="card position-relative shadow-lg">
+						<img
+							src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+							class="card-img-top"
+							alt="Località" />
+						<span
+							class="position-absolute top-0 end-0 m-2 badge rounded bg-danger text-white"
+							>HOT</span
+						>
+						<div class="card-body">
+							<h5 class="card-title">Titolo</h5>
+							<p class="card-text">
+								Lorem ipsum dolor sit, amet consectetur
+								adipisicing elit. Error, reiciendis placeat?
+								Illum corrupti dolorum officiis beatae
+								praesentium dolore nemo, debitis accusantium
+								animi saepe nulla dolorem? Accusamus praesentium
+								iure minima laudantium.
+							</p>
+							<a
+								href="#"
+								class="btn btn-primary"
+								>Prenota</a
+							>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-xl-4 mb-4">
+					<div class="card position-relative shadow-lg">
+						<img
+							src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+							class="card-img-top"
+							alt="Località" />
+						<span
+							class="position-absolute top-0 end-0 m-2 badge rounded bg-danger text-white"
+							>HOT</span
+						>
+						<div class="card-body">
+							<h5 class="card-title">Titolo</h5>
+							<p class="card-text">
+								Lorem ipsum dolor sit, amet consectetur
+								adipisicing elit. Error, reiciendis placeat?
+								Illum corrupti dolorum officiis beatae
+								praesentium dolore nemo, debitis accusantium
+								animi saepe nulla dolorem? Accusamus praesentium
+								iure minima laudantium.
+							</p>
+							<a
+								href="#"
+								class="btn btn-primary"
+								>Prenota</a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container mt-4 p-0 d-none d-sm-block">
+			<div class="h4">Offerte del giorno</div>
+			<div class="card border-0 mb-3 mt-3">
+				<div class="row g-0">
+					<div class="col-sm-6 col-lg-8">
+						<img
+							src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+							class="img-fluid rounded shadow-sm"
+							alt="Località" />
+					</div>
+					<div class="col-sm-5 col-lg-3">
+						<div class="card-body m-0 pt-0">
+							<p class="card-title display-6">
+								Fushifaru Maldives
+							</p>
+							<p class="card-text">
+								<small class="text-body-secondary"
+									>15.01.2021-31.01.2021</small
+								>
+							</p>
+							<p class="card-text">
+								Ville a partire da 500€, non fartele sfuggire!
+							</p>
+							<p class="card-text">
+								<span
+									class="badge rounded-pill bg-dark text-white"
+									>Best offer</span
+								>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container mt-4 p-0">
+			<div class="h4">Last Minute</div>
+			<div class="row">
+				<div class="col-6 col-md-4 col-lg-2 mb-4">
+					<img
+						src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+						class="img-fluid rounded shadow-sm"
+						alt="Località" />
+				</div>
+				<div class="col-6 col-md-4 col-lg-2 mb-4">
+					<img
+						src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+						class="img-fluid rounded shadow-sm"
+						alt="Località" />
+				</div>
+				<div class="col-6 col-md-4 col-lg-2 mb-4">
+					<img
+						src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+						class="img-fluid rounded shadow-sm"
+						alt="Località" />
+				</div>
+				<div class="col-6 col-md-4 col-lg-2 mb-4">
+					<img
+						src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+						class="img-fluid rounded shadow-sm"
+						alt="Località" />
+				</div>
+				<div class="col-6 col-md-4 col-lg-2 mb-4">
+					<img
+						src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+						class="img-fluid rounded shadow-sm"
+						alt="Località" />
+				</div>
+				<div class="col-6 col-md-4 col-lg-2 mb-4">
+					<img
+						src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+						class="img-fluid rounded shadow-sm"
+						alt="Località" />
+				</div>
+			</div>
+		</div>
+		<div class="container mt-4 p-0">
+			<div class="h4 text-center">Dicono di noi</div>
+			<div class="row">
+				<div class="col-12">
+					<div class="container-fluid row">
+						<div class="col-2 col-md-1">
+							<img
+								src="https://cdn.iconscout.com/icon/free/png-256/free-profile-1481935-1254808.png"
+								class="img-fluid rounded-5 border border-2 border-info"
+								alt="Profilo" />
+						</div>
+						<div class="col-10 col-md-11">
+							<div class="h6">Username</div>
+							<p>
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Vel nemo optio consequatur.
+								Tempora vel itaque cumque nesciunt cupiditate
+								rem unde explicabo, sunt culpa, eum accusamus
+								aut quidem possimus consectetur iure.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12">
+					<div class="container-fluid row">
+						<div class="col-2 col-md-1">
+							<img
+								src="https://cdn.iconscout.com/icon/free/png-256/free-profile-1481935-1254808.png"
+								class="img-fluid rounded-5 border border-2 border-info"
+								alt="Profilo" />
+						</div>
+						<div class="col-10 col-md-11">
+							<div class="h6">Username</div>
+							<p>
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Vel nemo optio consequatur.
+								Tempora vel itaque cumque nesciunt cupiditate
+								rem unde explicabo, sunt culpa, eum accusamus
+								aut quidem possimus consectetur iure.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12">
+					<div class="container-fluid row">
+						<div class="col-2 col-md-1">
+							<img
+								src="https://cdn.iconscout.com/icon/free/png-256/free-profile-1481935-1254808.png"
+								class="img-fluid rounded-5 border border-2 border-info"
+								alt="Profilo" />
+						</div>
+						<div class="col-10 col-md-11">
+							<div class="h6">Username</div>
+							<p>
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Vel nemo optio consequatur.
+								Tempora vel itaque cumque nesciunt cupiditate
+								rem unde explicabo, sunt culpa, eum accusamus
+								aut quidem possimus consectetur iure.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="container-fluid bg-dark pd-3 text-center mt-5">
+			<button
+				type="button"
+				class="btn btn-outline-secondary mt-5">
+				Contattaci
+			</button>
+			<div class="text-white mt-4">
+				&copy; 2021 Kalina Travel LTD. All Rights Reserved.
+			</div>
+		</footer>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+			crossorigin="anonymous"></script>
+	</body>
+</html>
