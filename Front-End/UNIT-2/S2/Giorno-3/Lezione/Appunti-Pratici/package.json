@@ -1,0 +1,11 @@
+{
+  "name": "appunti-pratici",
+  "version": "1.0.0",
+  "description": "SASS è un pre-processo per CSS, estende le possibilità di CSS facilitando e velocizzando lo sviluppo dei fogli di stile",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

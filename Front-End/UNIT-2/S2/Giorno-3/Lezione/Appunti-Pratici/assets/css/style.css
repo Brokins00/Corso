@@ -1,0 +1,35 @@
+header {
+  margin-bottom: 20px;
+}
+header h1 {
+  color: white;
+}
+header h1:hover {
+  color: red;
+  cursor: pointer;
+}
+
+h1 {
+  color: navy;
+  font-size: 2rem !important;
+}
+
+h2 {
+  color: #ccc;
+  font-size: 1.5rem !important;
+}
+
+p {
+  color: navy;
+  font-size: 2.5rem !important;
+}
+p span {
+  font-weight: bold;
+  color: red;
+}
+
+.paragrafo2 {
+  color: #00f;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../scss/partials/_header.scss","../scss/partials/_colori.scss","../scss/partials/_titoli.scss","../scss/mixins/_mixins.scss","../scss/style.scss"],"names":[],"mappings":"AAAA;EACI;;AACA;EACI,OCEQ;;ADDR;EACI,OCCG;EDAH;;;AEJZ;ECCI,OFHc;ECId;;;AAGJ;EACI;EACA;;;AEJJ;EDFI,OFHc;EGOd;;AACA;EACI;EACA,OHJO;;;AGQf;EACI","file":"style.css"}
