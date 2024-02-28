@@ -1,0 +1,40 @@
+@import 'colors';
+
+.jumbotron {
+    background-color: $bg_hero;
+    .container {
+        width: 80%;
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+        .contenuto {
+            width: 60%;
+            h1 {
+                font-size: 4rem;
+                font-weight: 800;
+                width: 50%;
+                color: $testo_h1;
+                margin-bottom: 0;
+            }
+            p {
+                color: $testo;
+                font-size: 1.2rem;
+            }
+            .bottoni {
+                margin-top: 20px;
+                display: flex;
+            }
+        }
+        .img {
+            position: relative;
+            bottom: -50px;
+            width: 30%;
+            img {
+                width: 100%;
+                border-radius: 10px;
+                border: 1px solid pink;
+                box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+}
