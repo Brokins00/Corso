@@ -17,6 +17,10 @@ a:link, a:visited {
   padding: 15px;
   margin-right: 10px;
   font-size: 0.7rem;
+  transition-duration: 0.5s;
+}
+.bottone:hover {
+  transform: scale(0.9);
 }
 
 .blu {
@@ -71,25 +75,96 @@ header .container nav ul li a:hover {
   width: 50%;
   color: #28064F;
   margin-bottom: 0;
+  animation-name: muzzu2;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
 }
 .jumbotron .container .contenuto p {
   color: #f4f4f4;
   font-size: 1.2rem;
+  animation-name: muzzu3;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
 }
 .jumbotron .container .contenuto .bottoni {
   margin-top: 20px;
   display: flex;
+  animation-name: muzzu4;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
 }
 .jumbotron .container .img {
   position: relative;
   bottom: -50px;
   width: 30%;
+  animation-name: muzzu;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
 }
 .jumbotron .container .img img {
   width: 100%;
   border-radius: 10px;
   border: 1px solid pink;
   box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes muzzu {
+  from {
+    top: 50vh;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes muzzu2 {
+  from {
+    position: relative;
+    top: -10vh;
+    opacity: 0;
+  }
+  to {
+    top: 80px;
+    opacity: 1;
+  }
+}
+@keyframes muzzu3 {
+  from {
+    position: relative;
+    top: -10vh;
+    opacity: 0;
+  }
+  to {
+    top: 80px;
+    opacity: 1;
+  }
+}
+@keyframes muzzu4 {
+  from {
+    position: relative;
+    left: -10vh;
+    opacity: 0;
+  }
+  to {
+    left: 80px;
+    opacity: 1;
+  }
+}
+main {
+  margin: 100px 0;
+}
+main .container {
+  display: flex;
+  justify-content: space-evenly;
+}
+main .container .card {
+  width: 23%;
+}
+main .container .card img {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid black;
 }
 
 /*# sourceMappingURL=style.css.map */

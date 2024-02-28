@@ -15,20 +15,32 @@
                 width: 50%;
                 color: $testo_h1;
                 margin-bottom: 0;
+                animation-name: muzzu2;
+                animation-duration: 2s;
+                animation-timing-function: ease-in;
             }
             p {
                 color: $testo;
                 font-size: 1.2rem;
+                animation-name: muzzu3;
+                animation-duration: 2s;
+                animation-timing-function: ease-in;
             }
             .bottoni {
                 margin-top: 20px;
                 display: flex;
+                animation-name: muzzu4;
+                animation-duration: 2s;
+                animation-timing-function: ease-in;
             }
         }
         .img {
             position: relative;
             bottom: -50px;
             width: 30%;
+            animation-name: muzzu;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
             img {
                 width: 100%;
                 border-radius: 10px;
@@ -36,5 +48,53 @@
                 box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.3);
             }
         }
+    }
+}
+
+@keyframes muzzu {
+    from {
+        top: 50vh;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes muzzu2 {
+    from {
+        position: relative;
+        top: -10vh;
+        opacity: 0;
+    }
+    to {
+        top: 80px;
+        opacity: 1;
+    }
+}
+
+@keyframes muzzu3 {
+    from {
+        position: relative;
+        top: -10vh;
+        opacity: 0;
+    }
+
+    to {
+        top: 80px;
+        opacity: 1;
+    }
+}
+@keyframes muzzu4 {
+    from {
+        position: relative;
+        left: -10vh;
+        opacity: 0;
+    }
+
+    to {
+        left: 80px;
+        opacity: 1;
     }
 }

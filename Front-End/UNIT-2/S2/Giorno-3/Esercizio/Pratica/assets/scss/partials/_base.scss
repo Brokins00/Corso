@@ -19,6 +19,10 @@ a:link, a:visited {
     padding: 15px;
     margin-right: 10px;
     font-size: 0.7rem;
+    transition-duration: 0.5s;
+    &:hover {
+        transform: scale(0.9);
+    }
 }
 
 .blu {
