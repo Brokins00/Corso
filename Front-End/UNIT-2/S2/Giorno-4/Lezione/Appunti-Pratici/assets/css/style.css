@@ -1,0 +1,11 @@
+.gradiente {
+    background: linear-gradient(156deg, rgba(0,255,51,1) 0%, rgba(255,255,255,1) 50%, rgba(255,0,0,1) 100%);
+}
+
+#regione_img img {
+    width: 150px;
+}
+
+#provincia_img img {
+    width: 150px;
+}
