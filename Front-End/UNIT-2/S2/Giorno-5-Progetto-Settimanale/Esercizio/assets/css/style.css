@@ -1,0 +1,20 @@
+html, body {
+    background-color: black;
+}
+
+.myCarouselIcon {
+    filter: none!important;
+    padding: 0 50px;
+}
+
+.card-img-film {
+    filter: grayscale();
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
+
+.card-img-film:hover {
+    filter: none;
+    transform: scale(1.1);
+    cursor: pointer;
+}
