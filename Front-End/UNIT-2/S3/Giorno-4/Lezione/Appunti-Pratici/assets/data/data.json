@@ -1,0 +1,19 @@
+{
+  "elenco": [
+    {
+      "id": "1",
+      "nome": "Antonio",
+      "cognome": "Copetti"
+    },
+    {
+      "id": "2",
+      "nome": "Fabio",
+      "cognome": "Brogi"
+    },
+    {
+      "id": "e593",
+      "nome": "Test",
+      "cognome": "Test"
+    }
+  ]
+}
