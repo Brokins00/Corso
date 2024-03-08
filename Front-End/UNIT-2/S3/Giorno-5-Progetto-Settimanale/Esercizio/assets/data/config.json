@@ -1,0 +1,4 @@
+{
+    "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVhZTJmOTJkN2IxMTAwMTkwZTZlYTAiLCJpYXQiOjE3MDk4OTIzNDUsImV4cCI6MTcxMTEwMTk0NX0.dSMt8P4KmHPrH47gFySxDWLoo-ntp4oMQqFY8clpI2M",
+    "apiURL": "https://striveschool-api.herokuapp.com/api/product/"
+}
