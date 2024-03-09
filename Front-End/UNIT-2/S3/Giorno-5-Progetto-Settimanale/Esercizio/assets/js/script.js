@@ -4,24 +4,28 @@ let apiURL = ""
 const list = document.getElementById('list')
 const listError = document.getElementById('listError')
 const caricamento = document.getElementById('caricamento')
+const alertCustom = document.getElementById('alertCustom')
 
 let products = []
+let exampleProduct = {}
 
-const firstProduct = {
-    "name": "Alienware X17 R2",
-    "brand": "Dell",
-    "imageUrl": "https://i.dell.com/sites/csimages/Product_Imagery/all/fp-aw-laptops-hero-a-1920x1440-v2.png",
-    "price": 2700,
-    "description": "Display da 17,3 pollici; FHD (1920 x 1080) a 165Hz 3ms o 360Hz 1ms; 4K (3840x 2160) a 120Hz 4ms\nCPU: Intel i7-12700H o i9-12900HK\nGPU: fino a Nvidia GeForce RTX 3080 Ti\nMemoria: fino a 64 GB DDR5, 4800 MHz\nMemoria: 512GB-4TB M.2, PCIe NVMe a stato solido"
-}
-
-window.addEventListener('load', init)
+const appendAlert = (message, type) => {
+    const wrapper = document.createElement('div')
+    wrapper.innerHTML = [
+      `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+      `   <div>${message}</div>`,
+      '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+      '</div>'
+    ].join('')
+  
+    alertCustom.append(wrapper)
+  }
 
 const debug = async () => {
     try {
         let can = true;
         products.forEach((element) => {
-            if (element.name == firstProduct.name) {
+            if (element.name == exampleProduct.name) {
                 can = false
             }
         })
@@ -32,8 +36,13 @@ const debug = async () => {
                     "Authorization": authorization,
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify(firstProduct)
+                body: JSON.stringify(exampleProduct)
             })
+            if (request.ok) {
+                window.location.href = "index.html";
+            } else {
+                console.log('Errore: '+request.status)
+            }
         } else {
             console.log('Prodotto già esistente')
         }
@@ -68,46 +77,40 @@ const searchFetch = async () => {
                 "Authorization": authorization
             }
         })
-        const response = await request.json();
-        caricamento.classList.add('d-none')
-        if (response.length > 0) {
-            products = response;
-            generateProducts()
-        } else {
-            if (listError.classList.contains('d-none')) {
-                listError.classList.remove('d-none')
+        if (request.ok) {
+            const response = await request.json();
+            caricamento.classList.add('d-none')
+            if (response.length > 0) {
+                products = response;
+                generateProducts()
+            } else {
+                if (listError.classList.contains('d-none')) {
+                    listError.classList.remove('d-none')
+                }
+                listError.innerText = 'Nessun Prodotto trovato'
             }
-            listError.innerText = 'Nessun Prodotto trovato'
+        } else {
+            console.log('Errore: '+request.status)
+            appendAlert('Errore nella ricerca prodotti, contatta l\'amministratore del sito', 'danger')
         }
     } catch (error) {
         console.log(error)
+        appendAlert('Errore nella ricerca prodotti, contatta l\'amministratore del sito', 'danger')
     }
 }
 
-const alertCustom = document.getElementById('alertCustom')
-
-const appendAlert = (message, type) => {
-    const wrapper = document.createElement('div')
-    wrapper.innerHTML = [
-      `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-      `   <div>${message}</div>`,
-      '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-      '</div>'
-    ].join('')
-  
-    alertCustom.append(wrapper)
-  }
-
-function init() {
-    start()
-}
-
-async function start() {
+const getConfig = async () => {
     let config = await fetch('assets/data/config.json')
     config = await config.json();
     authorization = config.token;
     apiURL = config.apiURL;
-    await searchFetch()
+    exampleProduct = config.exampleProduct;
+}
+
+const start = async () => {
+    getConfig().then(() => {
+        searchFetch()
+    })
     let params = new URL(document.location).searchParams;
     let status = params.get('status')
     if (status) {
@@ -126,3 +129,9 @@ async function start() {
         }
     }
 }
+
+const init = () => {
+    start()
+}
+
+window.addEventListener('load', init)

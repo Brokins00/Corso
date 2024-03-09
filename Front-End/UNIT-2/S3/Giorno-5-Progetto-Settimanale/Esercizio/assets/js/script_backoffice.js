@@ -1,5 +1,5 @@
-let authorization = "";
-let apiURL = "";
+let authorization;
+let apiURL;
 let products = []
 
 const formAdd = document.querySelector('#addProduct form');

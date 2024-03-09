@@ -1,4 +1,11 @@
 {
     "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVhZTJmOTJkN2IxMTAwMTkwZTZlYTAiLCJpYXQiOjE3MDk4OTIzNDUsImV4cCI6MTcxMTEwMTk0NX0.dSMt8P4KmHPrH47gFySxDWLoo-ntp4oMQqFY8clpI2M",
-    "apiURL": "https://striveschool-api.herokuapp.com/api/product/"
+    "apiURL": "https://striveschool-api.herokuapp.com/api/product/",
+    "exampleProduct": {
+        "name": "Alienware X17 R2",
+        "brand": "Dell",
+        "imageUrl": "https://i.dell.com/sites/csimages/Product_Imagery/all/fp-aw-laptops-hero-a-1920x1440-v2.png",
+        "price": 2700,
+        "description": "Display da 17,3 pollici; FHD (1920 x 1080) a 165Hz 3ms o 360Hz 1ms; 4K (3840x 2160) a 120Hz 4ms\nCPU: Intel i7-12700H o i9-12900HK\nGPU: fino a Nvidia GeForce RTX 3080 Ti\nMemoria: fino a 64 GB DDR5, 4800 MHz\nMemoria: 512GB-4TB M.2, PCIe NVMe a stato solido"
+    }
 }
