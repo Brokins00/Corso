@@ -1,0 +1,11 @@
+<h2>Hello World: ngIf!</h2>
+
+<button type="button" (click)="onEditClick()">Make text editable!</button>
+
+<p *ngIf="canEdit; else noEdit">You can edit the following paragraph.</p>
+
+<ng-template #noEdit>
+    <p>The following paragraph is read only. Try clicking the button!</p>
+</ng-template>
+
+<p [contentEditable]="canEdit" id="modifica">{{message}}</p>
