@@ -9,6 +9,7 @@ import { Post } from 'src/app/models/post.interface';
 export class HomeComponent {
   posts!: Post[];
   bestPost!: Post;
+  isLoaded = false;
 
   constructor() {
     this.getPosts().then((data) => {
@@ -25,6 +26,7 @@ export class HomeComponent {
         }
       }
       this.posts = this.interested(4)
+      this.isLoaded = true
     })
   }
 
