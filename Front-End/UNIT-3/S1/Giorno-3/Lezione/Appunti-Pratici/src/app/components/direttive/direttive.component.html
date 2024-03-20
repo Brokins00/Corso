@@ -1,0 +1,14 @@
+<div class="container">
+    <h2>Lista</h2>
+    <div *ngIf="mostrare == 1">
+        <ul>
+            <li *ngFor="let item of items">{{item.nome}} {{item.cognome}} - Età: {{item.eta}}</li>
+        </ul>
+    </div>
+    <div *ngIf="mostrare == 2">
+        <ul>
+            <li *ngFor="let prod of products">{{prod.nomeProd}} - {{prod.categoria}} - {{prod.prezzo}}€</li>
+        </ul>
+    </div>
+    <button type="button" (click)="changeMostrare()">Cambia Lista</button>
+</div>
