@@ -1,0 +1,23 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-8">
+            <app-jumbotron [bestPost]="bestPost"></app-jumbotron>
+            <div class="container mt-3">
+                <div class="row">
+                    <div class="col-6">
+                        <app-card [post]="posts[0]"></app-card>
+                    </div>
+                    <div class="col-6">
+                        <app-card [post]="posts[posts.length - 1]"></app-card>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="container bg-secondary-subtle rounded-2 p-2">
+                <app-liked-posts [posts]="posts"></app-liked-posts>
+                <app-see-more></app-see-more>
+            </div>
+        </div>
+    </div>
+</div>

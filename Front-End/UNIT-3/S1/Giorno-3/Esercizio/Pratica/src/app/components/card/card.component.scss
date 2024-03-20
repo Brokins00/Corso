@@ -1,0 +1,13 @@
+.hcard {
+    height: 300px;
+}
+
+.hcard .card-body p {
+    height: 35%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    // white-space: wrap;
+}
