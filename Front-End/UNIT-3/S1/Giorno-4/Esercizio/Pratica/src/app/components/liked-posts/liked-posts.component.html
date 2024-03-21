@@ -1,0 +1,10 @@
+<div class="container">
+    <h3>Potrebbero piacerti:</h3>
+    <div class="row mt-2">
+        <div class="col-12 border border-1 border-secondary-subtle bg-white p-2 rounded-2" *ngFor="let post of posts">
+            <a [routerLink]="['/detailPost', post.id]" class="d-block"><i class="bi bi-link-45deg"></i> {{ post.title }}</a>
+            <span class="badge text-bg-primary me-2" *ngFor="let tag of post.tags">{{tag.toUpperCase()}}</span>
+            <p>{{ post.reactions }} <i class="bi bi-hand-thumbs-up-fill" style="color: orange;"></i></p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="card hcard">
+    <div class="card-header">
+        <h6>{{ post.tags.join(", ").toUpperCase() }}</h6>
+    </div>
+    <div class="card-body position-relative">
+        <h3 class="card-title">{{ post.title }}</h3>
+        <span class="text-secondary">Reactions: {{ post.reactions }}</span>
+        <p class="card-text">{{ post.body }}</p>
+        <a *ngIf="button;else linkCard" [routerLink]="['/detailPost', post.id]" class="btn btn-primary position-absolute bottom-0 start-0 px-2 mb-3 ms-3">Dettagli</a>
+        <ng-template #linkCard>
+            <a [routerLink]="['/detailPost', post.id]" class="position-absolute bottom-0 start-0 p-3">Leggi di più...</a>
+        </ng-template>
+    </div>
+</div>
