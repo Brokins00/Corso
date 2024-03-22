@@ -7,6 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BrandComponent } from './components/brand/brand.component';
+import { CarComponent } from './components/car/car.component';
 
 const routes: Route[] = [
   {
@@ -16,6 +17,10 @@ const routes: Route[] = [
   {
     path: ":id",
     component: BrandComponent
+  },
+  {
+    path: ":id/:name",
+    component: CarComponent
   }
 ]
 
@@ -25,7 +30,8 @@ const routes: Route[] = [
     NavbarComponent,
     HomeComponent,
     FooterComponent,
-    BrandComponent
+    BrandComponent,
+    CarComponent
   ],
   imports: [
     BrowserModule,

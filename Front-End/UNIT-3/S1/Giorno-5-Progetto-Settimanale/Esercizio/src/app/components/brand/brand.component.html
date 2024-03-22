@@ -12,7 +12,7 @@
     </div>
     <div class="row">
         <div class="col-3" *ngFor="let car of brandCars; let i = index">
-            <a [routerLink]="['/car', i]" class="text-decoration-none">
+            <a [routerLink]="['/', href, car.href]" class="text-decoration-none">
                 <div class="card border-0">
                     <img [src]="car.img" class="card-img-top" [alt]="car.name">
                     <div class="card-body">

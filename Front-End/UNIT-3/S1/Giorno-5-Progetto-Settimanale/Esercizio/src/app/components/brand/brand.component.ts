@@ -31,8 +31,11 @@ export class BrandComponent implements OnInit, OnDestroy {
       }
       this.brand = brand;
       this.brandCars = response.brandCars.filter((element) => {
-        return element.brand.toLowerCase().trim() == this.brand.name.toLowerCase().replace(/\s/g, '')
+        return element.brand.toLowerCase().replace(/\s/g, '') == this.brand.name.toLowerCase().replace(/\s/g, '')
       })
+      for (let car of this.brandCars) {
+        car.href = car.name.toLowerCase().replace(/\s/g, '')
+      }
       this.isLoaded = true
     })
   }
