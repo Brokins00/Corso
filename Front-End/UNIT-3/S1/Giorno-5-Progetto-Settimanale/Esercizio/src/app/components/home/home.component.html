@@ -1,0 +1,36 @@
+<div class="w-100 imgCustom"></div>
+<div class="container py-3">
+    <div class="row">
+        <div class="col-2 p-2 my-2 text-center hover-pointer" *ngFor="let brand of brands">
+            <a [routerLink]="['/', brand.href]" class="text-decoration-none">
+                <img [src]="brand.img" [alt]="brand.name" width="100" />
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container my-5">
+    <div class="row">
+        <div class="col-6">
+            <h3>Brandini: da più di 100 anni il tuo riferimento.</h3>
+            <p>
+                Con 16 sedi di vendita e assistenza per 16 brand che abbracciano tutte le moderne esigenze di mobilità, il Gruppo Brandini è il punto di riferimento in Toscana per chi desidera una vettura nuova o usata e per chi necessità di assistenza per la sua auto.
+L'azienda rappresenta i brand Fiat, Jeep, Lancia, Abarth, Alfa Romeo, Peugeot, Citroen, Opel e DS (Gruppo Stellantis), BMW e Mini (BMW Group), Hyundai, Nissan, MG Auto e DR garantendo così ampia scelta di vetture nuove e usate in pronta consegna, altissima qualità dei centri service e massima attenzione per le esigenze di ogni cliente.
+            </p>
+        </div>
+        <div class="col-6">
+            <h3>Nati in Toscana</h3>
+            <p>
+                Le nostre sedi di Firenze, Sesto Fiorentino, Pistoia, Grosseto, Scandicci, Borgo San Lorenzo e Lucca ospitano centinaia di vetture nuove, usate e Km0 in pronta consegna visibili in tempo reale sul sito brandini.it. Per ogni vettura potrai visionare decine di foto e verificare ogni singolo dettaglio relativo ad anno di immatricolazione, km, allestimento, alimentazione, accessori di serie e optional.
+Potrai inoltre selezionare e comparare fino a 3 vetture per rendere la scelta della tua nuova auto semplice e sicura.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h3>Vicini a te.</h3>
+            <p>Brandini.it ti offre la possibilità di prenotare online, con pochissimi clic, non solo un appuntamento in una delle nostre sedi per un preventivo gratuito, ma anche di bloccare la tua auto preferita con una piccola caparra direttamente dal tuo PC o dal tuo Smartphone.
+                Anche prenotare un servizio di assistenza o un tagliando in uno dei nostri service è semplicissimo: in pochi e veloci passi online ti confermeremo giorno e ora dell'intervento.
+                Gli operatori del nostro servizio clienti saranno inoltre a tua disposizione al numero 840.055.055 per ogni tua esigenza, per appuntamenti o informazioni sui nostri centri service e per prenotare direttamente un incontro con un consulente per un'auto nuova, usata o Km0.</p>
+        </div>
+    </div>
+</div>

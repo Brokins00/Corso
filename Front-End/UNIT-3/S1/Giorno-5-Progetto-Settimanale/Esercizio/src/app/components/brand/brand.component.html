@@ -1,0 +1,30 @@
+<div *ngIf="isLoaded">
+<div class="w-100 imgCustom" [style.backgroundImage]="'url('+brand.bgImg+')'"></div>
+<div class="container my-5">
+    <div class="row mb-5">
+        <div class="col-11">
+            <h1>{{brand.name}}</h1>
+            <p class="text-secondary-emphasis">Scegli tra le offerte la tua nuova auto</p>
+        </div>
+        <div class="col-1">
+            <img [src]="brand.img" [alt]="brand.name" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3" *ngFor="let car of brandCars; let i = index">
+            <a [routerLink]="['/car', i]" class="text-decoration-none">
+                <div class="card border-0">
+                    <img [src]="car.img" class="card-img-top" [alt]="car.name">
+                    <div class="card-body">
+                        <h5 class="card-title">{{car.name}}</h5>
+                        <p class="card-text">{{car.description}}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="text-info">Scopri di più</span><span class="btn btn-info py-2 rounded-circle text-white"><i class="bi bi-arrow-right-short"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+</div>

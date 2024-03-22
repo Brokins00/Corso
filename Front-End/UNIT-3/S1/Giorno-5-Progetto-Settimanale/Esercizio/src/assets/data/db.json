@@ -1,0 +1,575 @@
+{
+    "brands": [
+        {
+            "name": "BMW",
+            "img": "https://cdn.brandini.it/logo-prod/upload-62bb3b821bb7c9.72689851.svg",
+            "bgImg": "https://cdn.brandini.it/cover-prod/upload-62cbdc595b5383.55402754.jpg",
+            "href": "bmw"
+        },
+        {
+            "name": "MINI",
+            "img": "https://cdn.brandini.it/logo-prod/upload-62bb3b3d2f9a37.73738253.svg",
+            "bgImg": "https://cdn.brandini.it/cover-prod/upload-65a6a77ce5e6f4.42088928.jpg",
+            "href": "mini"
+        },
+        {
+            "name": "FIAT",
+            "img": "https://cdn.brandini.it/logo-prod/upload-62bb3b8c29b4c9.91632264.svg",
+            "bgImg": "https://cdn.brandini.it/cover-prod/upload-65ba4b9bcc1392.83385121.jpg",
+            "href": "fiat"
+        },
+        {
+            "name": "Jeep",
+            "img": "https://cdn.brandini.it/logo-prod/upload-62bb3b564285f5.44892339.svg",
+            "bgImg": "https://cdn.brandini.it/cover-prod/upload-62cbf7160158d2.15510267.jpg",
+            "href": "jeep"
+        },
+        {
+            "name": "Lancia",
+            "img": "https://cdn.brandini.it/logo-prod/upload-6538d07061a5d4.04059560.svg",
+            "bgImg": "https://cdn.brandini.it/cover-prod/upload-62c8551b670357.94027674.jpg",
+            "href": "lancia"
+        },
+        {
+            "name": "Alfa Romeo",
+            "img": "https://cdn.brandini.it/logo-prod/upload-62bb3bab78cb29.31704356.svg",
+            "bgImg": "https://cdn.brandini.it/cover-prod/upload-62c85660becd82.85945616.jpeg",
+            "href": "alfa-romeo"
+        },
+        {
+            "name": "Abarth",
+            "img": "https://cdn.brandini.it/logo-prod/upload-62bb3b13dc8e17.34397244.svg",
+            "bgImg": "https://cdn.brandini.it/cover-prod/upload-62cbd62d0f6b67.03881456.jpg",
+            "href": "abarth"
+        },
+        {
+            "name": "Citroen",
+            "img": "https://cdn.brandini.it/logo-prod/upload-63500be9d426b5.46287188.png",
+            "bgImg": "https://cdn.brandini.it/cover-prod/upload-62cbed2bc57046.51126388.jpg",
+            "href": "citroen"
+        },
+        {
+            "name": "Peugeot",
+            "img": "https://cdn.brandini.it/logo-prod/upload-62c80ea12770e6.15043114.svg",
+            "bgImg": "https://cdn.brandini.it/cover-prod/upload-62cc01902e8618.55072229.jpg",
+            "href": "peugeot"
+        },
+        {
+            "name": "Opel",
+            "img": "https://cdn.brandini.it/logo-prod/upload-6538d19bb78806.70218616.svg",
+            "bgImg": "https://cdn.brandini.it/cover-prod/upload-62cbfef6c212a8.17552086.jpg",
+            "href": "opeal"
+        },
+        {
+            "name": "Hyundai",
+            "img": "https://cdn.brandini.it/logo-prod/upload-62bb3b5f6e2200.38641031.svg",
+            "bgImg": "https://cdn.brandini.it/cover-prod/upload-62cbf318965a51.67009627.jpeg",
+            "href": "hyundai"
+        },
+        {
+            "name": "NISSAN",
+            "img": "https://cdn.brandini.it/logo-prod/upload-62bb3b34319908.38684983.svg",
+            "bgImg": "https://cdn.brandini.it/cover-prod/upload-62cbfb4666a0a3.10470432.jpg",
+            "href": "nissan"
+        }
+    ],
+    "brandCars": [
+        {
+            "name": "BMW iX2",
+            "description": "xDrive30",
+            "img": "https://cdn.brandini.it/offer-prod/upload-659d34563c02d4.53684979.jpg",
+            "brand": "bmw"
+        },
+        {
+            "name": "BMW i5",
+            "description": "eDrive40 Berlina",
+            "img": "https://cdn.brandini.it/offer-prod/upload-64c916d54cc2b9.39101079.png",
+            "brand": "bmw"
+        },
+        {
+            "name": "BMW iX1",
+            "description": "xDrive20",
+            "img": "https://cdn.brandini.it/offer-prod/upload-63d1493791e545.48438102.jpg",
+            "brand": "bmw"
+        },
+        {
+            "name": "BMW X1",
+            "description": "sDrive18i",
+            "img": "https://cdn.brandini.it/offer-prod/upload-643e8c05b63500.48566344.jpg",
+            "brand": "bmw"
+        },
+        {
+            "name": "BMW X1",
+            "description": "Plug-in Hybrid xDrive25e xLine",
+            "img": "https://cdn.brandini.it/offer-prod/upload-64c91aee919c97.97416611.png",
+            "brand": "bmw"
+        },
+        {
+            "name": "BMW Serie 1",
+            "description": "128ti Msport",
+            "img": "https://cdn.brandini.it/offer-prod/upload-65d9135fbf8ec6.54787471.png",
+            "brand": "bmw"
+        },
+        {
+            "name": "BMW Serie 1",
+            "description": "118i M Sport",
+            "img": "https://cdn.brandini.it/offer-prod/upload-633af24fda0843.34064660.jpg",
+            "brand": "bmw"
+        },
+        {
+            "name": "BMW Serie 2 Coupè",
+            "description": "220i M Sport",
+            "img": "https://cdn.brandini.it/offer-prod/upload-62cc1e672e48b1.53690078.jpg",
+            "brand": "bmw"
+        },
+        
+        {
+            "name": "MINI Nuova All-Electric Mini Cooper",
+            "description": "E Essential",
+            "img": "https://cdn.brandini.it/offer-prod/upload-65368427b71685.87598667.png",
+            "brand": "mini"
+        },
+        {
+            "name": "MINI Nuova Countryman",
+            "description": "E Essential",
+            "img": "https://cdn.brandini.it/offer-prod/upload-653684339e8bb3.94445614.png",
+            "brand": "mini"
+        },
+        {
+            "name": "MINI Cooper",
+            "description": "Essential",
+            "img": "https://cdn.brandini.it/offer-prod/upload-6548c035066747.88174769.jpg",
+            "brand": "mini"
+        },
+        {
+            "name": "MINI Cabrio",
+            "description": "Cooper Classic",
+            "img": "https://cdn.brandini.it/offer-prod/upload-62c434ab16e768.24931968.jpg",
+            "brand": "mini"
+        },
+        {
+            "name": "MINI Cooper 5 Porte",
+            "description": "Essential",
+            "img": "https://cdn.brandini.it/offer-prod/upload-62c43618e006e7.73199354.jpg",
+            "brand": "mini"
+        },
+
+        {
+            "name": "FIAT Panda",
+            "description": "1.0 Hybrid",
+            "img": "https://cdn.brandini.it/offer-prod/upload-632d755dea5275.15471450.jpg",
+            "brand": "fiat"
+        },
+        {
+            "name": "FIAT Panda Cross",
+            "description": "1.0 HYBRID 70 CV",
+            "img": "https://cdn.brandini.it/offer-prod/upload-632d709e017222.03012445.jpg",
+            "brand": "fiat"
+        },
+        {
+            "name": "FIAT 500e",
+            "description": "500 Action Berlina",
+            "img": "https://cdn.brandini.it/offer-prod/upload-62c2be6877cb17.85268338.png",
+            "brand": "fiat"
+        },
+        {
+            "name": "FIAT 500e",
+            "description": "Cabrio",
+            "img": "https://cdn.brandini.it/offer-prod/upload-63fc954f61eba9.26486885.jpg",
+            "brand": "fiat"
+        },
+        {
+            "name": "FIAT 500e",
+            "description": "Nuova 400 3+1",
+            "img": "https://cdn.brandini.it/offer-prod/upload-64380ca8c30d25.55979984.jpg",
+            "brand": "fiat"
+        },
+        {
+            "name": "FIAT 500",
+            "description": "1.0 Hybrid",
+            "img": "https://cdn.brandini.it/offer-prod/upload-62c2bbd18d9210.46016489.png",
+            "brand": "fiat"
+        },
+        {
+            "name": "FIAT 500 Cabrio",
+            "description": "1.0 Hybrid 70 CV",
+            "img": "https://cdn.brandini.it/offer-prod/upload-63fc927a79c0e5.95338689.jpg",
+            "brand": "fiat"
+        },
+        {
+            "name": "FIAT 500X",
+            "description": "1.5 130cv Hybrid",
+            "img": "https://cdn.brandini.it/offer-prod/upload-62cc49b9e84129.62832260.jpg",
+            "brand": "fiat"
+        },
+        
+        {
+            "name": "JEEP Renegade",
+            "description": "1.0 T3 120CV MT LONGITUDE",
+            "img": "https://cdn.brandini.it/offer-prod/upload-62cd3047b0e351.26645895.jpg",
+            "brand": "jeep"
+        },
+        {
+            "name": "JEEP Avenger",
+            "description": "Altitude 1.2 Turbo 100CV",
+            "img": "https://cdn.brandini.it/offer-prod/upload-6357e6c1b8c555.00470505.jpg",
+            "brand": "jeep"
+        },
+        {
+            "name": "JEEP Avenger",
+            "description": "e-Hybrid",
+            "img": "https://cdn.brandini.it/offer-prod/upload-656daa19736df2.08111099.webp",
+            "brand": "jeep"
+        },
+        {
+            "name": "JEEP Avenger",
+            "description": "Full Eletric",
+            "img": "https://cdn.brandini.it/offer-prod/upload-6481e9adcfd2f0.84523499.png",
+            "brand": "jeep"
+        },
+        {
+            "name": "JEEP Renegade",
+            "description": "4xe Limited",
+            "img": "https://cdn.brandini.it/offer-prod/upload-62cd30547aa887.91702530.jpg",
+            "brand": "jeep"
+        },
+        {
+            "name": "JEEP Renegade",
+            "description": "e-Hybrid",
+            "img": "https://cdn.brandini.it/offer-prod/upload-62cd31decb8f03.33586745.jpg",
+            "brand": "jeep"
+        },
+        {
+            "name": "JEEP Compass",
+            "description": "1.6 Mtj Longitude",
+            "img": "https://cdn.brandini.it/offer-prod/upload-62cd306767fd11.83536592.jpg",
+            "brand": "jeep"
+        },
+        {
+            "name": "JEEP Compass",
+            "description": "4xe PlugIn Hybrid Limited",
+            "img": "https://cdn.brandini.it/offer-prod/upload-62cd3078edb116.83981261.jpg",
+            "brand": "jeep"
+        },
+
+        {
+            "name": "LANCIA Nuova Ypsilon",
+            "description": "Edizione Limitata Cassina BEV",
+            "img": "https://cdn.brandini.it/offer-prod/upload-65e70576d91e01.64126329.jpg",
+            "brand": "lancia"
+        },
+        {
+            "name": "LANCIA Nuova Ypsilon",
+            "description": "Edizione Limitata Cassina Ibrida",
+            "img": "https://cdn.brandini.it/offer-prod/upload-65fb07b50c1512.92953290.webp",
+            "brand": "lancia"
+        },
+        {
+            "name": "LANCIA Ypsilon",
+            "description": "1.0 Hybrid 70 CV Platino",
+            "img": "https://cdn.brandini.it/offer-prod/upload-62cd3868c930e0.13653455.jpg",
+            "brand": "lancia"
+        },
+        {
+            "name": "LANCIA Ypsilon",
+            "description": "1.2 Ecochic GPL",
+            "img": "https://cdn.brandini.it/offer-prod/upload-641dbc0d52aa12.70289012.jpg",
+            "brand": "lancia"
+        },
+        
+        {
+            "name": "ALFA ROMEO Tonale",
+            "description": "Spirit 130CV Hybrid",
+            "img": "https://cdn.brandini.it/offer-prod/upload-62cd345e2dfd09.66443322.jpg",
+            "brand": "alfaromeo"
+        },
+        {
+            "name": "ALFA ROMEO Tonale",
+            "description": "Spirit 130CV Diesel",
+            "img": "https://cdn.brandini.it/offer-prod/upload-65e5a71d2be022.46568951.webp",
+            "brand": "alfaromeo"
+        },
+        {
+            "name": "ALFA ROMEO Giulia",
+            "description": "Giulia 2.2 Turbodiesel 210 CV AT8 AWD Q4 Veloce",
+            "img": "https://cdn.brandini.it/offer-prod/upload-640ee5b15f29b2.49385837.png",
+            "brand": "alfaromeo"
+        },
+        {
+            "name": "ALFA ROMEO Stelvio",
+            "description": "Stelvio 2.2 Turbodiesel 210 CV AT8 Q4 Veloce",
+            "img": "https://cdn.brandini.it/offer-prod/upload-640ee4a6bd86b2.70778707.png",
+            "brand": "alfaromeo"
+        },
+        {
+            "name": "ALFA ROMEO Tonale",
+            "description": "Plug-In Hybrid Q4 Edizione Speciale",
+            "img": "https://cdn.brandini.it/offer-prod/upload-63c95c15e7fd56.71630798.jpg",
+            "brand": "alfaromeo"
+        },
+
+        {
+            "name": "ABARTH 595",
+            "description": "165 CV",
+            "img": "https://cdn.brandini.it/offer-prod/upload-62cd36e361a816.29634468.jpg",
+            "brand": "abarth"
+        },
+        {
+            "name": "ABARTH 695",
+            "description": "180 CV",
+            "img": "https://cdn.brandini.it/offer-prod/upload-62cd382f855f62.10691982.jpg",
+            "brand": "abarth"
+        },
+        {
+            "name": "ABARTH 500e",
+            "description": "Scorpionissima Hatchback",
+            "img": "https://cdn.brandini.it/offer-prod/upload-6400ba6e869df8.40454870.jpg",
+            "brand": "abarth"
+        },
+
+        {
+            "name": "CITROEN e-C3",
+            "description": "YOU",
+            "img": "https://cdn.brandini.it/offer-prod/upload-6538c639b4d625.31276291.jpg",
+            "brand": "citroen"
+        },
+        {
+            "name": "CITROEN C3",
+            "description": "PureTech 83CV You!",
+            "img": "https://cdn.brandini.it/offer-prod/upload-65cdfc7b13fa84.40459152.webp",
+            "brand": "citroen"
+        },
+        {
+            "name": "CITROEN C3 Aircross",
+            "description": "Puretech 110 Rip Curl",
+            "img": "https://cdn.brandini.it/offer-prod/upload-62cc33fdbc0916.66141148.jpg",
+            "brand": "citroen"
+        },
+        {
+            "name": "CITROEN AMI",
+            "description": "MY AMI",
+            "img": "https://cdn.brandini.it/offer-prod/upload-62d27fae43dd25.00163298.jpg",
+            "brand": "citroen"
+        },
+        {
+            "name": "CITROEN C4",
+            "description": "PureTech 100cv S&S Live Pack",
+            "img": "https://cdn.brandini.it/offer-prod/upload-62cc340bab2bc4.26293044.jpg",
+            "brand": "citroen"
+        },
+        {
+            "name": "CITROEN e-C4",
+            "description": "136 CV Feel",
+            "img": "https://cdn.brandini.it/offer-prod/upload-62cc341f255ec4.69135357.jpg",
+            "brand": "citroen"
+        },
+        {
+            "name": "CITROEN e-C4X",
+            "description": "100kW 136cv S&s Feel",
+            "img": "https://cdn.brandini.it/offer-prod/upload-63d2aefd24f646.51798579.jpg",
+            "brand": "citroen"
+        },
+        {
+            "name": "CITROEN C4X",
+            "description": "PureTech 130cv S&S LIVE PACK",
+            "img": "https://cdn.brandini.it/offer-prod/upload-63d3b0341e42c2.20243228.jpg",
+            "brand": "citroen"
+        },
+
+        {
+            "name": "PEUGEOT 208",
+            "description": "Active Hybrid 100 e-DSC6",
+            "img": "https://cdn.brandini.it/offer-prod/upload-656dec33bb1157.66017316.webp",
+            "brand": "peugeot"
+        },
+        {
+            "name": "PUEGEOT 208",
+            "description": "Active Benzina Puretech 75 s&s",
+            "img": "https://cdn.brandini.it/offer-prod/upload-651e6fcad25b24.20792928.jpg",
+            "brand": "peugeot"
+        },
+        {
+            "name": "PEUGEOT e-208",
+            "description": "Active 156 CV (115kW) Elettrico Cambio Automatico",
+            "img": "https://cdn.brandini.it/offer-prod/upload-651e70239bef14.64828311.jpg",
+            "brand": "peugeot"
+        },
+        {
+            "name": "PEUGEOT Nuovo 2008",
+            "description": "Active Pure Tech 100 S&S",
+            "img": "https://cdn.brandini.it/offer-prod/upload-646f873cba7e55.43475332.jpg",
+            "brand": "peugeot"
+        },
+        {
+            "name": "PEUGEOT Nuovo e-2008",
+            "description": "MHEV Allure",
+            "img": "https://cdn.brandini.it/offer-prod/upload-65bb702e918a95.70737510.webp",
+            "brand": "peugeot"
+        },
+        {
+            "name": "PEUGEOT Nuovo e-2008",
+            "description": "First Edition 156CV 115kW Allure",
+            "img": "https://cdn.brandini.it/offer-prod/upload-646f87325d1419.42048060.jpg",
+            "brand": "peugeot"
+        },
+        {
+            "name": "PEUGEOT 308",
+            "description": "BL Puretech 130 S&S EAT8 Allure",
+            "img": "https://cdn.brandini.it/offer-prod/upload-62cc3d56d67864.88275434.jpg",
+            "brand": "peugeot"
+        },
+        {
+            "name": "PEUGEOT e-308",
+            "description": "BL Elettrico 156 CV (115KW) Allure",
+            "img": "https://cdn.brandini.it/offer-prod/upload-648197dbb37130.26799888.png",
+            "brand": "peugeot"
+        },
+
+        {
+            "name": "OPEL Nuova Corsa",
+            "description": "Edition 5 Porte 1.2 75CV MT5",
+            "img": "https://cdn.brandini.it/offer-prod/upload-652f9f30033426.53482059.jpg",
+            "brand": "opel"
+        },
+        {
+            "name": "OPEL Nuova Corsa Electric",
+            "description": "Edition 5 porte BEV",
+            "img": "https://cdn.brandini.it/offer-prod/upload-652f9fa49dc919.09856604.jpg",
+            "brand": "opel"
+        },
+        {
+            "name": "OPEL Astra",
+            "description": "1.2 Turbo 110 CV Edition",
+            "img": "https://cdn.brandini.it/offer-prod/upload-62d01dee5f1a11.64070946.jpg",
+            "brand": "opel"
+        },
+        {
+            "name": "OPEL Astra",
+            "description": "Plug-In Hybrid 180 Auto Elegance",
+            "img": "https://cdn.brandini.it/offer-prod/upload-62d01dfbace985.45938055.jpg",
+            "brand": "opel"
+        },
+        {
+            "name": "OPEL Crossland",
+            "description": "Edition 1.2 Benzina 110cv MT5",
+            "img": "https://cdn.brandini.it/offer-prod/upload-62d01e06da3865.59778928.jpg",
+            "brand": "opel"
+        },
+        {
+            "name": "OPEL Mokka",
+            "description": "Edition 1.2 T Benzina 100CV MT6",
+            "img": "https://cdn.brandini.it/offer-prod/upload-62d01e3009a8a0.82912398.jpg",
+            "brand": "opel"
+        },
+        {
+            "name": "OPEL Mokka-e",
+            "description": "Edition BEV",
+            "img": "https://cdn.brandini.it/offer-prod/upload-62d01e43195143.97563453.jpg",
+            "brand": "opel"
+        },
+        {
+            "name": "OPEL Grandland",
+            "description": "1.2 130 CV MT6",
+            "img": "https://cdn.brandini.it/offer-prod/upload-62d01e160d0599.72397234.jpg",
+            "brand": "opel"
+        },
+
+        {
+            "name": "HYUNDAI Nuova Kona",
+            "description": "1.0 TGDi 120cv X-Line",
+            "img": "https://cdn.brandini.it/offer-prod/upload-64818ec2bdcf44.54527582.png",
+            "brand": "hyundai"
+        },
+        {
+            "name": "HYUNDAI Nuova Kona Hybrid",
+            "description": "HEV XLine",
+            "img": "https://cdn.brandini.it/offer-prod/upload-648192d0deef92.14816603.png",
+            "brand": "hyundai"
+        },
+        {
+            "name": "HYUNDAI i10",
+            "description": "1.0 GPL Connectline",
+            "img": "https://cdn.brandini.it/offer-prod/upload-65c1f79334fee6.31186677.webp",
+            "brand": "hyundai"
+        },
+        {
+            "name": "HYUNDAI i10",
+            "description": "1.0 MPI Connectline",
+            "img": "https://cdn.brandini.it/offer-prod/upload-6450e7b5dab250.96736038.jpg",
+            "brand": "hyundai"
+        },
+        {
+            "name": "HYUNDAI Nuova i20",
+            "description": "1.2 84 CV ConnectLine",
+            "img": "https://cdn.brandini.it/offer-prod/upload-6576d5f3d8f447.05907906.png",
+            "brand": "hyundai"
+        },
+        {
+            "name": "HYUNDAI Nuova i20",
+            "description": "1.2 GPL 84CV",
+            "img": "https://cdn.brandini.it/offer-prod/upload-65c1f8470b97d1.13459317.webp",
+            "brand": "hyundai"
+        },
+        {
+            "name": "HYUNDAI i20 N",
+            "description": "N-Performance",
+            "img": "https://cdn.brandini.it/offer-prod/upload-63bbf7ddbf7f08.59708369.png",
+            "brand": "hyundai"
+        },
+        {
+            "name": "HYUNDAI i30 N",
+            "description": "N-Performance",
+            "img": "https://cdn.brandini.it/offer-prod/upload-643d44249a5132.65680349.jpg",
+            "brand": "hyundai"
+        },
+
+        {
+            "name": "NISSAN Juke",
+            "description": "N-CONNECTA FULL HYBRID",
+            "img": "https://cdn.brandini.it/offer-prod/upload-62cd3b2f4eae79.38008218.jpg",
+            "brand": "nissan"
+        },
+        {
+            "name": "NISSAN Qashqai E-Power",
+            "description": "N-CONNECTA 190 CV",
+            "img": "https://cdn.brandini.it/offer-prod/upload-634835a7c517c6.91496853.jpg",
+            "brand": "nissan"
+        },
+        {
+            "name": "NISSAN X-Trail",
+            "description": "N-CONNECTA e-POWER 2WD",
+            "img": "https://cdn.brandini.it/offer-prod/upload-63ff5ea2994819.84251131.jpg",
+            "brand": "nissan"
+        },
+        {
+            "name": "NISSAN Ariya",
+            "description": "ENGAGE 2WD 63 kWh",
+            "img": "https://cdn.brandini.it/offer-prod/upload-63930df12d0987.40009627.png",
+            "brand": "nissan"
+        },
+        {
+            "name": "NISSAN Qashqai",
+            "description": "Visia Mild Hybrid 140Cv MY2",
+            "img": "https://cdn.brandini.it/offer-prod/upload-63c95c5c8e2bb9.87911593.jpg",
+            "brand": "nissan"
+        },
+        {
+            "name": "NISSAN Leaf",
+            "description": "40 kWh 147 CV 2WD Acenta",
+            "img": "https://cdn.brandini.it/offer-prod/upload-62cd3b3b8c0842.27204923.jpg",
+            "brand": "nissan"
+        },
+        {
+            "name": "NISSAN Townstar EV",
+            "description": "Van 100% Elettrica",
+            "img": "https://cdn.brandini.it/offer-prod/upload-64673741d3ecd6.91810821.jpg",
+            "brand": "nissan"
+        },
+        {
+            "name": "NISSAN Townstar",
+            "description": "1.3 130 CV N-Connecta",
+            "img": "https://cdn.brandini.it/offer-prod/upload-62cd3b58538277.15533337.jpg",
+            "brand": "nissan"
+        }
+    ]
+}
