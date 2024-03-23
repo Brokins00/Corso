@@ -4,4 +4,5 @@ export interface BrandCars {
     img: string,
     brand: string,
     href?: string,
+    price?: number
 }

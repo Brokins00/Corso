@@ -17,7 +17,7 @@ export class BrandComponent implements OnInit, OnDestroy {
   brand!: Brand;
   href!: string;
   brandCars!: BrandCars[];
-  private sub!:Subscription;
+  private sub:Subscription = new Subscription();
 
   constructor(private route: ActivatedRoute, private router: Router, private fetchs: FetchsService, private parametri: ParametriService) {}
 
@@ -26,6 +26,10 @@ export class BrandComponent implements OnInit, OnDestroy {
       this.href = params["id"]
       this.parametri.name = params["name"]
       let fetch = this.fetchs.responseChange.subscribe((response) => {
+        if (response.brandCars.length == 0 || response.brands.length == 0) {
+          this.isLoaded = false;
+          return
+        }
         let brand = response.brands.find((brand) => brand.href == this.href);
         if (!brand) {
           this.router.navigate(['/'])

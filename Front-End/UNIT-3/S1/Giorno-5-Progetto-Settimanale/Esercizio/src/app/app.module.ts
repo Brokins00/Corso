@@ -21,6 +21,10 @@ const routes: Route[] = [
   {
     path: ":id/:name",
     component: CarComponent
+  },
+  {
+    path: "**",
+    redirectTo: ''
   }
 ]
 

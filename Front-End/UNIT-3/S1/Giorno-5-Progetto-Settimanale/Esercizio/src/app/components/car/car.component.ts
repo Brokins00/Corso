@@ -14,7 +14,7 @@ export class CarComponent implements OnInit, OnDestroy {
   isLoaded:boolean = false;
   href!: string;
   car!: BrandCars;
-  private sub!:Subscription;
+  private sub:Subscription = new Subscription();
 
   constructor(private route: ActivatedRoute, private parametri: ParametriService, private fetchs: FetchsService) {
     
@@ -31,7 +31,9 @@ export class CarComponent implements OnInit, OnDestroy {
             break
           }
         }
-        this.isLoaded = true;
+        if (this.car) {
+          this.isLoaded = true;
+        }
       })
       this.sub.add(sub2)
     })

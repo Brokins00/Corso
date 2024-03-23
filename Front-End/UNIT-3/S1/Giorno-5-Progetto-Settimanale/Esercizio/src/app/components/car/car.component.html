@@ -1,14 +1,124 @@
 <div class="container-fluid g-0" *ngIf="isLoaded">
-    <div class="row">
-        <div class="col-1">
-
-        </div>
+    <div class="row g-0">
+        <div class="col-1"></div>
         <div class="col-8">
             <img [src]="car.img" [alt]="car.name" class="imgMaxHeight" />
         </div>
         <div class="col-3 p-5 bg-secondary-subtle">
-            <h3>{{car.name}}</h3>
-            <p class="text-secondary-emphasis">{{car.description}}</p>
+            <h3>{{ car.name }}</h3>
+            <p class="text-secondary-emphasis">{{ car.description }}</p>
+            <div>
+                <p class="fw-semi-bold">Prenota il tuo appuntamento in sede</p>
+                <a
+                    class="d-block rounded-1 p-3 mb-4 border border-2 border-light bg-white text-decoration-none"
+                    aria-label="Vedi la sede"
+                    ><div
+                        class="position-relative rounded-top-1"
+                    >
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <figure
+                                    class="rounded bg-light"
+                                >
+                                    <img src="https://cdn.brandini.it/cover-prod/upload-62d6c27c61a5e8.92044853.jpg" width="100%" alt="Firenze" />
+                                </figure>
+                            </div>
+                            <div class="col-8" >
+                                <div
+                                    class="d-flex align-items-center mb-2"
+                                    
+                                >
+                                    <img
+                                        src="https://cdn.brandini.it/logo-prod/upload-62bb3b821bb7c9.72689851.svg"
+                                        class="img-fluid me-2"
+                                        
+                                        style="height: 20px"
+                                    /><img
+                                        src="https://cdn.brandini.it/logo-prod/upload-62bb3b3d2f9a37.73738253.svg"
+                                        class="img-fluid me-2"
+                                        
+                                        style="height: 20px"
+                                    />
+                                </div>
+                                <!--v-if-->
+                                <h2 class="fw-bold mb-2 h5">
+                                    Firenze Nord (Osmannoro)
+                                </h2>
+                                <span class="fs-sm text-muted"
+                                    >Via Alfred Nobel 8 - Osmannoro</span
+                                >
+                            </div>
+                        </div>
+                    </div></a
+                ><a
+                    class="d-block rounded-1 p-3 mb-4 border border-2 border-light bg-white text-decoration-none"
+                    aria-label="Vedi la sede"
+                    ><div
+                        class="position-relative rounded-top-1"
+                    >
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <figure
+                                    class="rounded bg-light"
+                                >
+                                    <img src="https://cdn.brandini.it/cover-prod/upload-62d6c82c0c32f9.33323116.jpg" width="100%" alt="Pistoia" />
+                                </figure>
+                            </div>
+                            <div class="col-8" >
+                                <div
+                                    class="d-flex align-items-center mb-2"
+                                    
+                                >
+                                    <img
+                                        src="https://cdn.brandini.it/logo-prod/upload-62bb3b821bb7c9.72689851.svg"
+                                        class="img-fluid me-2"
+                                        
+                                        style="height: 20px"
+                                    /><img
+                                        src="https://cdn.brandini.it/logo-prod/upload-62bb3b3d2f9a37.73738253.svg"
+                                        class="img-fluid me-2"
+                                        
+                                        style="height: 20px"
+                                    />
+                                </div>
+                                <!--v-if-->
+                                <h2 class="fw-bold mb-2 h5" >
+                                    Pistoia (Sant'Agostino)
+                                </h2>
+                                <span class="fs-sm text-muted" 
+                                    >Via E. Fermi 53 - Pistoia</span
+                                >
+                            </div>
+                        </div>
+                    </div></a
+                >
+            </div>
+        </div>
+    </div>
+    <div class="position-fixed bottom-0 w-75 d-flex justify-content-center">
+        <div
+            class="row w-50 bg-secondary-subtle rounded-top-2 d-flex justify-content-center align-items-center p-3"
+        >
+            <div class="col-5">
+                <div *ngIf="car.price && car.price < 1000;else fullPrice">
+                    <h3>€ {{car.price || 0}} <sub class="fs-6">/mese</sub></h3>
+                    <p class="text-secondary-emphasis">
+                        <small>TAN 4,99, TAEG 6,22</small>
+                    </p>
+                </div>
+                <ng-template #fullPrice>
+                    <h3>€ {{car.price || 0}}</h3>
+                </ng-template>
+            </div>
+            <div class="col-6">
+                <p class="text-secondary-emphasis p-0 m-0">
+                    Vuoi saperne di più?
+                </p>
+                <h6>Prenota appuntamento in sede</h6>
+            </div>
+            <div class="col-1">
+                <i class="bi bi-arrow-right-circle-fill"></i>
+            </div>
         </div>
     </div>
 </div>
