@@ -1,0 +1,8 @@
+<div class="container">
+    <h3>Vedi anche:</h3>
+    <div class="row mt-2">
+        <div class="col-12 border border-1 border-secondary-subtle bg-white p-2 rounded-2" *ngFor="let link of links">
+            <a [routerLink]="link.href">{{ link.text }}</a>
+        </div>
+    </div>
+</div>

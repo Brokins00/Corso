@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink="/">{{title}}</a>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li *ngFor="let link of links; let i = index" class="nav-item">
+                    <a *ngIf="i == 0;else otherLinks" [routerLinkActiveOptions]="{exact:true}" class="nav-link" [routerLink]="link.href" routerLinkActive="active" ariaCurrentWhenActive="page">{{link.text}}</a>
+                    <ng-template #otherLinks>
+                        <a class="nav-link" [routerLink]="link.href" routerLinkActive="active" ariaCurrentWhenActive="page">{{link.text}}</a>
+                    </ng-template>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
