@@ -1,0 +1,42 @@
+<div class="container mt-5" *ngIf="isLoaded">
+    <div class="row">
+        <div class="col-8">
+            <app-jumbotron [bestPost]="bestPost"></app-jumbotron>
+            <div class="container mt-3">
+                <div class="row">
+                    <div class="col-6">
+                        <app-card [post]="interested[0]"></app-card>
+                    </div>
+                    <div class="col-6">
+                        <app-card [post]="interested[interested.length - 1]"></app-card>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="container bg-secondary-subtle rounded-2 p-2">
+                <app-liked-posts [posts]="interested"></app-liked-posts>
+                <app-see-more></app-see-more>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-12 my-4" id="filter">
+            <span class="badge text-bg-primary me-2 cursor-pointer" (click)="displayEvent('all')">ALL</span>
+            <span class="badge text-bg-secondary me-2 cursor-pointer" *ngFor="let tag of tags" (click)="displayEvent(tag)">{{tag | uppercase}}</span>
+        </div>
+        <ng-container *ngFor="let post of posts; let i = index">
+            <div class="col-12" *ngIf="display == 'all' || post.tags.includes(display)">
+                <app-card [post]="post" [button]="true" id="card-{{post.id}}" [editmode]="editMode">
+                    <div class="card-body position-relative">
+                        <label class="form-label" for="title-{{post.id}}">Titolo</label>
+                        <h3 class="card-title"><input type="text" id="title-{{post.id}}" class="form-control" [value]="post.title" /></h3>
+                        <label class="form-label" for="body-{{post.id}}">Descrizione</label>
+                        <p class="card-text"><input type="text" id="body-{{post.id}}" class="form-control" [value]="post.body" /></p>
+                        <a (click)="savePost(post.id, i)" class="btn btn-primary position-absolute bottom-0 start-0 px-2 mb-3 ms-3">Salva</a>
+                    </div>
+                </app-card>
+            </div>
+        </ng-container>
+    </div>
+</div>

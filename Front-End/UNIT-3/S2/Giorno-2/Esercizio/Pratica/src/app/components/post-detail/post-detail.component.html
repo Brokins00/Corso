@@ -1,0 +1,16 @@
+<div class="container mt-3">
+    <div class="card p-3">
+        <div class="row" *ngIf="isLoaded">
+            <div class="col-6">
+                <h1>{{post.title}}</h1>
+                <div>
+                    <span class="badge text-bg-primary me-2" *ngFor="let tag of post.tags">{{tag.toUpperCase()}}</span>
+                </div>
+                <p>Reactions: {{post.reactions}}</p>
+            </div>
+            <div class="col-6 border-start">
+                <p>{{post.body}}</p>
+            </div>
+        </div>
+    </div>
+</div>
