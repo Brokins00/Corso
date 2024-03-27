@@ -22,8 +22,8 @@
     </div>
     <div class="row mt-5">
         <div class="col-12 my-4" id="filter">
-            <span class="badge text-bg-primary me-2 cursor-pointer" (click)="displayEvent('all')">ALL</span>
-            <span class="badge text-bg-secondary me-2 cursor-pointer" *ngFor="let tag of tags" (click)="displayEvent(tag)">{{tag | uppercase}}</span>
+            <span class="badge me-2 cursor-pointer" [ngClass]="display == 'all' ? 'text-bg-primary' : 'text-bg-secondary'" (click)="displayEvent('all')">ALL</span>
+            <span class="badge me-2 cursor-pointer" [ngClass]="display == tag ? 'text-bg-primary' : 'text-bg-secondary'" *ngFor="let tag of tags" (click)="displayEvent(tag)">{{tag | uppercase}}</span>
         </div>
         <ng-container *ngFor="let post of posts; let i = index">
             <div class="col-12" *ngIf="display == 'all' || post.tags.includes(display)">

@@ -54,16 +54,16 @@ export class HomeComponent implements OnInit {
 
   displayEvent(tag:string) {
     this.display = tag;
-    let spanTags = document.querySelectorAll('#filter span');
-    spanTags.forEach(element => {
-      if (element.classList.contains('text-bg-primary')) {
-        element.classList.remove('text-bg-primary')
-        element.classList.add('text-bg-secondary')
-      }
-      if (element.innerHTML == tag.toUpperCase()) {
-        element.classList.add('text-bg-primary')
-        element.classList.remove('text-bg-secondary')
-      }
-    })
+    // let spanTags = document.querySelectorAll('#filter span');
+    // spanTags.forEach(element => {
+    //   if (element.classList.contains('text-bg-primary')) {
+    //     element.classList.remove('text-bg-primary')
+    //     element.classList.add('text-bg-secondary')
+    //   }
+    //   if (element.innerHTML == tag.toUpperCase()) {
+    //     element.classList.add('text-bg-primary')
+    //     element.classList.remove('text-bg-secondary')
+    //   }
+    // })
   }
 }
