@@ -1,0 +1,17 @@
+<div class="card" style="width: 18rem">
+    <ngb-carousel class="card-img-top" >
+        <ng-container *ngFor="let image of product.images">
+            <ng-template ngbSlide>
+                <div class="picksum-img-wrapper">
+                    <img [src]="image" [alt]="product.title" class="img-fluid" />
+                </div>
+            </ng-template>
+        </ng-container>
+    </ngb-carousel>
+    <!-- <img src="..." class="card-img-top" alt="..."> -->
+    <div class="card-body">
+        <h5 class="card-title">{{ product.title }}</h5>
+        <p class="card-text">{{ product.description }}</p>
+        <a class="btn btn-success" (click)="addCart()">{{ product.price }} €</a>
+    </div>
+</div>
