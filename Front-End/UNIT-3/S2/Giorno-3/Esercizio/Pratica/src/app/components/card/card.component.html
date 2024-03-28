@@ -1,4 +1,4 @@
-<div class="card" style="width: 18rem">
+<div class="card">
     <ngb-carousel class="card-img-top" >
         <ng-container *ngFor="let image of product.images">
             <ng-template ngbSlide>
@@ -13,5 +13,7 @@
         <h5 class="card-title">{{ product.title }}</h5>
         <p class="card-text">{{ product.description }}</p>
         <a class="btn btn-success" (click)="addCart()">{{ product.price }} €</a>
+        <a class="btn btn-danger" *ngIf="!favorite" (click)="addFavorites()">{{"<3"}}</a>
+        <a class="btn btn-danger" *ngIf="favorite" (click)="removeFavorites()">{{"<~3"}}</a>
     </div>
 </div>

@@ -1,1 +1,7 @@
-<p>favorites works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-2" *ngFor="let product of favorites">
+            <app-card [product]="product" [favorite]="true"></app-card>
+        </div>
+    </div>
+</div>

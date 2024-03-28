@@ -7,7 +7,7 @@ import { Products } from '../interface/products.interface';
   providedIn: 'root'
 })
 export class FetchsService {
-  productsUrl='https://dummyjson.com/products/';
+  private productsUrl='https://dummyjson.com/products/';
   constructor(private http: HttpClient) {
   }
 
