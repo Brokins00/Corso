@@ -1,30 +1,123 @@
 <div class="container">
-    <form (ngSubmit)="onSubmit(); userForm.reset()" #userForm="ngForm">
+    <form (ngSubmit)="openVerticallyCentered(content)" #userForm="ngForm">
         <div class="mb-3 form-group">
             <label for="firstName" class="form-label">First Name</label>
-            <input type="text" class="form-control" id="firstName" [(ngModel)]="user.firstName" name="firstName" required #firstName="ngModel">
-            <div [hidden]="firstName.valid || firstName.pristine" class="alert alert-danger">First Name is required</div>
+            <input
+                type="text"
+                class="form-control"
+                id="firstName"
+                [(ngModel)]="user.firstName"
+                name="firstName"
+                required
+                #firstName="ngModel"
+            />
+            <div
+                [hidden]="firstName.valid || firstName.pristine"
+                class="alert alert-danger"
+            >
+                First Name is required
+            </div>
         </div>
         <div class="mb-3 form-group">
             <label for="lastName" class="form-label">Last Name</label>
-            <input type="text" class="form-control" id="lastName" [(ngModel)]="user.lastName" required name="lastName" #lastName="ngModel">
-            <div [hidden]="lastName.valid || lastName.pristine" class="alert alert-danger">Last Name is required</div>
+            <input
+                type="text"
+                class="form-control"
+                id="lastName"
+                [(ngModel)]="user.lastName"
+                required
+                name="lastName"
+                #lastName="ngModel"
+            />
+            <div
+                [hidden]="lastName.valid || lastName.pristine"
+                class="alert alert-danger"
+            >
+                Last Name is required
+            </div>
         </div>
         <div class="mb-3 form-group">
             <label for="title" class="form-label">Title</label>
-            <input type="text" class="form-control" id="title" [(ngModel)]="user.title" required name="title" #title="ngModel">
-            <div [hidden]="title.valid || title.pristine" class="alert alert-danger">Title is required</div>
+            <input
+                type="text"
+                class="form-control"
+                id="title"
+                [(ngModel)]="user.title"
+                required
+                name="title"
+                #title="ngModel"
+            />
+            <div
+                [hidden]="title.valid || title.pristine"
+                class="alert alert-danger"
+            >
+                Title is required
+            </div>
         </div>
         <div class="mb-3 form-group">
             <label for="image" class="form-label">URL Image</label>
-            <input type="text" class="form-control" id="image" [(ngModel)]="user.image" required name="image" #image="ngModel">
-            <div [hidden]="image.valid || image.pristine" class="alert alert-danger">Image is required</div>
+            <input
+                type="text"
+                class="form-control"
+                id="image"
+                [(ngModel)]="user.image"
+                required
+                name="image"
+                #image="ngModel"
+            />
+            <div
+                [hidden]="image.valid || image.pristine"
+                class="alert alert-danger"
+            >
+                Image is required
+            </div>
         </div>
         <div class="mb-3 form-group">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" [(ngModel)]="user.email" required name="email" #email="ngModel">
-            <div [hidden]="email.valid || email.pristine" class="alert alert-danger">Email is required</div>
+            <input
+                type="email"
+                class="form-control"
+                id="email"
+                [(ngModel)]="user.email"
+                required
+                name="email"
+                #email="ngModel"
+            />
+            <div
+                [hidden]="email.valid || email.pristine"
+                class="alert alert-danger"
+            >
+                Email is required
+            </div>
         </div>
-        <button type="submit" class="btn btn-success" [disabled]="!userForm.form.valid">Submit</button>
+        <button
+            type="submit"
+            class="btn btn-success"
+            [disabled]="!userForm.form.valid"
+        >
+            Submit
+        </button>
     </form>
 </div>
+
+<ng-template #content let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title">Detail</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+		<div class="d-flex justify-content-center py-3">
+            <img class="rounded-circle" [src]="user.image" [alt]="user.firstName + ' '+user.lastName" width="100px" height="100px" />
+        </div>
+        <p><b>First Name</b>: {{user.firstName}}</p>
+        <p><b>Last Name</b>: {{user.lastName}}</p>
+        <p><b>Title</b>: {{user.title}}</p>
+        <p><b>Email</b>: {{user.email}}</p>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-danger" (click)="modal.close('Close click')">Abort</button>
+		<button type="button" class="btn btn-success" (click)="modal.close('Close submit');onSubmit();changeSuccessMessage();userForm.reset();">Confirm</button>
+	</div>
+</ng-template>
+
+<ngb-alert *ngIf="successMessage" #selfClosingAlert class="position-absolute w-50 top-0 translate-middle-x start-50" type="success" (closed)="successMessage = ''">{{ successMessage }}</ngb-alert>

@@ -7,7 +7,7 @@ import { User } from '../interface/user.interface';
 })
 export class UserService {
   private dbPath = '/users';
-  users!: AngularFireList<User>
+  private users!: AngularFireList<User>
   
   constructor(private db: AngularFireDatabase) {
     this.users = this.db.list(this.dbPath)

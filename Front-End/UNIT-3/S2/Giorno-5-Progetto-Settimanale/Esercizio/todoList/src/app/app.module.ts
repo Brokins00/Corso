@@ -9,7 +9,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbAlertModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './components/home/home.component';
 import { DoneComponent } from './components/done/done.component';
 import { NotdoneComponent } from './components/notdone/notdone.component';
@@ -59,6 +59,7 @@ const route: Route[] = [
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
+    NgbAlertModule,
     RouterModule.forRoot(route)
   ],
   providers: [],
