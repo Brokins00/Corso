@@ -1,0 +1,30 @@
+<!-- <div class="container">
+    <form (ngSubmit)="onSubmit(); todoForm.reset()" #todoForm="ngForm">
+        <div class="mb-3 form-group">
+            <label for="firstName" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="firstName" [(ngModel)]="user.firstName" name="firstName" required #firstName="ngModel">
+            <div [hidden]="firstName.valid || firstName.pristine" class="alert alert-danger">First Name is required</div>
+        </div>
+        <div class="mb-3 form-group">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lastName" [(ngModel)]="user.lastName" required name="lastName" #lastName="ngModel">
+            <div [hidden]="lastName.valid || lastName.pristine" class="alert alert-danger">Last Name is required</div>
+        </div>
+        <div class="mb-3 form-group">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="title" [(ngModel)]="user.title" required name="title" #title="ngModel">
+            <div [hidden]="title.valid || title.pristine" class="alert alert-danger">Title is required</div>
+        </div>
+        <div class="mb-3 form-group">
+            <label for="image" class="form-label">URL Image</label>
+            <input type="text" class="form-control" id="image" [(ngModel)]="user.image" required name="image" #image="ngModel">
+            <div [hidden]="image.valid || image.pristine" class="alert alert-danger">Image is required</div>
+        </div>
+        <div class="mb-3 form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" [(ngModel)]="user.email" required name="email" #email="ngModel">
+            <div [hidden]="email.valid || email.pristine" class="alert alert-danger">Email is required</div>
+        </div>
+        <button type="submit" class="btn btn-success" [disabled]="!todoForm.form.valid">Submit</button>
+    </form>
+</div> -->

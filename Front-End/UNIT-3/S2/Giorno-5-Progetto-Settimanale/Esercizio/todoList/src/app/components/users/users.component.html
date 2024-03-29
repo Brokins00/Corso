@@ -1,0 +1,31 @@
+<div class="container">
+    <ng-container *ngFor="let mixed of mix">
+        <div class="row">
+            <div class="col-5">
+                <img [src]="mixed.image" [alt]="mixed.firstName + ' ' + mixed.lastName" class="img-fluid"/>
+            </div>
+            <div class="col-7">
+                <div class="container">
+                    <h3>{{mixed.firstName}} {{mixed.lastName}}</h3>
+                    <p>{{mixed.title}}</p>
+                    <div *ngFor="let todo of mixed.todos" class="row p-3 my-2 rounded-2" [ngClass]="todo.completed ? 'bg-success' : 'bg-danger'">
+                        <div class="col-1">
+                            <a (click)="toggleIcon(todo.key, !todo.completed)" *ngIf="todo.completed; else altraIcona">
+                                <i class="bi bi-check-square-fill"></i>
+                            </a>
+                            <ng-template #altraIcona>
+                                <a (click)="toggleIcon(todo.key, !todo.completed)">
+                                    <i class="bi bi-square"></i>
+                                </a>
+                            </ng-template>
+                        </div>
+                        <div class="col-11 d-flex flex-column">
+                            <h5>{{todo.todo}}</h5>
+                            <p>Assigned to: {{getUserName(todo.userId)}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>
