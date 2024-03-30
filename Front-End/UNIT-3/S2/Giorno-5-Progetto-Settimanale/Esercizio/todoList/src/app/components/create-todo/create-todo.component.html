@@ -1,30 +1,59 @@
-<!-- <div class="container">
-    <form (ngSubmit)="onSubmit(); todoForm.reset()" #todoForm="ngForm">
+<div class="container">
+    <form (ngSubmit)="openVerticallyCentered(content)" #todoForm="ngForm">
         <div class="mb-3 form-group">
-            <label for="firstName" class="form-label">First Name</label>
-            <input type="text" class="form-control" id="firstName" [(ngModel)]="user.firstName" name="firstName" required #firstName="ngModel">
-            <div [hidden]="firstName.valid || firstName.pristine" class="alert alert-danger">First Name is required</div>
+            <label for="todo" class="form-label">Message of Todo</label>
+            <input
+                type="text"
+                class="form-control"
+                id="todo"
+                [(ngModel)]="todo.todo"
+                name="todo"
+                required
+                #todoM="ngModel"
+            />
+            <div
+                [hidden]="todoM.valid || todoM.pristine"
+                class="alert alert-danger"
+            >
+                Message is required
+            </div>
         </div>
         <div class="mb-3 form-group">
-            <label for="lastName" class="form-label">Last Name</label>
-            <input type="text" class="form-control" id="lastName" [(ngModel)]="user.lastName" required name="lastName" #lastName="ngModel">
-            <div [hidden]="lastName.valid || lastName.pristine" class="alert alert-danger">Last Name is required</div>
+            <label for="user" class="form-label">User</label>
+            <select class="form-control" id="user" required [(ngModel)]="todo.userId" name="user" #userM="ngModel">
+                <option selected></option>
+                <option *ngFor="let user of users" [value]="user.id">{{user.firstName}} {{user.lastName}}</option>
+            </select>
+            <div
+                [hidden]="userM.valid || userM.pristine"
+                class="alert alert-danger"
+            >
+                User Option is required
+            </div>
         </div>
-        <div class="mb-3 form-group">
-            <label for="title" class="form-label">Title</label>
-            <input type="text" class="form-control" id="title" [(ngModel)]="user.title" required name="title" #title="ngModel">
-            <div [hidden]="title.valid || title.pristine" class="alert alert-danger">Title is required</div>
-        </div>
-        <div class="mb-3 form-group">
-            <label for="image" class="form-label">URL Image</label>
-            <input type="text" class="form-control" id="image" [(ngModel)]="user.image" required name="image" #image="ngModel">
-            <div [hidden]="image.valid || image.pristine" class="alert alert-danger">Image is required</div>
-        </div>
-        <div class="mb-3 form-group">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" [(ngModel)]="user.email" required name="email" #email="ngModel">
-            <div [hidden]="email.valid || email.pristine" class="alert alert-danger">Email is required</div>
-        </div>
-        <button type="submit" class="btn btn-success" [disabled]="!todoForm.form.valid">Submit</button>
+        <button
+            type="submit"
+            class="btn btn-success"
+            [disabled]="!todoForm.form.valid"
+        >
+            Submit
+        </button>
     </form>
-</div> -->
+</div>
+
+<ng-template #content let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title">Detail</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+        <p><b>Message</b>: {{todo.todo}}</p>
+        <p><b>Full Name</b>: {{getFullName(todo.userId)}}</p>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-danger" (click)="modal.close('Close click')">Abort</button>
+		<button type="button" class="btn btn-success" (click)="modal.close('Close submit');onSubmit();changeSuccessMessage();todoForm.reset();">Confirm</button>
+	</div>
+</ng-template>
+
+<ngb-alert *ngIf="successMessage" #selfClosingAlert class="position-absolute w-50 top-0 translate-middle-x start-50" type="success" (closed)="successMessage = ''">{{ successMessage }}</ngb-alert>

@@ -40,6 +40,10 @@ const route: Route[] = [
     path: 'create-user',
     component: CreateUserComponent
   },
+  {
+    path: 'create-todo',
+    component: CreateTodoComponent
+  },
 ]
 
 @NgModule({
