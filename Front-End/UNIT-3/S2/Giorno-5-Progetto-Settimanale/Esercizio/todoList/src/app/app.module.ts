@@ -17,6 +17,7 @@ import { UsersComponent } from './components/users/users.component';
 import { CreateUserComponent } from './components/create-user/create-user.component';
 import { CreateTodoComponent } from './components/create-todo/create-todo.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { CardComponent } from './components/card/card.component';
 
 const route: Route[] = [
   {
@@ -50,7 +51,8 @@ const route: Route[] = [
     UsersComponent,
     CreateUserComponent,
     CreateTodoComponent,
-    NavbarComponent
+    NavbarComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

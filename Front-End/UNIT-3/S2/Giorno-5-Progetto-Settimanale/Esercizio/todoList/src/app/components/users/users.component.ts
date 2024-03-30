@@ -53,12 +53,6 @@ export class UsersComponent {
     this.userSub.unsubscribe();
   }
 
-  toggleIcon(id:string | undefined, completed: boolean) {
-    if (id) {
-      this.todo.update(id, {completed: completed})
-    }
-  }
-
   getUserName(id:number | undefined) {
     if (id) {
       let user = this.users.findIndex((value) => value.id == id)

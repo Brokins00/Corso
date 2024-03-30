@@ -1,0 +1,16 @@
+<div class="row p-3 my-2 rounded-2" [ngClass]="todo.completed ? 'bg-success' : 'bg-danger'">
+    <div class="col-1">
+        <a (click)="toggleIcon(todo.key, !todo.completed)" *ngIf="todo.completed; else altraIcona">
+            <i class="bi bi-check-square-fill"></i>
+        </a>
+        <ng-template #altraIcona>
+            <a (click)="toggleIcon(todo.key, !todo.completed)">
+                <i class="bi bi-square"></i>
+            </a>
+        </ng-template>
+    </div>
+    <div class="col-11 d-flex flex-column">
+        <h5>{{todo.todo}}</h5>
+        <p class="m-0">Assigned to: {{userName}}</p>
+    </div>
+</div>

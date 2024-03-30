@@ -2,23 +2,8 @@
     <input type="text" class="form-control" id="filter" [(ngModel)]="_filter" (ngModelChange)="filter()" placeholder="Enter your name here" />
     <div class="row p-3 justify-content-center">
         <ng-container *ngFor="let todo of filtered">
-            <div class="col-5 p-3 m-2 rounded-2 " [ngClass]="todo.completed ? 'bg-success' : 'bg-danger'">
-                <div class="row">
-                    <div class="col-1 d-flex align-items-center justify-content-center">
-                        <a (click)="toggleIcon(todo.key, !todo.completed)" *ngIf="todo.completed; else altraIcona">
-                            <i class="bi bi-check-square-fill"></i>
-                        </a>
-                        <ng-template #altraIcona>
-                            <a (click)="toggleIcon(todo.key, !todo.completed)">
-                                <i class="bi bi-square"></i>
-                            </a>
-                        </ng-template>
-                    </div>
-                    <div class="col-11">
-                        <h5>{{todo.todo}}</h5>
-                        <p>Assigned to: {{getUserName(todo.userId)}}</p>
-                    </div>
-                </div>
+            <div class="col-5 p-3 m-2 rounded-2 ">
+                <app-card [todo]="todo" [userName]="getUserName(todo.userId)"></app-card>
             </div>
         </ng-container>
     </div>
