@@ -44,6 +44,10 @@ const route: Route[] = [
     path: 'create-todo',
     component: CreateTodoComponent
   },
+  {
+    path: '**',
+    redirectTo: ''
+  }
 ]
 
 @NgModule({
