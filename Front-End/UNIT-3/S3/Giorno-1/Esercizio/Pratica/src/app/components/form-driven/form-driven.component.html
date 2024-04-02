@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form (ngSubmit)="onSubmit()" #loginForm="ngForm" [hidden]="submitted">
+                <div class="form-group">
+                    <label class="form-label" for="userName">Username: </label>
+                    <input class="form-control"
+                        id="userName"
+                        type="text"
+                        [(ngModel)]="login.userName"
+                        name="userName"
+                        #userName="ngModel"
+                        required
+                    />
+                    <div [hidden]="userName.valid || userName.pristine"
+                        class="alert alert-danger">
+                            La username è richiesta
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="password">Password: </label>
+                    <input class="form-control"
+                        id="password"
+                        type="text"
+                        [(ngModel)]="login.password"
+                        name="password"
+                        #password="ngModel"
+                        required
+                    />
+                    <div [hidden]="password.valid || password.pristine"
+                        class="alert alert-danger">
+                            La password è richiesta
+                    </div>
+                </div>
+                <br>
+                <button type="submit" [disabled]="!loginForm.form.valid" class="btn btn-primary">Log-In</button>
+            </form>
+            <div [hidden]="!submitted">
+                <h3>Sei loggato con i seguenti dati:</h3>
+                <div class="row">
+                  <div class="col-xs-3 h4">Username</div>
+                  <div class="col-xs-9">{{ login.userName }}</div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-3 h4">Password</div>
+                  <div class="col-xs-9">{{ login.password }}</div>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
