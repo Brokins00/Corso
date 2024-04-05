@@ -1,0 +1,13 @@
+<div class="position-absolute" *ngIf="!user">
+  <div class="position-relative top-0 start-0 background">
+    <img src="https://assets.nflxext.com/ffe/siteui/vlv3/7ca5b7c7-20aa-42a8-a278-f801b0d65fa1/5e0e928c-6cf0-4db6-8c10-b5c8c960bb7f/IT-it-20240326-popsignuptwoweeks-perspective_alpha_website_small.jpg" srcset="https://assets.nflxext.com/ffe/siteui/vlv3/7ca5b7c7-20aa-42a8-a278-f801b0d65fa1/5e0e928c-6cf0-4db6-8c10-b5c8c960bb7f/IT-it-20240326-popsignuptwoweeks-perspective_alpha_website_small.jpg 1000w, https://assets.nflxext.com/ffe/siteui/vlv3/7ca5b7c7-20aa-42a8-a278-f801b0d65fa1/5e0e928c-6cf0-4db6-8c10-b5c8c960bb7f/IT-it-20240326-popsignuptwoweeks-perspective_alpha_website_medium.jpg 1500w, https://assets.nflxext.com/ffe/siteui/vlv3/7ca5b7c7-20aa-42a8-a278-f801b0d65fa1/5e0e928c-6cf0-4db6-8c10-b5c8c960bb7f/IT-it-20240326-popsignuptwoweeks-perspective_alpha_website_large.jpg 1800w" class="img-fluid" style="max-height: 100vh; width: 100vw;" />
+    <div class="position-absolute top-0 start-0" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%); background: rgb(0 0 0 / 40%); width: 100vw; height: 100vh;"></div>
+  </div>
+</div>
+
+<header [ngClass]="user ? 'position-sticky top-0 left-0': ''">
+  <app-navbar></app-navbar>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>

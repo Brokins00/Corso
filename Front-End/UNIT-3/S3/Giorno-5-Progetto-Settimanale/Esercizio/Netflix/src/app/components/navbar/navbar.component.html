@@ -1,0 +1,97 @@
+<div class="container">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" [routerLink]="user ? ['/dashboard'] : ['/']"
+        ><img
+          src="../../../assets/img/netflix_logo.png"
+          width="130"
+          alt="Logo Netflix"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse position-relative"
+        id="navbarSupportedContent"
+      >
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" *ngIf="user">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/dashboard"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0)">Serie TV</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0)">Film</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0)">Nuovi e popolari</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0)">La mia lista</a>
+          </li>
+        </ul>
+        <div
+          class="d-lg-flex text-secondary align-items-lg-center"
+          *ngIf="user"
+        >
+          <i class="bi bi-bell-fill px-3 py-3 py-lg-0"></i>
+          <div ngbDropdown class="d-inline-block">
+            <button
+              type="button"
+              class="btn"
+              id="dropdownBasic1"
+              ngbDropdownToggle
+            >
+              <img
+                src="../../../assets/img/avatar.png"
+                width="40"
+                class="me-2 rounded-2"
+                alt="Avatar Icon"
+              />
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button
+                ngbDropdownItem
+                routerLink="/profile"
+              >
+              <img
+                src="../../../assets/img/avatar.png"
+                width="30"
+                alt="Avatar"
+                /><span class="ps-2" id="nickname">{{
+                user.user.username
+                }}</span>
+              </button>
+              <button ngbDropdownItem [routerLink]="['/profile']">Manage Profiles</button>
+              <button ngbDropdownItem [routerLink]="['/account']">Account</button>
+              <button ngbDropdownItem (click)="logout()">Signout Netflix</button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="d-lg-flex text-secondary align-items-lg-center position-absolute top-0 end-0 translate-middle-y"
+          *ngIf="!user"
+        >
+          <i class="bi bi-search px-3 py-3 py-lg-0"></i>
+          <a class="btn btn-danger text-light me-3" routerLink="/login"
+            >Accedi</a
+          >
+          <a class="btn btn-danger text-light" routerLink="/register"
+            >Registrati</a
+          >
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
