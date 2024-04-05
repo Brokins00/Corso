@@ -1,5 +1,5 @@
 <div class="card">
-    <ngb-carousel class="card-img-top" >
+    <!-- <ngb-carousel class="card-img-top" >
         <ng-container *ngFor="let image of product.images">
             <ng-template ngbSlide>
                 <div class="picksum-img-wrapper">
@@ -7,7 +7,26 @@
                 </div>
             </ng-template>
         </ng-container>
-    </ngb-carousel>
+    </ngb-carousel> -->
+    <div class="card-img-top">
+      <div id="carouselExample{{product.id}}" class=" carousel slide">
+          <div class="carousel-inner">
+            <ng-container *ngFor="let image of product.images; let i = index">
+              <div class="carousel-item" [ngClass]="i == 0 ? 'active':''">
+                <img [src]="image" class="d-block w-100" [alt]="product.title">
+              </div>
+            </ng-container>
+          </div>
+          <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#carouselExample'+product.id" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#carouselExample'+product.id" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+    </div>
     <!-- <img src="..." class="card-img-top" alt="..."> -->
     <div class="card-body">
         <h5 class="card-title">{{ product.title }}</h5>
