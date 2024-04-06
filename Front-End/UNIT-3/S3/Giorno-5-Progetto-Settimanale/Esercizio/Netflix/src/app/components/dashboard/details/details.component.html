@@ -1,1 +1,33 @@
-<p>details works!</p>
+<div class="container w-50">
+    <div class="d-flex justify-content-center" *ngIf="!movie">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    <div class="card" *ngIf="movie">
+        <img [src]="apiImgUrl+movie.backdrop_path" class="card-img-top" [alt]="movie.title">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-7">
+                    <h5 class="card-title">{{movie.title}}</h5>
+                    <p class="card-text">{{movie.overview}}</p>
+                </div>
+                <div class="col">
+                    <p class="card-text mb-0"><span class="text-secondary">Generi: </span>{{getGenres()}}</p>
+                    <p class="card-text"><span class="text-secondary">Anno di uscita: </span>{{movie.release_date | slice :0:4}}</p>
+                    <div class="row">
+                        <div class="col-10">
+                            <ngb-rating [(rate)]="movie.vote_average" [max]="5" [readonly]="true" /> &nbsp;&nbsp;<span>{{movie.vote_count}}</span>
+                        </div>
+                        <div class="col-2">
+                            <a (click)="favorite(movie.id)">
+                                <i class="bi bi-heart-fill text-danger" *ngIf="favorited"></i>
+                                <i class="bi bi-heart" *ngIf="!favorited"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+</div>

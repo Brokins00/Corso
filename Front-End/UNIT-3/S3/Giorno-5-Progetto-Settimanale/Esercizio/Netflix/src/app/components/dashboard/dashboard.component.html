@@ -1,5 +1,8 @@
+<div *ngIf="random" class="">
+    <img [src]="apiImgUrl+ random.backdrop_path" [alt]="random.title"  style="width: 98.8vw; height: 60vh;" />
+</div>
 <div class="container">
-    <div class="container-fluid d-flex">
+    <div class="container-fluid d-flex  py-3">
         <div ngbDropdown class="d-inline-block">
 			<button type="button" class="btn btn-outline-secondary" id="generi" ngbDropdownToggle>
 				Generi
@@ -8,11 +11,51 @@
 				<button ngbDropdownItem (click)="selectGenre({id: -1, name: 'Generi'})">---------</button>
 				<button ngbDropdownItem *ngFor="let genre of genres" (click)="selectGenre(genre)">{{genre.name}}</button>
 			</div>
-            <h2 *ngIf="selectedGenre.name !== 'Generi'">{{selectedGenre.name}}</h2>
 		</div>
     </div>
+    <div class="container py-3" *ngIf="selectedGenre.name !== 'Generi'">
+        <h4>{{selectedGenre.name}}</h4>
+        <ngb-carousel [showNavigationArrows]="false" [showNavigationIndicators]="false">
+            <ng-template ngbSlide>
+                <div class="row g-2">
+                    <div class="col-12 col-md-2" *ngFor="let movie of filtred | slice:0:6;">
+                        <a [routerLink]="['/dashboard/details', movie.id]">
+                            <img [src]="apiImgUrl+movie.backdrop_path" [alt]="movie.title" class="w-100" />
+                        </a>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template ngbSlide *ngIf="filtred.length > 6">
+                <div class="row g-2">
+                    <div class="col-12 col-md-2" *ngFor="let movie of filtred | slice:6:12;">
+                        <a [routerLink]="['/dashboard/details', movie.id]">
+                            <img [src]="apiImgUrl+movie.backdrop_path" [alt]="movie.title" class="w-100" />
+                        </a>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template ngbSlide *ngIf="filtred.length > 12">
+                <div class="row g-2">
+                    <div class="col-12 col-md-2" *ngFor="let movie of filtred | slice:12:18;">
+                        <a [routerLink]="['/dashboard/details', movie.id]">
+                            <img [src]="apiImgUrl+movie.backdrop_path" [alt]="movie.title" class="w-100" />
+                        </a>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template ngbSlide *ngIf="filtred.length > 18">
+                <div class="row g-2">
+                    <div class="col-12 col-md-2" *ngFor="let movie of filtred | slice:14:20;">
+                        <a [routerLink]="['/dashboard/details', movie.id]">
+                            <img [src]="apiImgUrl+movie.backdrop_path" [alt]="movie.title" class="w-100" />
+                        </a>
+                    </div>
+                </div>
+            </ng-template>
+        </ngb-carousel>
+    </div>
     <div class="container py-3">
-        <h4>{{selectedGenre.name !== 'Generi' ? selectedGenre.name : "Popolari"}}</h4>
+        <h4>Popolari</h4>
         <ngb-carousel [showNavigationArrows]="false" [showNavigationIndicators]="false">
             <ng-template ngbSlide>
                 <div class="row g-2">
@@ -23,7 +66,7 @@
                     </div>
                 </div>
             </ng-template>
-            <ng-template ngbSlide>
+            <ng-template ngbSlide *ngIf="populars.length > 6">
                 <div class="row g-2">
                     <div class="col-12 col-md-2" *ngFor="let movie of populars | slice:6:12;">
                         <a [routerLink]="['/dashboard/details', movie.id]">
@@ -32,7 +75,7 @@
                     </div>
                 </div>
             </ng-template>
-            <ng-template ngbSlide>
+            <ng-template ngbSlide *ngIf="populars.length > 12">
                 <div class="row g-2">
                     <div class="col-12 col-md-2" *ngFor="let movie of populars | slice:12:18;">
                         <a [routerLink]="['/dashboard/details', movie.id]">
@@ -41,9 +84,92 @@
                     </div>
                 </div>
             </ng-template>
-            <ng-template ngbSlide>
+            <ng-template ngbSlide *ngIf="populars.length > 18">
                 <div class="row g-2">
                     <div class="col-12 col-md-2" *ngFor="let movie of populars | slice:14:20;">
+                        <a [routerLink]="['/dashboard/details', movie.id]">
+                            <img [src]="apiImgUrl+movie.backdrop_path" [alt]="movie.title" class="w-100" />
+                        </a>
+                    </div>
+                </div>
+            </ng-template>
+        </ngb-carousel>
+    </div>
+    <div class="container py-3">
+        <h4>Più votati</h4>
+        <ngb-carousel [showNavigationArrows]="false" [showNavigationIndicators]="false">
+            <ng-template ngbSlide>
+                <div class="row g-2">
+                    <div class="col-12 col-md-2" *ngFor="let movie of toprated | slice:0:6;">
+                        <a [routerLink]="['/dashboard/details', movie.id]">
+                            <img [src]="apiImgUrl+movie.backdrop_path" [alt]="movie.title" class="w-100" />
+                        </a>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template ngbSlide *ngIf="toprated.length > 6">
+                <div class="row g-2">
+                    <div class="col-12 col-md-2" *ngFor="let movie of toprated | slice:6:12;">
+                        <a [routerLink]="['/dashboard/details', movie.id]">
+                            <img [src]="apiImgUrl+movie.backdrop_path" [alt]="movie.title" class="w-100" />
+                        </a>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template ngbSlide *ngIf="toprated.length > 12">
+                <div class="row g-2">
+                    <div class="col-12 col-md-2" *ngFor="let movie of toprated | slice:12:18;">
+                        <a [routerLink]="['/dashboard/details', movie.id]">
+                            <img [src]="apiImgUrl+movie.backdrop_path" [alt]="movie.title" class="w-100" />
+                        </a>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template ngbSlide *ngIf="toprated.length > 18">
+                <div class="row g-2">
+                    <div class="col-12 col-md-2" *ngFor="let movie of toprated | slice:14:20;">
+                        <a [routerLink]="['/dashboard/details', movie.id]">
+                            <img [src]="apiImgUrl+movie.backdrop_path" [alt]="movie.title" class="w-100" />
+                        </a>
+                    </div>
+                </div>
+            </ng-template>
+        </ngb-carousel>
+    </div>
+    <div class="container py-3">
+        <h4>Preferiti</h4>
+        <p *ngIf="favorites.length == 0">Seleziona un film e mettilo tra i tuoi preferiti</p>
+        <ngb-carousel [showNavigationArrows]="false" [showNavigationIndicators]="false" *ngIf="favorites.length > 0">
+            <ng-template ngbSlide>
+                <div class="row g-2">
+                    <div class="col-12 col-md-2" *ngFor="let movie of favorites | slice:0:6;">
+                        <a [routerLink]="['/dashboard/details', movie.id]">
+                            <img [src]="apiImgUrl+movie.backdrop_path" [alt]="movie.title" class="w-100" />
+                        </a>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template ngbSlide *ngIf="favorites.length > 6">
+                <div class="row g-2">
+                    <div class="col-12 col-md-2" *ngFor="let movie of favorites | slice:6:12;">
+                        <a [routerLink]="['/dashboard/details', movie.id]">
+                            <img [src]="apiImgUrl+movie.backdrop_path" [alt]="movie.title" class="w-100" />
+                        </a>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template ngbSlide *ngIf="favorites.length > 12">
+                <div class="row g-2">
+                    <div class="col-12 col-md-2" *ngFor="let movie of favorites | slice:12:18;">
+                        <a [routerLink]="['/dashboard/details', movie.id]">
+                            <img [src]="apiImgUrl+movie.backdrop_path" [alt]="movie.title" class="w-100" />
+                        </a>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template ngbSlide *ngIf="favorites.length > 18">
+                <div class="row g-2">
+                    <div class="col-12 col-md-2" *ngFor="let movie of favorites | slice:14:20;">
                         <a [routerLink]="['/dashboard/details', movie.id]">
                             <img [src]="apiImgUrl+movie.backdrop_path" [alt]="movie.title" class="w-100" />
                         </a>

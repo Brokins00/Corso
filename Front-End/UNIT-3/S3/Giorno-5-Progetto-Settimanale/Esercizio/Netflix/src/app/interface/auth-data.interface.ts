@@ -3,6 +3,7 @@ export interface AuthData {
     user: {
         username:string,
         id:string,
-        email:string
+        email:string,
+        favorites?: number[]
     }
 }
