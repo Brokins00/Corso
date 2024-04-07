@@ -21,30 +21,45 @@ export class DashboardComponent implements OnInit {
   films: Movie[] = []
   filtred: Movie[] = []
   random!: Movie;
+  loaded:boolean = false;
   user!: AuthData | null;
   apiImgUrl: string = environment.apiImgUrl
 
   constructor(private moviesSrv: MoviesService, private config:NgbCarouselConfig, private userSrv: AuthService) {
     config.interval = 10000
-    setTimeout(() => {
-      this.random = this.films[Math.floor(Math.random() * this.films.length)]
-    }, 1000)
   }
 
   ngOnInit(): void {
-    this.moviesSrv.getGenres().subscribe((value) => {
-      this.genres = value;
-    })
-    this.moviesSrv.getPopulars().subscribe((value) => {
-      this.populars = value;
-      this.films = [...this.films, ...this.populars]
-    })
-    this.moviesSrv.getTopRated().subscribe((value) => {
-      this.toprated = value;
-      this.films = [...this.films, ...this.toprated]
-    })
-    this.userSrv.user$.subscribe((value) => {
+    this.update();
+  }
+
+  private async update() {
+    let genres = await this.moviesSrv.getGenres().toPromise()
+    if (genres!== undefined) {
+      this.genres = genres
+    }
+    let populars = await this.moviesSrv.getPopulars().toPromise()
+    if (populars!== undefined) {
+      this.populars = populars
+    }
+    let toprated = await this.moviesSrv.getTopRated().toPromise()
+    if (toprated!== undefined) {
+      this.toprated = toprated
+    }
+    this.films = [...this.films, ...this.populars, ...this.toprated]
+    this.userSrv.user$.subscribe(async (value) => {
       this.user = value;
+      this.random = this.films[Math.floor(Math.random() * this.films.length)]
+      if (this.user) {
+        this.favorites = []
+        for (const film of this.films) {
+          let favorite = await this.moviesSrv.getFavoriteFromId(film.id, Number(this.user.user.id))
+          if (favorite !== undefined) {
+            this.favorites.push(film)
+          }
+        }
+        this.loaded = true
+      }
     })
   }
 

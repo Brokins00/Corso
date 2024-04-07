@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from './service/auth.service';
 import { AuthData } from './interface/auth-data.interface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,12 +11,15 @@ import { AuthData } from './interface/auth-data.interface';
 export class AppComponent implements OnInit {
   title = 'Netflix';
   user:AuthData|null = null;
-  constructor(private authSrv:AuthService) {}
+  constructor(private authSrv:AuthService, private router: Router) {}
 
   ngOnInit(): void {
     this.authSrv.restore();
     this.authSrv.user$.subscribe((value) => {
       this.user = value
+      if (this.user !== null) {
+        this.router.navigate(['/dashboard'])
+      }
     })
   }
 }

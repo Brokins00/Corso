@@ -5,6 +5,8 @@ import { BehaviorSubject, catchError, tap, throwError } from 'rxjs';
 import { AuthData } from '../interface/auth-data.interface';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { Router } from '@angular/router';
+import { Admin } from '../interface/admin.interface';
+import { User } from '../interface/user.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -23,12 +25,45 @@ export class AuthService {
     return this.http.post(`${this.apiUrl}register`, data).pipe(catchError(this.errors))
   }
 
+  getAdmins() {
+    return this.http.get<Admin[]>(`${this.apiUrl}admins`)
+  }
+
+  async isAdmin(userId:number) {
+    let admins = []
+    let adminsP = await this.getAdmins().toPromise()
+    let isAdmin = false
+    if (adminsP) {
+      admins = [...adminsP]
+      for (let i=0; i < admins.length; i++) {
+        if (admins[i].userId === userId) {
+          isAdmin = true
+        }
+      }
+    }
+    return isAdmin
+  }
+
+  async getUsers() {
+    let usersP = await this.http.get<User[]>(`${this.apiUrl}users`).toPromise();
+    let users: User[] = []
+    if (usersP !== undefined) {
+      users = [...usersP]
+      for (let i = 0; i < users.length; i++) {
+        users[i].admin = await this.isAdmin(users[i].id || -1)
+      }
+    }
+    return users
+  }
+
   login(data: {email: string, password: string}) {
     return this.http.post<AuthData>(`${this.apiUrl}login`, data).pipe(
-      tap((data) => {
+      tap(async (data) => {
         this.authSub.next(data)
         localStorage.setItem('user', JSON.stringify(data))
         this.autoLogout(data)
+        data.user.admin = await this.isAdmin(Number(data.user.id))
+        this.authSub.next(data)
       }),
       catchError(this.errors)
     )
@@ -40,7 +75,7 @@ export class AuthService {
     this.router.navigate(['/login'])
   }
 
-  restore() {
+  async restore() {
     const userJson = localStorage.getItem('user')
     if (!userJson) {
       return
@@ -48,6 +83,8 @@ export class AuthService {
     const user:AuthData = JSON.parse(userJson);
     this.authSub.next(user);
     this.autoLogout(user);
+    user.user.admin = await this.isAdmin(Number(user.user.id))
+    this.authSub.next(user)
   }
 
   private autoLogout(data:AuthData) {

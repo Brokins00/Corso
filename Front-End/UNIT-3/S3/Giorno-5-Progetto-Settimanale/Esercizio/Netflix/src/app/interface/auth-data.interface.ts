@@ -4,6 +4,7 @@ export interface AuthData {
         username:string,
         id:string,
         email:string,
-        favorites?: number[]
+        favorites?: number[],
+        admin?: boolean
     }
 }

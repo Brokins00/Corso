@@ -16,6 +16,7 @@ import { environment } from 'src/environments/environment.development';
 export class DetailsComponent {
   movie:Movie|undefined;
   apiImgUrl = environment.apiImgUrl;
+  genres = "";
   favorited = false;
   user!:AuthData|null;
 
@@ -25,13 +26,14 @@ export class DetailsComponent {
     })
     const idO: Observable<string> = route.params.pipe(map((p) => p['id']))
     idO.subscribe((id) => {
-      setTimeout(() => {
+      setTimeout(async () => {
         let idN = Number(id)
-        this.movie = movieSrv.getMovieById(idN)
+        this.movie = await movieSrv.getMovieById(idN)
         if (this.movie) {
+          this.genres = await this.getGenres()
           this.movie.vote_average = this.movie.vote_average / 2
           if (this.user) {
-            let favorite = this.movieSrv.getFavoriteFromId(this.movie.id, Number(this.user.user.id))
+            let favorite = await this.movieSrv.getFavoriteFromId(this.movie.id, Number(this.user.user.id))
             this.favorited = favorite ? true : false
           }
         }
@@ -39,11 +41,11 @@ export class DetailsComponent {
     })
   }
 
-  getGenres() {
+  async getGenres() {
     let genres = ""
     if(this.movie) {
       for (let i = 0; i < this.movie.genre_ids.length; i++) {
-        let genre = this.movieSrv.getGenresById(this.movie.genre_ids[i])
+        let genre = await this.movieSrv.getGenresById(this.movie.genre_ids[i])
         if (genre) {
           if (genres.length == 0) {
             genres += genre.name
@@ -56,14 +58,13 @@ export class DetailsComponent {
     return genres
   }
 
-  favorite(id:number) {
+  async favorite(id:number) {
     this.favorited = !this.favorited;
     if (this.user) {
-      this.movieSrv.refresh()
       if (this.favorited) {
         this.movieSrv.setFavorate(id, Number(this.user.user.id)).subscribe()
       } else {
-        let favorite = this.movieSrv.getFavoriteFromId(id, Number(this.user.user.id))
+        let favorite = await this.movieSrv.getFavoriteFromId(id, Number(this.user.user.id))
         if (favorite) {
           this.movieSrv.removeFavorate(favorite.id).subscribe()
         }

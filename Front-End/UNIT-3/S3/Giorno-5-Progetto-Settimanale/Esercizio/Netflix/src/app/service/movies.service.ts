@@ -11,26 +11,10 @@ import { Favorite } from '../interface/favorite.interface';
 })
 export class MoviesService {
   private apiUrl = environment.apiUrl
-  private movies:Movie[] = []
-  private genres:Genres[] = []
-  private favorites:Favorite[] = []
-  constructor(private http:HttpClient) {
-    this.refresh()
-  }
+  constructor(private http:HttpClient) {}
 
-  refresh() {
-    this.http.get<Movie[]>(`${this.apiUrl}movies-popular`).subscribe((movie) => {
-      this.movies = [...this.movies, ...movie]
-    })
-    this.http.get<Movie[]>(`${this.apiUrl}movies-toprated`).subscribe((movie) => {
-      this.movies = [...this.movies, ...movie]
-    })
-    this.http.get<Genres[]>(`${this.apiUrl}genres`).subscribe((genre) => {
-      this.genres = genre
-    })
-    this.http.get<Favorite[]>(`${this.apiUrl}favorites`).subscribe(value => {
-      this.favorites = value
-    })
+  getFavorites() {
+    return this.http.get<Favorite[]>(`${this.apiUrl}favorites`)
   }
 
   getGenres(): Observable<Genres[]> {
@@ -45,24 +29,53 @@ export class MoviesService {
     return this.http.get<Movie[]>(`${this.apiUrl}movies-toprated`)
   }
 
-  getMovieById(id:number) {
-    return this.movies.find((movie) => movie.id === id)
+  async getMovieById(id:number) {
+    let films: Movie[] = []
+    let popular:Movie[] | undefined = await this.getPopulars().toPromise()
+    let topRated:Movie[] | undefined = await this.getTopRated().toPromise()
+    if (popular !== undefined) {
+      films = [...films, ...popular]
+    }
+    if (topRated !== undefined) {
+      films = [...films, ...topRated]
+    }
+    return films.find((movie) => movie.id === id)
   }
 
-  getGenresById(id:number) {
-    return this.genres.find(genre => genre.id === id)
+  async getGenresById(id:number) {
+    let genres: Genres[] = []
+
+    let genresP = await this.getGenres().toPromise()
+    if (genresP !== undefined) {
+      genres = [...genres, ...genresP]
+    }
+    
+    return genres.find(genre => genre.id === id)
   }
 
   setFavorate(id:number, userId: number) {
     return this.http.post(`${this.apiUrl}favorites`, {userId: userId, movieId: id})
   }
 
-  getFavoriteFromId(id:number, userId: number) {
-    return this.favorites.find((value) => value.userId === userId && value.movieId === id)
+  async getFavoriteFromId(id:number, userId: number) {
+    let favorites:Favorite[] = []
+    let favoritesP = await this.getFavorites().toPromise()
+    if (favoritesP !== undefined) {
+      favorites = [...favorites, ...favoritesP]
+    }
+    return favorites.find((value) => value.userId === userId && value.movieId === id)
+  }
+
+  async getFavoritesFromUser(userId: number) {
+    let favorites:Favorite[] = []
+    let favoritesP = await this.getFavorites().toPromise()
+    if (favoritesP !== undefined) {
+      favorites = [...favorites, ...favoritesP]
+    }
+    return favorites.filter((value) => value.userId === userId)
   }
 
   removeFavorate(id:number) {
-    console.log(`${this.apiUrl}favorites/${id}`)
     return this.http.delete(`${this.apiUrl}favorites/${id}`)
   }
 }

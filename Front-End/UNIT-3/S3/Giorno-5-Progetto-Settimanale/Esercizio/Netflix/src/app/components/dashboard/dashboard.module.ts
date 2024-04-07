@@ -5,12 +5,16 @@ import { NgbDropdownModule, NgbRatingModule, NgbCarouselModule } from '@ng-boots
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { DetailsComponent } from './details/details.component';
+import { FavoritesComponent } from './favorites/favorites.component';
+import { UsersComponent } from './users/users.component';
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
-    DetailsComponent
+    DetailsComponent,
+    FavoritesComponent,
+    UsersComponent
   ],
   imports: [
     CommonModule,

@@ -5,6 +5,24 @@
       "password": "$2a$10$UDfQlFBMOTBf6G8q3mtoSOX0/sBpYMXZFW1RUEVAWHBWPmiM2DuqG",
       "username": "Brokins00",
       "id": 1
+    },
+    {
+      "email": "asdrubale@gmail.com",
+      "password": "$2a$10$s5uQnpZEb6COpdWBSnHyCuDvKcd.AAqqSG0Pt6z5fzgcKbysR2rOK",
+      "username": "Asdrubale",
+      "id": 2
+    },
+    {
+      "email": "alfonso@gmail.com",
+      "password": "$2a$10$36xNSjuqkFwNaGmP.X5C8OF.6Mo7c4DckTpeFvEnJnm5wt2E74JHi",
+      "username": "Alfonso",
+      "id": 3
+    }
+  ],
+  "admins": [
+    {
+      "userId": 1,
+      "id": 1
     }
   ],
   "favorites": [
@@ -40,8 +58,13 @@
     },
     {
       "userId": 1,
-      "movieId": 813258,
-      "id": 28
+      "movieId": 567189,
+      "id": 31
+    },
+    {
+      "userId": 1,
+      "movieId": 238,
+      "id": 33
     }
   ],
   "genres": [

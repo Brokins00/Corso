@@ -24,7 +24,7 @@
       >
         <ul class="navbar-nav me-auto mb-2 mb-lg-0" *ngIf="user">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" routerLink="/dashboard"
+            <a class="nav-link" aria-current="page" routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
               >Home</a
             >
           </li>
@@ -38,14 +38,16 @@
             <a class="nav-link" href="javascript:void(0)">Nuovi e popolari</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="javascript:void(0)">La mia lista</a>
+            <a class="nav-link" routerLink="/dashboard/favorites" routerLinkActive="active">La mia lista</a>
+          </li>
+          <li class="nav-item" *ngIf="user.user.admin">
+            <a class="nav-link" routerLink="/dashboard/users" routerLinkActive="active">Utenti</a>
           </li>
         </ul>
         <div
           class="d-lg-flex text-secondary align-items-lg-center"
           *ngIf="user"
         >
-          <i class="bi bi-bell-fill px-3 py-3 py-lg-0"></i>
           <div ngbDropdown class="d-inline-block">
             <button
               type="button"
