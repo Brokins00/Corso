@@ -28,7 +28,7 @@
               >Home</a
             >
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="javascript:void(0)">Serie TV</a>
           </li>
           <li class="nav-item">
@@ -36,7 +36,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="javascript:void(0)">Nuovi e popolari</a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" routerLink="/dashboard/favorites" routerLinkActive="active">La mia lista</a>
           </li>
@@ -65,7 +65,7 @@
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="z-3">
               <button
                 ngbDropdownItem
-                routerLink="/profile"
+                routerLink="/dashboard/profile"
               >
               <img
                 src="../../../assets/img/avatar.png"
@@ -75,9 +75,9 @@
                 user.user.username
                 }}</span>
               </button>
-              <button ngbDropdownItem [routerLink]="['/profile']">Manage Profiles</button>
-              <button ngbDropdownItem [routerLink]="['/account']">Account</button>
-              <button ngbDropdownItem (click)="logout()">Signout Netflix</button>
+              <button ngbDropdownItem [routerLink]="['/dashboard/profile']">Gestisci Profilo</button>
+              <button ngbDropdownItem [routerLink]="['/dashboard/account']">Account</button>
+              <button ngbDropdownItem (click)="logout()">Logout</button>
             </div>
           </div>
         </div>

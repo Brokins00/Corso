@@ -1,0 +1,119 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <div class="container-fluid">
+                <h1 class="text-md-center display-4 fw-bold">
+                    Modifica Profilo
+                </h1>
+                <hr />
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <img
+                            src="../../../../assets/img/avatar.png"
+                            width="100"
+                            alt="Avatar" />
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <input
+                            type="text"
+                            class="bg-secondary w-75"
+                            id="nickname2"
+                            [attr.value]="user.user.username" />
+                        <h5 class="my-3 text-secondary">
+                            Lingua:
+                        </h5>
+                        <div ngbDropdown class="d-inline-block">
+                            <button
+                                class="btn dropdown-toggle rounded-0 border border-1 border-light"
+                                id="dropdownBasicProfile"
+                                type="button"
+                                aria-expanded="false"
+                                ngbDropdownToggle
+                                >
+                                Italiano
+                            </button>
+                            <div ngbDropdownMenu aria-labelledby="dropdownBasicProfile" class="bg-black">
+                                <button
+                                    ngbDropdownItem
+                                    href="javascript:void(0)"
+                                    >Inglese</button
+                                >
+                            </div>
+                        </div>
+                        <hr />
+                        <h5 class="my-3 text-secondary">
+                            Impostazioni Età:
+                        </h5>
+                        <button
+                            class="btn btn-dark rounded-0 w-75 fw-bold px-2">
+                            TUTTE IMPOSTAZIONI ETA'
+                        </button>
+                        <p>
+                            Mostra i file per tutte le impostazioni di età per questo profilo.
+                        </p>
+                        <button
+                            class="btn rounded-0 w-50 border border-1 border-secondary text-secondary"
+                            type="button">
+                            MODIFICA
+                        </button>
+                        <hr />
+                        <h5 class="my-3 text-secondary">
+                            Controlli Autoplay:
+                        </h5>
+                        <div class="form-check">
+                            <input
+                                class="form-check-input shadow-none bg-black border-white"
+                                type="checkbox"
+                                value=""
+                                id="defaultCheck1" />
+                            <label
+                                class="form-check-label"
+                                for="defaultCheck1">
+                                Riproduci automaticamente il prossimo episodio di una serie in tutti i dispositivi
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input
+                                class="form-check-input shadow-none bg-black border-white"
+                                type="checkbox"
+                                value=""
+                                id="defaultCheck1" />
+                            <label
+                                class="form-check-label"
+                                for="defaultCheck1">
+                                Riproduci automaticamente il prossimo episodio di una serie in tutti i dispositivi
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-12 col-xl-4">
+                        <button
+                            id="salva"
+                            class="btn btn-light fw-bold rounded-0 w-50 border border-1 border-dark text-dark w-100 h-100"
+                            type="button">
+                            SALVA
+                        </button>
+                    </div>
+                    <div class="col-12 col-xl-4">
+                        <button
+                            class="btn rounded-0 fw-bold w-50 border border-1 border-secondary text-secondary w-100 h-100"
+                            type="button">
+                            ANNULLA
+                        </button>
+                    </div>
+                    <div class="col-12 col-xl-4">
+                        <button
+                            class="btn rounded-0 fw-bold w-50 border border-1 border-secondary text-secondary w-100 h-100"
+                            type="button">
+                            ELIMINA PROFILO
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>

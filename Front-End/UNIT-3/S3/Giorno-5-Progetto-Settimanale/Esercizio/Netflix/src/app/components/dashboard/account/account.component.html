@@ -1,0 +1,219 @@
+<div class="bg-white text-black py-4">
+    <div class="w-75 m-auto py-3">
+        <h1>Account</h1>
+        <hr />
+        <div class="container-fluid p-0">
+            <div class="row">
+                <div class="col-12 col-md-3 pb-3 pb-md-0">
+                    <h5 class="text-secondary">ABBONAMENTI & FATTURE</h5>
+                    <button
+                        class="btn shadow-sm text-black btn-light"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Annulla abbonamento
+                    </button>
+                </div>
+                <div class="col-12 col-md-9">
+                    <div class="container-fluid p-0">
+                        <div class="row g-0">
+                            <div class="col-6">
+                                <h6 class="fw-bold m-0 email">
+                                    {{user.user.email}}
+                                </h6>
+                                <p class="text-secondary m-0">
+                                    Password : *********
+                                </p>
+                            </div>
+                            <div class="col-6 flex-column d-flex">
+                                <a
+                                    href="javascript:void(0)"
+                                    class="text-end m-0"
+                                    >Cambia email account</a
+                                >
+                                <a
+                                    href="javascript:void(0)"
+                                    class="text-end m-0"
+                                    >Cambia password account</a
+                                >
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row g-0">
+                            <div class="col-5">
+                                <div class="align-items-center d-flex">
+                                    <img
+                                        src="https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png"
+                                        width="60" />
+                                    <h6 class="mx-3 fw-bold m-0 email">
+                                        {{user.user.email}}
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="col-7 flex-column d-flex">
+                                <a
+                                    href="javascript:void(0)"
+                                    class="text-end m-0"
+                                    >Aggiorna Info Pagamenti</a
+                                >
+                                <a
+                                    href="javascript:void(0)"
+                                    class="text-end m-0"
+                                    >Dettagli Fatturazione</a
+                                >
+                                <a
+                                    href="javascript:void(0)"
+                                    class="text-end m-0"
+                                    >Riscatta giftcard o codici promo</a
+                                >
+                                <a
+                                    href="javascript:void(0)"
+                                    class="text-end m-0"
+                                    >Dove comprare gift cards?</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-12 col-md-3">
+                    <h5 class="text-secondary">DETTAGLI PIANO</h5>
+                </div>
+                <div class="col-12 col-md-9">
+                    <div class="container-fluid p-0">
+                        <div class="row g-0">
+                            <div class="col-6">
+                                <h6 class="fw-bold">
+                                    Standard
+                                    <i class="bi bi-badge-hd"></i>
+                                </h6>
+                            </div>
+                            <div class="col-6 flex-column d-flex">
+                                <a
+                                    href="javascript:void(0)"
+                                    class="text-end m-0"
+                                    >Cambia piano</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-12 col-md-3">
+                    <h5 class="text-secondary">IMPOSTAZIONI</h5>
+                </div>
+                <div class="col-12 col-md-9">
+                    <div class="flex-column d-flex">
+                        <a
+                            href="javascript:void(0)"
+                            class="my-2"
+                            >Controllo Genitori</a
+                        >
+                        <a
+                            href="javascript:void(0)"
+                            class="my-2"
+                            >Test di Partecipazione</a
+                        >
+                        <a
+                            href="javascript:void(0)"
+                            class="my-2"
+                            >Gestisci dipositivi</a
+                        >
+                        <a
+                            href="javascript:void(0)"
+                            class="my-2"
+                            >Attiva un dispositivo</a
+                        >
+                        <a
+                            href="javascript:void(0)"
+                            class="my-2"
+                            >Attività dispositivi recenti</a
+                        >
+                        <a
+                            href="javascript:void(0)"
+                            class="my-2"
+                            >Logout da tutti i dispositivi</a
+                        >
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-12 col-md-3">
+                    <h5 class="text-secondary">IL MIO PROFILO</h5>
+                </div>
+                <div class="col-12 col-md-9">
+                    <div class="container-fluid p-0">
+                        <div class="row g-0">
+                            <div
+                                class="col-8 d-flex align-items-center">
+                                <img
+                                    src="../../../../assets/img/avatar.png"
+                                    width="40"
+                                    height="40"
+                                    alt="Avatar" />
+                                <h6
+                                    class="fw-bold mx-3"
+                                    id="nickname2">
+                                    {{user.user.username}}
+                                </h6>
+                            </div>
+                            <div class="col-4 d-flex flex-column">
+                                <a
+                                    href="javascript:void(0)"
+                                    class="text-end m-0"
+                                    >Gestisci Profilo</a
+                                >
+                                <a
+                                    href="javascript:void(0)"
+                                    class="text-end m-0"
+                                    >Aggiungi email profilo</a
+                                >
+                            </div>
+                        </div>
+                        <div class="row g-0">
+                            <div class="col-12 col-md-4">
+                                <div class="flex-column d-flex">
+                                    <a
+                                        href="javascript:void(0)"
+                                        class="my-2"
+                                        >Lingua</a
+                                    >
+                                    <a
+                                        href="javascript:void(0)"
+                                        class="my-2"
+                                        >Impostazioni Playback</a
+                                    >
+                                    <a
+                                        href="javascript:void(0)"
+                                        class="my-2"
+                                        >Aspetto sottotitoli</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="flex-column d-flex">
+                                    <a
+                                        href="javascript:void(0)"
+                                        class="my-2"
+                                        >Visualizzazione dell'attività</a
+                                    >
+                                    <a
+                                        href="javascript:void(0)"
+                                        class="my-2"
+                                        >Votazioni</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
