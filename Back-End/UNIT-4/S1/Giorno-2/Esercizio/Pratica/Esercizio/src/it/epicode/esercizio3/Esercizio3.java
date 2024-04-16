@@ -10,11 +10,12 @@ public class Esercizio3 {
         do {
             System.out.println("Inserisci una stringa (o digita ':q' per uscire)");
             input = scanner.nextLine();
-            if (!input.equals(":q")) {
-                String[] splittedString = input.split(",");
-                System.out.println("Stringa divisa: "+ Arrays.toString(splittedString));
+            if (!(input.indexOf(":q") == 0)) {
+                String[] splittedString = input.split("");
+                String splittedString2 = String.join(",", splittedString);
+                System.out.println("Stringa divisa: "+ splittedString2);
             }
-        } while (!input.equals(":q"));
+        } while (!(input.indexOf(":q") == 0));
 
         scanner.close();
         System.out.println("Applicazione chiusa");

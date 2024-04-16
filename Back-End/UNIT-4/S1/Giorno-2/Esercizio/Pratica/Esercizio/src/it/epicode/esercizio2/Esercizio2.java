@@ -7,24 +7,19 @@ public class Esercizio2 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Digita un numero intero");
         int num = scanner.nextInt();
-        switch (num) {
-            case 0:
-                System.out.println("zero");
-                break;
-            case 1:
-                System.out.println("uno");
-                break;
-            case 2:
-                System.out.println("due");
-                break;
-            case 3:
-                System.out.println("tre");
-                break;
-            default:
-                System.out.println("Errore, il numero non è compreso tra 0 e 3");
-        }
+        System.out.println(controllaNumero(num));
 
         scanner.close();
         System.out.println("Applicazione chiusa");
+    }
+
+    public static String controllaNumero(int num) {
+        return switch (num) {
+            case 0 -> "zero";
+            case 1 -> "uno";
+            case 2 -> "due";
+            case 3 -> "tre";
+            default -> "Errore, il numero non è compreso tra 0 e 3";
+        };
     }
 }
