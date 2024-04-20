@@ -82,7 +82,8 @@ public class Main {
         }
         int scelta;
         do {
-            System.out.println("Scegli uno numero tra 1 e 5 (elementi multimediali creati in precedenza)");
+            System.out.println("Scegli uno numero tra 1 e 5 (elementi multimediali creati in precedenza)\nPer terminare" +
+                    " il programma digita il numero 0");
             scelta = scanner.nextInt();
             if (scelta == 0) {
                 System.out.println("Hai scelto di terminare il programma");
