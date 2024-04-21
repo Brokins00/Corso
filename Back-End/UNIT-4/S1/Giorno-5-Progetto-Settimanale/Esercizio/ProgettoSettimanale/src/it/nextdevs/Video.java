@@ -1,9 +1,9 @@
-package it.epicode;
+package it.nextdevs;
 
-public class Video extends ElementoMultimediale {
+public class Video extends ElementoMultimediale implements Riproducibile {
     private int luminosita;
-    public Video(String title, int duration, int volume, int luminosita) {
-        super(title, duration, volume);
+    public Video(String titolo, int durata, int volume, int luminosita) {
+        super(titolo, durata, volume);
         this.luminosita = luminosita;
     }
 
@@ -31,14 +31,11 @@ public class Video extends ElementoMultimediale {
         }
     }
 
-    @Override
     public void play() {
-        int counter = 0;
-        while (counter < this.getDuration()) {
+        for (int i = 0; i < this.getDurata(); i++) {
             String volume = "!".repeat(Math.max(0, this.getVolume()));
             String luminosita = "*".repeat(Math.max(0, this.luminosita));
-            counter++;
-            System.out.println(this.getTitle()+" "+ volume+" "+luminosita);
+            System.out.println(this.getTitolo()+" "+ volume+" "+luminosita);
         }
     }
 }

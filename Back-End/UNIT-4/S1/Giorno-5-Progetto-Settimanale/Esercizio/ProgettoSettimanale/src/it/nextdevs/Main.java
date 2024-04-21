@@ -1,4 +1,4 @@
-package it.epicode;
+package it.nextdevs;
 
 import java.util.Scanner;
 
@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         ElementoMultimediale[] elementi = new ElementoMultimediale[5];
+
         for (int i = 0; i < elementi.length; i++) {
             int risultato;
             do {
@@ -17,7 +18,7 @@ public class Main {
             } while(risultato < 1 || risultato > 3);
             scanner.nextLine();
             System.out.println("Inserisci un titolo per l'elemento scelto");
-            String title = scanner.nextLine();
+            String titolo = scanner.nextLine();
             int luminosita;
             int volume;
             int durata;
@@ -30,7 +31,7 @@ public class Main {
                             System.out.println("Devi inserire un numero positivo e che sia compreso tra 0 e 10");
                         }
                     } while (luminosita < 0 || luminosita > 10);
-                    Immagine immagine = new Immagine(title, luminosita);
+                    Immagine immagine = new Immagine(titolo, luminosita);
                     elementi[i] = immagine;
                     break;
                 case 2:
@@ -55,7 +56,7 @@ public class Main {
                             System.out.println("Devi inserire un numero positivo e che sia compreso tra 0 e 10");
                         }
                     } while (volume < 0 || volume > 10);
-                    Video video = new Video(title, durata, volume, luminosita);
+                    Video video = new Video(titolo, durata, volume, luminosita);
                     elementi[i] = video;
                     break;
                 case 3:
@@ -73,7 +74,7 @@ public class Main {
                             System.out.println("Devi inserire un numero positivo e che sia compreso tra 0 e 10");
                         }
                     } while (volume < 0 || volume > 10);
-                    Audio audio = new Audio(title, durata, volume);
+                    Audio audio = new Audio(titolo, durata, volume);
                     elementi[i] = audio;
                     break;
                 default:
@@ -88,11 +89,11 @@ public class Main {
             if (scelta == 0) {
                 System.out.println("Hai scelto di terminare il programma");
             } else if (scelta > 0 && scelta <= elementi.length) {
-                System.out.println("Hai scelto il file multimediale chiamato "+elementi[scelta-1].getTitle());
-                if (elementi[scelta-1] instanceof Immagine) {
-                    elementi[scelta-1].show();
+                System.out.println("Hai scelto il file multimediale chiamato "+elementi[scelta-1].getTitolo());
+                if (elementi[scelta-1] instanceof Riproducibile) {
+                    ((Riproducibile) elementi[scelta - 1]).play();
                 } else {
-                    elementi[scelta-1].play();
+                    elementi[scelta-1].show();
                 }
             } else {
                 System.out.println("Devi inserire un numero tra 1 e 5");

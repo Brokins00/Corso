@@ -1,9 +1,9 @@
-package it.epicode;
+package it.nextdevs;
 
 public class Immagine extends ElementoMultimediale {
     private int luminosita;
-    public Immagine(String title, int luminosita) {
-        super(title);
+    public Immagine(String titolo, int luminosita) {
+        super(titolo);
         this.luminosita = luminosita;
     }
 
@@ -21,6 +21,6 @@ public class Immagine extends ElementoMultimediale {
 
     @Override
     public void show() {
-        System.out.println(this.getTitle()+" "+"*".repeat(Math.max(0, this.luminosita)));
+        System.out.println(this.getTitolo()+" "+"*".repeat(Math.max(0, this.luminosita)));
     }
 }

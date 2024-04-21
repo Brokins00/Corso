@@ -1,17 +1,14 @@
-package it.epicode;
+package it.nextdevs;
 
-public class Audio extends ElementoMultimediale {
-    public Audio(String title, int duration, int volume) {
-        super(title, duration, volume);
+public class Audio extends ElementoMultimediale implements Riproducibile {
+    public Audio(String titolo, int durata, int volume) {
+        super(titolo, durata, volume);
     }
 
-    @Override
     public void play() {
-        int counter = 0;
-        while (counter < this.getDuration()) {
+        for (int i = 0; i < this.getDurata(); i++) {
             String volume = "!".repeat(Math.max(0, this.getVolume()));
-            counter++;
-            System.out.println(this.getTitle()+" "+ volume);
+            System.out.println(this.getTitolo()+" "+ volume);
         }
     }
 
