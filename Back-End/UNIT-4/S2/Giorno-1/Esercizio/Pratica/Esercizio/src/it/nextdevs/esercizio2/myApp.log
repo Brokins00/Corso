@@ -1,0 +1,14 @@
+2024-04-22 16:28:48,121 INFO [main] MainEsercizio2 [MainEsercizio2.java:14] -- Inserisci il numero di km percorsi:
+2024-04-22 16:28:54,596 INFO [main] MainEsercizio2 [MainEsercizio2.java:22] -- Inserisci i litri di carburante consumati:
+2024-04-22 16:28:55,778 INFO [main] MainEsercizio2 [MainEsercizio2.java:33] -- Il numero di km/litro percorsi è: 1.0
+2024-04-22 16:35:17,900 INFO [main] MainEsercizio2 [MainEsercizio2.java:14] -- Inserisci il numero di km percorsi:
+2024-04-22 17:02:18,976 INFO [main] M.class [MainEsercizio2.java:14] -- Inserisci il numero di km percorsi:
+2024-04-22 17:06:07,346 INFO [main] MainEsercizio2 [MainEsercizio2.java:14] -- Inserisci il numero di km percorsi:
+2024-04-22 17:06:11,656 INFO [main] MainEsercizio2 [MainEsercizio2.java:22] -- Inserisci i litri di carburante consumati:
+2024-04-22 17:06:13,257 ERROR [main] MainEsercizio2 [MainEsercizio2.java:36] -- Errore: Divisione per zero: i litri consumati non possono essere zero.
+2024-04-22 17:07:53,019 INFO [main] MainEsercizio2 [MainEsercizio2.java:14] -- Inserisci il numero di km percorsi:
+2024-04-22 17:07:56,945 INFO [main] MainEsercizio2 [MainEsercizio2.java:22] -- Inserisci i litri di carburante consumati:
+2024-04-22 17:07:57,994 INFO [main] MainEsercizio2 [MainEsercizio2.java:33] -- Il numero di km/litro percorsi è: 1.0
+2024-04-22 17:09:37,579 INFO [main] MainEsercizio2 [MainEsercizio2.java:14] -- Inserisci il numero di km percorsi:
+2024-04-22 17:09:40,377 INFO [main] MainEsercizio2 [MainEsercizio2.java:22] -- Inserisci i litri di carburante consumati:
+2024-04-22 17:09:41,171 INFO [main] MainEsercizio2 [MainEsercizio2.java:33] -- Il numero di km/litro percorsi è: 10.0

@@ -1,0 +1,37 @@
+2024-04-22 16:29:51,679 INFO [main] M.class [MainEsercizio1.java:31] -- Numero selezionato: 5
+2024-04-22 16:29:51,681 INFO [main] M.class [MainEsercizio1.java:31] -- Numero selezionato: 8
+2024-04-22 16:29:51,682 ERROR [main] M.class [MainEsercizio1.java:25] -- Numero 8 già presente
+2024-04-22 16:29:51,682 INFO [main] M.class [MainEsercizio1.java:31] -- Numero selezionato: 9
+2024-04-22 16:29:51,682 ERROR [main] M.class [MainEsercizio1.java:25] -- Numero 9 già presente
+2024-04-22 16:29:51,682 INFO [main] M.class [MainEsercizio1.java:31] -- Numero selezionato: 1
+2024-04-22 16:29:51,682 INFO [main] M.class [MainEsercizio1.java:31] -- Numero selezionato: 3
+2024-04-22 16:29:51,682 INFO [main] M.class [MainEsercizio1.java:34] -- Risultato: [5, 8, 9, 1, 3]
+2024-04-22 16:29:51,704 INFO [main] M.class [MainEsercizio1.java:42] -- Seleziona uno slot da 1 a 5 (0 per uscire dal programma)
+2024-04-22 20:07:24,747 INFO [main] MainEsercizio1 [MainEsercizio1.java:31] -- Numero selezionato: 5
+2024-04-22 20:07:24,750 INFO [main] MainEsercizio1 [MainEsercizio1.java:31] -- Numero selezionato: 2
+2024-04-22 20:07:24,750 INFO [main] MainEsercizio1 [MainEsercizio1.java:31] -- Numero selezionato: 7
+2024-04-22 20:07:24,750 INFO [main] MainEsercizio1 [MainEsercizio1.java:31] -- Numero selezionato: 6
+2024-04-22 20:07:24,750 ERROR [main] MainEsercizio1 [MainEsercizio1.java:25] -- Numero 5 già presente
+2024-04-22 20:07:24,750 ERROR [main] MainEsercizio1 [MainEsercizio1.java:25] -- Numero 6 già presente
+2024-04-22 20:07:24,750 INFO [main] MainEsercizio1 [MainEsercizio1.java:31] -- Numero selezionato: 9
+2024-04-22 20:07:24,751 INFO [main] MainEsercizio1 [MainEsercizio1.java:34] -- Risultato: [5, 2, 7, 6, 9]
+2024-04-22 20:07:24,761 INFO [main] MainEsercizio1 [MainEsercizio1.java:42] -- Seleziona uno slot da 1 a 5 (0 per uscire dal programma)
+2024-04-22 20:07:29,481 INFO [main] MainEsercizio1 [MainEsercizio1.java:67] -- Digita il nuovo valore da assegnare a questo slot
+2024-04-22 20:07:32,323 INFO [main] MainEsercizio1 [MainEsercizio1.java:90] -- Nuovo array: [1, 2, 7, 6, 9]
+2024-04-22 20:07:32,323 INFO [main] MainEsercizio1 [MainEsercizio1.java:42] -- Seleziona uno slot da 1 a 5 (0 per uscire dal programma)
+2024-04-22 20:07:35,420 INFO [main] MainEsercizio1 [MainEsercizio1.java:67] -- Digita il nuovo valore da assegnare a questo slot
+2024-04-22 20:07:38,746 INFO [main] MainEsercizio1 [MainEsercizio1.java:90] -- Nuovo array: [1, 2, 3, 6, 9]
+2024-04-22 20:07:38,747 INFO [main] MainEsercizio1 [MainEsercizio1.java:42] -- Seleziona uno slot da 1 a 5 (0 per uscire dal programma)
+2024-04-22 20:07:41,149 INFO [main] MainEsercizio1 [MainEsercizio1.java:67] -- Digita il nuovo valore da assegnare a questo slot
+2024-04-22 20:07:41,900 INFO [main] MainEsercizio1 [MainEsercizio1.java:90] -- Nuovo array: [1, 2, 3, 4, 9]
+2024-04-22 20:07:41,900 INFO [main] MainEsercizio1 [MainEsercizio1.java:42] -- Seleziona uno slot da 1 a 5 (0 per uscire dal programma)
+2024-04-22 20:07:43,177 INFO [main] MainEsercizio1 [MainEsercizio1.java:67] -- Digita il nuovo valore da assegnare a questo slot
+2024-04-22 20:07:43,722 INFO [main] MainEsercizio1 [MainEsercizio1.java:90] -- Nuovo array: [1, 2, 3, 4, 5]
+2024-04-22 20:07:43,723 INFO [main] MainEsercizio1 [MainEsercizio1.java:42] -- Seleziona uno slot da 1 a 5 (0 per uscire dal programma)
+2024-04-22 20:07:44,902 ERROR [main] MainEsercizio1 [MainEsercizio1.java:56] -- Devi inserire un numero positivo e che sia tra 1 e 5
+2024-04-22 20:07:44,902 INFO [main] MainEsercizio1 [MainEsercizio1.java:42] -- Seleziona uno slot da 1 a 5 (0 per uscire dal programma)
+2024-04-22 20:07:45,953 ERROR [main] MainEsercizio1 [MainEsercizio1.java:56] -- Devi inserire un numero positivo e che sia tra 1 e 5
+2024-04-22 20:07:45,953 INFO [main] MainEsercizio1 [MainEsercizio1.java:42] -- Seleziona uno slot da 1 a 5 (0 per uscire dal programma)
+2024-04-22 20:07:50,664 ERROR [main] MainEsercizio1 [MainEsercizio1.java:56] -- Devi inserire un numero positivo e che sia tra 1 e 5
+2024-04-22 20:07:50,665 INFO [main] MainEsercizio1 [MainEsercizio1.java:42] -- Seleziona uno slot da 1 a 5 (0 per uscire dal programma)
+2024-04-22 20:07:54,046 ERROR [main] MainEsercizio1 [MainEsercizio1.java:60] -- Hai scelto di terminare il programma!

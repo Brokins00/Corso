@@ -1,0 +1,7 @@
+2024-04-22 16:33:50,836 INFO [main] B.class [Banca.java:11] -- Saldo conto: 20000.0
+2024-04-22 16:33:50,838 INFO [main] B.class [Banca.java:16] -- Saldo conto: 18249.5
+2024-04-22 16:33:50,845 ERROR [main] B.class [Banca.java:31] -- Errore durante il prelievo: it.nextdevs.esercizio3.BancaException: L'importo indicato ha superato il limite di prelievo
+2024-04-22 20:08:07,526 INFO [main] Banca [Banca.java:11] -- Saldo conto: 20000.0
+2024-04-22 20:08:07,528 INFO [main] Banca [Banca.java:16] -- Saldo conto: 18249.5
+2024-04-22 20:08:07,540 INFO [main] Banca [ContoOnLine.java:18] -- Titolare: Rossi Luigi - Saldo: 50350.0 - Num movimenti: 0 - Massimo movimenti: 50 - Massimo prelievi possibile: 1500.0
+2024-04-22 20:08:07,540 ERROR [main] Banca [Banca.java:31] -- Errore durante il prelievo: it.nextdevs.esercizio3.BancaException: L'importo indicato ha superato il limite di prelievo

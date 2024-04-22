@@ -1,0 +1,41 @@
+<configuration>
+    <appender name="STDOUT"
+              class="ch.qos.logback.core.ConsoleAppender"> <!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} -%kvp- %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="MainEsercizio1" class="ch.qos.logback.core.FileAppender">
+        <file>src/it/nextdevs/esercizio1/myApp.log</file>
+          <append>true</append>
+        <encoder>
+            <pattern>%date %level [%thread] %logger{10} [%file:%line] -%kvp- %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="MainEsercizio2" class="ch.qos.logback.core.FileAppender">
+        <file>src/it/nextdevs/esercizio2/myApp.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%date %level [%thread] %logger{10} [%file:%line] -%kvp- %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="Banca" class="ch.qos.logback.core.FileAppender">
+        <file>src/it/nextdevs/esercizio3/myApp.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%date %level [%thread] %logger{10} [%file:%line] -%kvp- %msg%n</pattern>
+        </encoder>
+    </appender>
+    <logger name="MainEsercizio1" level="info">
+        <appender-ref ref="MainEsercizio1" />
+    </logger>
+    <logger name="MainEsercizio2" level="info">
+        <appender-ref ref="MainEsercizio2" />
+    </logger>
+    <logger name="Banca" level="info">
+        <appender-ref ref="Banca" />
+    </logger>
+    <root level="debug">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
