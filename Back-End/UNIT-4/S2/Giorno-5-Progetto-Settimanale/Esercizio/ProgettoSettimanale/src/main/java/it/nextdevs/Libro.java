@@ -17,6 +17,14 @@ public class Libro extends Prodotto {
     }
 
     public String getGenere() {
-        return genere;
+        return this.genere;
+    }
+
+    public void setAutore(String autore) {
+        this.autore = autore;
+    }
+
+    public void setGenere(String genere) {
+        this.genere = genere;
     }
 }

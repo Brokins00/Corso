@@ -5,13 +5,13 @@ import java.time.LocalDate;
 public class Prodotto {
     private String isbn;
     private String titolo;
-    private LocalDate annoPubblicazione;
+    private LocalDate dataPubblicazione;
     private Integer numPagine;
 
-    public Prodotto(String isbn, String titolo, LocalDate annoPubblicazione, Integer numPagine) {
+    public Prodotto(String isbn, String titolo, LocalDate dataPubblicazione, Integer numPagine) {
         this.isbn = isbn;
         this.titolo = titolo;
-        this.annoPubblicazione = annoPubblicazione;
+        this.dataPubblicazione = dataPubblicazione;
         this.numPagine = numPagine;
     }
 
@@ -19,8 +19,8 @@ public class Prodotto {
         return this.isbn;
     }
 
-    public LocalDate getAnnoPubblicazione() {
-        return this.annoPubblicazione;
+    public LocalDate getDataPubblicazione() {
+        return this.dataPubblicazione;
     }
 
     @Override
@@ -28,25 +28,28 @@ public class Prodotto {
         return "Prodotto{" +
                 "isbn='" + isbn + '\'' +
                 ", titolo='" + titolo + '\'' +
-                ", annoPubblicazione=" + annoPubblicazione +
+                ", dataPubblicazione=" + dataPubblicazione +
                 ", numPagine=" + numPagine +
                 '}';
     }
 
-    public String libro(Libro book) {
-        return isbn +
-                "," + titolo +
-                "," + annoPubblicazione +
-                "," + numPagine +
-                "," + book.getAutore() +
-                "," + book.getGenere();
+    public String getTitolo() {
+        return this.titolo;
     }
 
-    public String rivista(Rivista news) {
-        return isbn +
-                "," + titolo +
-                "," + annoPubblicazione +
-                "," + numPagine +
-                "," + news.getPeriodicita();
+    public Integer getNumPagine() {
+        return this.numPagine;
+    }
+
+    public void setTitolo(String titolo) {
+        this.titolo = titolo;
+    }
+
+    public void setDataPubblicazione(LocalDate dataPubblicazione) {
+        this.dataPubblicazione = dataPubblicazione;
+    }
+
+    public void setNumPagine(Integer numPagine) {
+        this.numPagine = numPagine;
     }
 }

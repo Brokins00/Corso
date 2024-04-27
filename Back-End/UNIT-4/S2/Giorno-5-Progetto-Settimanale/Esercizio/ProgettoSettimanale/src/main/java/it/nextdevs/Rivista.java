@@ -11,6 +11,10 @@ public class Rivista extends Prodotto {
     }
 
     public Periodicita getPeriodicita() {
-        return periodicita;
+        return this.periodicita;
+    }
+
+    public void setPeriodicita(Periodicita periodicita) {
+        this.periodicita = periodicita;
     }
 }
