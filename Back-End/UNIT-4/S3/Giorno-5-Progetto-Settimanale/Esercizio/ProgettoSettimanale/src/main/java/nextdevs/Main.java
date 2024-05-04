@@ -95,6 +95,15 @@ public class Main {
             System.err.println("Prodotto non esistente");
         }
 
+        System.out.println("--------------------");
+        System.out.println("Prodotti Rowling");
+        List<Prodotto> findProductsFromAutore = prodottoDAO.findByAutore("Rowling");
+        if (findProductsFromAutore.isEmpty()) {
+            System.err.println("Nessun risultato trovato");
+        } else {
+            findProductsFromAutore.forEach(System.out::println);
+        }
+
         System.out.println("---------------------");
 
         System.out.println("Prodotti anno 2005");

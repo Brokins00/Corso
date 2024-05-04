@@ -4,24 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="134667ab-53e9-481d-b29f-f3c67292e07b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Evento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/EventoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Location.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/LocationDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Partecipazione.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PartecipazioneDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Persona.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PersonaDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Sesso.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Stato.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/TipoEvento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../Giorno-2/Esercizio/Pratica/GestioneEventi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Giorno-2/Esercizio/Pratica/GestioneEventi/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="134667ab-53e9-481d-b29f-f3c67292e07b" name="Changes" comment="Esercizio UNIT 4 Settimana 3 Giorno 3">
+      <change afterPath="$PROJECT_DIR$/../../../../Giorno-5-Progetto-Settimanale/Esercizio/ProgettoSettimanale/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Giorno-5-Progetto-Settimanale/Esercizio/ProgettoSettimanale/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Giorno-5-Progetto-Settimanale/Esercizio/ProgettoSettimanale/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Giorno-5-Progetto-Settimanale/Esercizio/ProgettoSettimanale/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Giorno-5-Progetto-Settimanale/Esercizio/ProgettoSettimanale/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Giorno-5-Progetto-Settimanale/Esercizio/ProgettoSettimanale/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Giorno-5-Progetto-Settimanale/Esercizio/ProgettoSettimanale/src/main/java/nextdevs/Archivio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Giorno-5-Progetto-Settimanale/Esercizio/ProgettoSettimanale/src/main/java/nextdevs/Libro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Giorno-5-Progetto-Settimanale/Esercizio/ProgettoSettimanale/src/main/java/nextdevs/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Giorno-5-Progetto-Settimanale/Esercizio/ProgettoSettimanale/src/main/java/nextdevs/Periodicita.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Giorno-5-Progetto-Settimanale/Esercizio/ProgettoSettimanale/src/main/java/nextdevs/Prodotto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Giorno-5-Progetto-Settimanale/Esercizio/ProgettoSettimanale/src/main/java/nextdevs/Rivista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Giorno-5-Progetto-Settimanale/Esercizio/ProgettoSettimanale/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,21 +36,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../../../.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Brokins00"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Brokins00&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Brokins00/Corso.git",
-    "accountId": "5aabb935-aef8-47fa-a8f5-9bfbb670c03e"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Brokins00/Corso.git&quot;,
+    &quot;accountId&quot;: &quot;5aabb935-aef8-47fa-a8f5-9bfbb670c03e&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2fvT31DcQXm6zbVYLdsCLtp7P3i" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -62,19 +59,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/broki/Desktop/EPICODE/Corso/Back-End/UNIT-4/S3/Giorno-3/Esercizio/Pratica/Esercizio/src/main/java",
-    "onboarding.tips.debug.path": "C:/Users/broki/Desktop/EPICODE/Corso/Back-End/UNIT-4/S3/Giorno-3/Esercizio/Pratica/Esercizio/src/main/java/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/broki/Desktop/EPICODE/Corso/Back-End/UNIT-4/S3/Giorno-3/Esercizio/Pratica/Esercizio/src/main/java&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/broki/Desktop/EPICODE/Corso/Back-End/UNIT-4/S3/Giorno-3/Esercizio/Pratica/Esercizio/src/main/java/Main.java&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\broki\Desktop\EPICODE\Corso\Back-End\UNIT-4\S3\Giorno-3\Esercizio\Pratica\Esercizio\src\main\java" />

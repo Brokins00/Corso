@@ -41,6 +41,12 @@ public class ProdottoDAO {
                 .getResultList();
     }
 
+    public List<Prodotto> findByAutore(String autore) {
+        return em.createQuery("SELECT p FROM Prodotto p WHERE autore LIKE :autore", Prodotto.class)
+                .setParameter("autore", "%"+autore+"%")
+                .getResultList();
+    }
+
     public List<Prodotto> findByTitolo(String titolo) {
         return em.createQuery("SELECT p FROM Prodotto p WHERE titolo LIKE :titolo", Prodotto.class)
                 .setParameter("titolo", "%"+titolo+"%")
