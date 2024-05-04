@@ -58,4 +58,15 @@ public class Utente {
     public void setDataDiNascita(LocalDate dataDiNascita) {
         this.dataDiNascita = dataDiNascita;
     }
+
+    @Override
+    public String toString() {
+        return "Utente{" +
+                "numeroDiTessera=" + numeroDiTessera +
+                ", nome='" + nome + '\'' +
+                ", cognome='" + cognome + '\'' +
+                ", dataDiNascita=" + dataDiNascita +
+                ", prestiti=" + prestiti +
+                '}';
+    }
 }
