@@ -5,13 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cda7eaca-dcdc-4f6f-8f52-f1678cafaaa1" name="Changes" comment="Progetto Settimanale UNIT 4 Settimana 2 Giorno 5">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archivio.txt" beforeDir="false" afterPath="$PROJECT_DIR$/archivio.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/nextdevs/Archivio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/nextdevs/Archivio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/nextdevs/Libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/nextdevs/Libro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/nextdevs/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/nextdevs/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/nextdevs/Prodotto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/nextdevs/Prodotto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/nextdevs/Rivista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/nextdevs/Rivista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../S3/Giorno-5-Progetto-Settimanale/Esercizio/ProgettoSettimanale/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../S3/Giorno-5-Progetto-Settimanale/Esercizio/ProgettoSettimanale/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../S3/Giorno-5-Progetto-Settimanale/Esercizio/ProgettoSettimanale/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../S3/Giorno-5-Progetto-Settimanale/Esercizio/ProgettoSettimanale/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../S3/Giorno-5-Progetto-Settimanale/Esercizio/ProgettoSettimanale/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../S3/Giorno-5-Progetto-Settimanale/Esercizio/ProgettoSettimanale/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../S3/Giorno-5-Progetto-Settimanale/Esercizio/ProgettoSettimanale/src/main/java/nextdevs/Archivio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../S3/Giorno-5-Progetto-Settimanale/Esercizio/ProgettoSettimanale/src/main/java/nextdevs/Libro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../S3/Giorno-5-Progetto-Settimanale/Esercizio/ProgettoSettimanale/src/main/java/nextdevs/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../S3/Giorno-5-Progetto-Settimanale/Esercizio/ProgettoSettimanale/src/main/java/nextdevs/Periodicita.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../S3/Giorno-5-Progetto-Settimanale/Esercizio/ProgettoSettimanale/src/main/java/nextdevs/Prodotto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../S3/Giorno-5-Progetto-Settimanale/Esercizio/ProgettoSettimanale/src/main/java/nextdevs/Rivista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../S3/Giorno-5-Progetto-Settimanale/Esercizio/ProgettoSettimanale/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../S3/Giorno-3/Esercizio/Pratica/Esercizio/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../S3/Giorno-3/Esercizio/Pratica/Esercizio/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
