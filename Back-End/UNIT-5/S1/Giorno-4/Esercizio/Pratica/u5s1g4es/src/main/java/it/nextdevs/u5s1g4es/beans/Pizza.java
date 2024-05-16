@@ -1,15 +1,22 @@
-package it.nextdevs.u5s1g2.beans;
+package it.nextdevs.u5s1g4es.beans;
 
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 import java.util.List;
 
-@Getter
-@Setter
+@EqualsAndHashCode(callSuper = true)
+@Data
+@Entity
+@ToString(callSuper = true)
 public class Pizza extends Product {
     private String name;
     private double price;
+    @OneToMany(mappedBy = "pizza")
     private List<Topping> toppings;
 
     public Pizza(String name, double price, int calories, List<Topping> toppings) {
@@ -19,14 +26,5 @@ public class Pizza extends Product {
     }
 
     public Pizza() {
-    }
-
-    @Override
-    public String toString() {
-        return "Pizza{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                ", toppings=" + toppings +
-                '}';
     }
 }

@@ -1,17 +1,22 @@
-package it.nextdevs.u5s1g2;
+package it.nextdevs.u5s1g4es;
 
-import it.nextdevs.u5s1g2.beans.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import it.nextdevs.u5s1g4es.beans.*;
+import it.nextdevs.u5s1g4es.service.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class MenuInizializzazione implements CommandLineRunner {
+    @Autowired
+    private ProductService productService;
+
     @Override
     public void run(String... args) throws Exception {
-        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(U5s1g2Application.class);
+        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(U5s1g4esApplication.class);
         try {
             Menu m = (Menu) ctx.getBean("menu");
             m.printMenu();
@@ -32,6 +37,10 @@ public class MenuInizializzazione implements CommandLineRunner {
             o1.print();
             System.out.println("CONTO TAVOLO 1");
             System.out.println(o1.calcolaTotale(o1.getTavolo().getCostoCoperto()));
+//            List<Pizza> pizze = (List<Pizza>) ctx.getBean("lista_pizze");
+//            pizze.forEach(pizza -> {
+//                productService.inserisciProdotto(pizza);
+//            });
         } catch (Exception ex) {
             System.err.println(ex.getMessage());
         } finally {

@@ -1,11 +1,15 @@
-package it.nextdevs.u5s1g2.beans;
+package it.nextdevs.u5s1g4es.beans;
 
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.Data;
 
-@Getter
-@Setter
+@Data
+@Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class Product {
+    @Id
+    @GeneratedValue
+    private int id;
     private int calories;
     private double price;
 

@@ -1,4 +1,4 @@
-package it.nextdevs.u5s1g2.beans;
+package it.nextdevs.u5s1g4es.beans;
 
 import lombok.Data;
 import org.springframework.stereotype.Component;

@@ -1,6 +1,7 @@
-package it.nextdevs.u5s1g2.appConfig;
+package it.nextdevs.u5s1g4es.appConfig;
 
-import it.nextdevs.u5s1g2.beans.*;
+import it.nextdevs.u5s1g4es.beans.*;
+import it.nextdevs.u5s1g4es.service.ProductService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -50,6 +51,10 @@ public class AppConfig {
                 new Topping("Salami", 0.99, 86)
         )));
         return pizza;
+    }
+    @Bean(name="lista_pizze")
+    public List<Pizza> listPizza() {
+        return new ArrayList<>(List.of(salamiPizza(), hawaiianPizza(), margherita()));
     }
     @Bean(name = "toppings_tomato")
     public Topping tomato() {
