@@ -44,7 +44,7 @@ public class PrenotazioneService {
 
         List<Prenotazione> prenotazioniPostazione = prenotazioneRepository.findByPostazioneAndData(postazione, data);
         if (!prenotazioniPostazione.isEmpty()) {
-            if (prenotazioniPostazione.size() + 1 > postazione.getNumeroMax()) {
+            if (prenotazioniPostazione.size() + 1 > postazione.getMaxOccupanti()) {
                 throw new Exception("La postazione è occupato in quella data");
             }
         }
